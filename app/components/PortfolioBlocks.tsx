@@ -1,16 +1,35 @@
 import Link from "next/link";
-import type { Project, WorkStory } from "../data";
+import { navigation, site, type Metric, type Project, type WorkStory } from "../data";
+
+function BrandMark() {
+  const dotIndex = site.brandName.indexOf(".");
+
+  if (dotIndex === -1) {
+    return <>{site.brandName}</>;
+  }
+
+  return (
+    <>
+      {site.brandName.slice(0, dotIndex)}
+      <span>.</span>
+      {site.brandName.slice(dotIndex + 1)}
+    </>
+  );
+}
 
 export function Header() {
   return (
     <header className="site-header">
       <nav className="nav-shell" aria-label="Primary navigation">
         <Link className="brand" href="/">
-          max<span>.</span>lee
+          <BrandMark />
         </Link>
         <div className="nav-tabs">
-          <Link href="/ai-at-work">AI at Work</Link>
-          <Link href="/projects">Projects</Link>
+          {navigation.map((item) => (
+            <Link key={item.href} href={item.href}>
+              {item.label}
+            </Link>
+          ))}
         </div>
       </nav>
     </header>
@@ -22,14 +41,17 @@ export function Footer() {
     <footer className="footer">
       <div>
         <Link className="brand" href="/">
-          max<span>.</span>lee
+          <BrandMark />
         </Link>
-        <p>Account Executive in Singapore, building with AI at work and after hours.</p>
+        <p>{site.footerText}</p>
       </div>
       <div className="footer-links">
-        <Link href="/ai-at-work">AI at Work</Link>
-        <Link href="/projects">Projects</Link>
-        <a href="mailto:leesianyi@gmail.com">Email</a>
+        {navigation.map((item) => (
+          <Link key={item.href} href={item.href}>
+            {item.label}
+          </Link>
+        ))}
+        <a href={`mailto:${site.email}`}>Email</a>
       </div>
     </footer>
   );
@@ -172,7 +194,7 @@ export function WorkFeature({ story, index }: { story: WorkStory; index: number 
   );
 }
 
-export function MetricRail({ metrics }: { metrics: { value: string; label: string }[] }) {
+export function MetricRail({ metrics }: { metrics: Metric[] }) {
   return (
     <div className="metric-rail">
       {metrics.map((metric) => (

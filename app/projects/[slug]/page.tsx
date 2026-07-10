@@ -5,7 +5,7 @@ import {
   PageShell,
   ProjectVisual,
 } from "../../components/PortfolioBlocks";
-import { projects } from "../../data";
+import { projects, site } from "../../data";
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props) {
   }
 
   return {
-    title: `${project.title} - Max Lee`,
+    title: `${project.title} - ${site.brandName}`,
     description: project.summary,
   };
 }

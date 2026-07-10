@@ -1,0 +1,352 @@
+{
+  "site": {
+    "brandName": "max.lee",
+    "footerText": "Account Executive in Singapore, building with AI at work and after hours.",
+    "email": "leesianyi@gmail.com",
+    "metadata": {
+      "title": "Max Lee - AI Sales Portfolio",
+      "description": "Portfolio for Max Lee Sian Yi, a Docusign Account Executive using AI in sales workflows and personal projects.",
+      "openGraphTitle": "Max Lee - AI Sales Portfolio",
+      "openGraphDescription": "AI-at-work stories, sales experience, and practical projects from Max Lee Sian Yi."
+    }
+  },
+  "navigation": [
+    {
+      "label": "AI at Work",
+      "href": "/ai-at-work"
+    },
+    {
+      "label": "Projects",
+      "href": "/projects"
+    }
+  ],
+  "home": {
+    "hero": {
+      "eyebrow": "Account Executive - Singapore",
+      "headline": "I sell complex software, and I use AI to make the work sharper.",
+      "body": "I am Max Lee Sian Yi, a Docusign AE promoted four times in five years. I pair MEDDPICC discipline with practical AI workflows, from account research at work to private tools I build after hours.",
+      "actions": [
+        {
+          "label": "AI at Work",
+          "href": "/ai-at-work"
+        },
+        {
+          "label": "Projects",
+          "href": "/projects"
+        }
+      ],
+      "proof": [
+        {
+          "value": "4x",
+          "label": "promoted in 5 years at Docusign"
+        },
+        {
+          "value": "$3M",
+          "label": "largest commercial territory in Asia"
+        },
+        {
+          "value": "55%",
+          "label": "less account research time using AI"
+        }
+      ]
+    },
+    "sections": {
+      "aiAtWork": {
+        "eyebrow": "AI at work",
+        "headline": "Practical AI workflows tied to measurable sales outcomes.",
+        "linkLabel": "All AI at Work",
+        "href": "/ai-at-work"
+      },
+      "projects": {
+        "eyebrow": "Projects",
+        "headline": "Tools built around real workflows, not portfolio filler.",
+        "linkLabel": "All Projects",
+        "href": "/projects"
+      },
+      "experience": {
+        "eyebrow": "Experience",
+        "headline": "Commercial path"
+      }
+    }
+  },
+  "pages": {
+    "aiAtWork": {
+      "metadata": {
+        "title": "AI at Work - Max Lee",
+        "description": "How Max Lee uses AI in sales workflows and personal building."
+      },
+      "hero": {
+        "eyebrow": "AI at Work",
+        "headline": "AI as leverage inside real commercial work.",
+        "body": "These are the places where Max has used AI to reduce research time, sharpen sales execution, learn faster, and build useful internal tools."
+      }
+    },
+    "projects": {
+      "metadata": {
+        "title": "Projects - Max Lee",
+        "description": "AI and workflow projects built by Max Lee."
+      },
+      "hero": {
+        "eyebrow": "Projects",
+        "headline": "Tools built end to end around real workflows.",
+        "body": "A small set of focused builds: private AI practice, household operations, and the systems needed to make them usable."
+      }
+    }
+  },
+  "resumeFacts": [
+    "Max Lee Sian Yi is an Account Executive in Singapore.",
+    "At Docusign, Max was promoted four times in five years, progressing from SDR to Majors AE.",
+    "Max currently manages a US$3 million book of business, the largest commercial territory in Docusign Asia.",
+    "As a Mid Market AE in 2025, Max reached 126% attainment, closed US$1.2 million ARR, 17 new logos, and a 31% upsell rate.",
+    "In 2024 H2, Max reached 104% attainment, closed US$771k ARR, 6 new logos, and a 24% upsell rate.",
+    "Max used MEDDPICC, POC criteria, and mutual success plans to improve close rates from 22% to 31% and shorten sales cycles from 6 months to 5 months.",
+    "Max used Gemini and Glean for account and persona research, reducing account research time by 55%, increasing pipeline by 25%, and improving reply rates by 4%.",
+    "Max was the first AE in Docusign Asia to sell two newly launched AI product lines within the first month, before established playbooks existed.",
+    "Max closed one of the first major Docusign Intelligent Agreement Management platform deals at US$120k ARR.",
+    "Max built a private OpenAI BDR Interviewer Buddy that records spoken answers, transcribes with OpenAI speech-to-text, scores answers with structured AI feedback, and stores progress in Supabase without retaining raw audio.",
+    "Max built Crib Stock Taker, a household stock taking app with Supabase Auth, roles, low-stock tracking, perishables, private photo storage, and Vercel hosting."
+  ],
+  "projects": [
+    {
+      "slug": "openai-bdr-interviewer-buddy",
+      "title": "OpenAI BDR Interviewer Buddy",
+      "year": "2026",
+      "kicker": "Voice practice coach for OpenAI interview fluency",
+      "status": "Private beta",
+      "summary": "A private record-and-review practice app that helps Max prepare crisp spoken answers on OpenAI products, AI concepts, competitor positioning, and APAC customer value.",
+      "description": [
+        "This app is not a generic quiz tool. It is an interview-performance training system built around daily five-question voice sessions, topic mastery, retry logic, and commercially grounded feedback.",
+        "The browser captures a single answer, sends temporary audio to the backend, transcribes it with OpenAI speech-to-text, then discards the raw audio. The transcript is evaluated with structured AI scoring across technical accuracy, simple explanation, business relevance, OpenAI positioning, interview structure, and concision.",
+        "The app also includes production plumbing for Supabase persistence, private login placeholders, daily practice, manual practice modes, topic mastery, and a future freshness review queue for approved OpenAI and competitor source updates."
+      ],
+      "tags": [
+        "Next.js",
+        "OpenAI",
+        "Speech-to-text",
+        "Structured scoring",
+        "Supabase"
+      ],
+      "metrics": [
+        {
+          "value": "5",
+          "label": "daily questions"
+        },
+        {
+          "value": "0",
+          "label": "raw audio retained"
+        },
+        {
+          "value": "9",
+          "label": "rubric dimensions"
+        }
+      ],
+      "highlights": [
+        "Backend-only OpenAI API calls so keys never touch the browser.",
+        "Daily adaptive flow from foundation to business translation, scenario, objection handling, and BDR close.",
+        "Transcript-first feedback with stronger answer, factual corrections, retry prompts, and mastery updates.",
+        "Designed for Singapore and APAC commercial fluency, not generic AI trivia."
+      ],
+      "role": "Product owner, designer, and builder.",
+      "next": "crib-stock-taker",
+      "accent": "gold"
+    },
+    {
+      "slug": "crib-stock-taker",
+      "title": "Crib Stock Taker",
+      "year": "2026",
+      "kicker": "Mobile household stock and perishables tracker",
+      "status": "Live app",
+      "summary": "A mobile-friendly household stock taking app for tracking daily necessities and food that should be consumed soon.",
+      "description": [
+        "Crib Stock Taker was built for a small household team with two admins and one helper. The helper-facing workflow uses large controls, clear item names, optional photos, and minimal settings so daily updates stay simple.",
+        "The app tracks stock items like toilet paper, detergent, rice, sauces, and cleaning supplies, plus one-off perishables like vegetables, fruit, bread, cake, and takeaway food. Attention counts show low-stock items and perishables that have reached their alert day.",
+        "Supabase powers authentication, roles, database tables, and private photo storage. The frontend is a static HTML, CSS, and JavaScript app hosted on Vercel."
+      ],
+      "tags": [
+        "Supabase",
+        "Vercel",
+        "JavaScript",
+        "Auth",
+        "Storage"
+      ],
+      "metrics": [
+        {
+          "value": "2",
+          "label": "user roles"
+        },
+        {
+          "value": "5",
+          "label": "live tables"
+        },
+        {
+          "value": "1",
+          "label": "private photo bucket"
+        }
+      ],
+      "highlights": [
+        "Admin and helper roles with different levels of control.",
+        "Batch stock updates with pending edits, save, discard, and leave-page warnings.",
+        "Perishable alerts default to two days and support optional photos and notes.",
+        "Supabase Auth profiles connect app-specific roles to real users."
+      ],
+      "role": "Solo builder for a real household workflow.",
+      "next": "openai-bdr-interviewer-buddy",
+      "accent": "teal"
+    }
+  ],
+  "workStories": [
+    {
+      "slug": "ai-research-at-docusign",
+      "title": "AI-assisted account research",
+      "eyebrow": "Docusign",
+      "year": "2024-2026",
+      "summary": "Used Gemini and Glean to compress account research, sharpen persona insights, identify buying signals, and personalize outreach.",
+      "details": [
+        "Max used AI to make pre-call and prospecting research faster and more precise. The workflow supported account planning, persona research, value-based positioning, and buying-signal discovery.",
+        "The measurable outcome from the resume: account research time fell by 55%, overall pipeline increased by 25%, and reply rates improved by 4%."
+      ],
+      "tags": [
+        "Gemini",
+        "Glean",
+        "Persona research",
+        "Buying signals",
+        "Pipeline"
+      ],
+      "metrics": [
+        {
+          "value": "55%",
+          "label": "less research time"
+        },
+        {
+          "value": "25%",
+          "label": "pipeline increase"
+        },
+        {
+          "value": "4%",
+          "label": "reply-rate lift"
+        }
+      ],
+      "highlights": [
+        "Turned research into value-based positioning instead of generic outreach.",
+        "Used AI as leverage inside a human sales process, not as a replacement for qualification.",
+        "Connected AI-assisted preparation to pipeline and reply-rate outcomes."
+      ],
+      "accent": "blue"
+    },
+    {
+      "slug": "ai-product-launch-selling",
+      "title": "Selling new AI product lines",
+      "eyebrow": "Docusign",
+      "year": "2025",
+      "summary": "First AE in Docusign Asia to sell two newly launched AI product lines within the first month, before established playbooks existed.",
+      "details": [
+        "The resume positions this as an execution story: Max sold newly launched AI product lines early, operating without mature playbooks, while applying structured discovery and deal execution.",
+        "This sits alongside one of the first major Docusign Intelligent Agreement Management platform deals at US$120k ARR, recognized internally for MEDDPICC execution, multi-threading, and executive sponsorship."
+      ],
+      "tags": [
+        "AI product lines",
+        "IAM",
+        "MEDDPICC",
+        "Multi-threading",
+        "Executive sponsorship"
+      ],
+      "metrics": [
+        {
+          "value": "2",
+          "label": "AI products sold early"
+        },
+        {
+          "value": "$120k",
+          "label": "major IAM ARR deal"
+        },
+        {
+          "value": "1st",
+          "label": "Asia AE milestone"
+        }
+      ],
+      "highlights": [
+        "Translated new AI product value into commercial conversations before playbooks were mature.",
+        "Used structured qualification to separate real opportunity from noise.",
+        "Built credibility with cross-functional execution and executive sponsorship."
+      ],
+      "accent": "red"
+    },
+    {
+      "slug": "codex-built-portfolio",
+      "title": "Building with Codex",
+      "eyebrow": "Personal AI workflow",
+      "year": "2026",
+      "summary": "Used Codex to build and ship personal tools, including this portfolio, the interview-practice app, and the household stock tracker.",
+      "details": [
+        "The local project history shows Max using Codex-style workflows to turn product specs into working apps, connect services like Supabase and Vercel, and iterate from product decisions into implementation.",
+        "For this portfolio, Codex was used to inspect source material, mirror a requested reference layout, and build a recruiter-facing site grounded in resume, portfolio, and project material."
+      ],
+      "tags": [
+        "Codex",
+        "Product specs",
+        "Supabase",
+        "Vercel",
+        "Portfolio"
+      ],
+      "metrics": [
+        {
+          "value": "3",
+          "label": "portfolio source groups"
+        },
+        {
+          "value": "2",
+          "label": "shipped app surfaces"
+        },
+        {
+          "value": "1",
+          "label": "recruiter-facing portfolio"
+        }
+      ],
+      "highlights": [
+        "Uses AI as a builder and reviewer across product, code, copy, and deployment.",
+        "Keeps AI claims grounded in resume, portfolio, and project source material.",
+        "Turns vague product ideas into usable internal tools."
+      ],
+      "accent": "violet"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Account Executive, Majors",
+      "company": "Docusign",
+      "period": "Feb 2026 - Present",
+      "bullets": [
+        "Managing a US$3 million book of business, the largest commercial territory in Docusign Asia.",
+        "Closed one new enterprise logo and built US$750k of pipeline in two months."
+      ]
+    },
+    {
+      "role": "Account Executive, Mid Market",
+      "company": "Docusign",
+      "period": "Aug 2024 - Jan 2026",
+      "bullets": [
+        "2025: 126% attainment, US$1.2 million ARR, 17 new logos, and 31% upsell rate.",
+        "Used MEDDPICC, POC criteria, and mutual success plans to improve close rates from 22% to 31% and shorten sales cycles from 6 to 5 months.",
+        "Used Gemini and Glean to reduce account research time by 55%, increase pipeline by 25%, and improve reply rates by 4%."
+      ]
+    },
+    {
+      "role": "Account Executive, SMB",
+      "company": "Docusign",
+      "period": "Feb 2023 - Jul 2024",
+      "bullets": [
+        "2024 H1: 109% attainment, US$793k ARR, 42 new logos, and 21% upsell rate.",
+        "2023: 96% attainment, US$634k ARR, and 27% upsell rate across existing Singapore customers."
+      ]
+    },
+    {
+      "role": "Business Development Lead",
+      "company": "NodeFlair",
+      "period": "Feb 2019 - Jan 2021",
+      "bullets": [
+        "First employee, 125% attainment, and 48 new logos including ByteDance, Shopee, and StashAway.",
+        "Implemented the end-to-end sales process in three months using MEDDIC, Sales Navigator, Lusha, Neverbounce, Hunter.io, and HubSpot."
+      ]
+    }
+  ]
+}

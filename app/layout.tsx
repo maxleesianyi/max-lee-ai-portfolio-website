@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { site } from "./data";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -14,19 +15,17 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Max Lee - AI Sales Portfolio",
+    default: site.metadata.title,
     template: "%s",
   },
-  description:
-    "Portfolio for Max Lee Sian Yi, a Docusign Account Executive using AI in sales workflows and personal projects.",
+  description: site.metadata.description,
   icons: {
     icon: "/favicon.svg",
     shortcut: "/favicon.svg",
   },
   openGraph: {
-    title: "Max Lee - AI Sales Portfolio",
-    description:
-      "AI-at-work stories, sales experience, and practical projects from Max Lee Sian Yi.",
+    title: site.metadata.openGraphTitle,
+    description: site.metadata.openGraphDescription,
     type: "website",
   },
 };
