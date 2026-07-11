@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { PageShell, ProjectFeature, WorkFeature } from "./components/PortfolioBlocks";
-import { experience, home, projects, site, workStories } from "./data";
+import { PageShell, ProjectFeature, SocialLinks, WorkFeature } from "./components/PortfolioBlocks";
+import { experience, home, projects, workStories } from "./data";
 
 export default function Home() {
   const { hero, sections } = home;
@@ -25,13 +25,7 @@ export default function Home() {
               </Link>
             ))}
           </div>
-          <div className="social-links social-links--hero" aria-label="Social links">
-            {site.socialLinks.map((item) => (
-              <a key={item.href} href={item.href} aria-label={item.label}>
-                <span aria-hidden="true">{item.icon}</span>
-              </a>
-            ))}
-          </div>
+          <SocialLinks className="social-links--hero" />
         </div>
         <div className="hero-side">
           <div className="hero-photo-placeholder" aria-label="Portrait placeholder">

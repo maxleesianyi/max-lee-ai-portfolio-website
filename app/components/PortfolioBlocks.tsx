@@ -17,6 +17,40 @@ function BrandMark() {
   );
 }
 
+function SocialIcon({ label }: { label: string }) {
+  const normalized = label.toLowerCase();
+
+  if (normalized === "linkedin") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.37 4.27 5.46v6.28ZM5.32 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.1 20.45H3.54V9H7.1v11.45ZM22.23 0H1.76C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.76 24h20.47c.97 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0Z" />
+      </svg>
+    );
+  }
+
+  if (normalized === "github") {
+    return (
+      <svg aria-hidden="true" viewBox="0 0 24 24">
+        <path d="M12 .3a12 12 0 0 0-3.79 23.39c.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.73.08-.73 1.21.08 1.85 1.24 1.85 1.24 1.07 1.84 2.81 1.31 3.5 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.12-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6.01 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.49 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.7.83.58A12 12 0 0 0 12 .3Z" />
+      </svg>
+    );
+  }
+
+  return <span aria-hidden="true">{label.slice(0, 2)}</span>;
+}
+
+export function SocialLinks({ className = "" }: { className?: string }) {
+  return (
+    <div className={`social-links ${className}`} aria-label="Social links">
+      {site.socialLinks.map((item) => (
+        <a key={item.href} href={item.href} aria-label={item.label}>
+          <SocialIcon label={item.label} />
+        </a>
+      ))}
+    </div>
+  );
+}
+
 export function Header() {
   return (
     <header className="site-header">
@@ -52,13 +86,7 @@ export function Footer() {
           </Link>
         ))}
         <a href={`mailto:${site.email}`}>Email</a>
-        <div className="social-links" aria-label="Social links">
-          {site.socialLinks.map((item) => (
-            <a key={item.href} href={item.href} aria-label={item.label}>
-              <span aria-hidden="true">{item.icon}</span>
-            </a>
-          ))}
-        </div>
+        <SocialLinks />
       </div>
     </footer>
   );
