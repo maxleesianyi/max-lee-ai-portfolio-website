@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { HomeExplorer } from "./components/HomeExplorer";
 import { PageShell, SocialLinks } from "./components/PortfolioBlocks";
 import { experience, home, pages, projects, workStories } from "./data";
@@ -19,13 +18,6 @@ export default function Home() {
             ))}
           </h1>
           <p>{hero.body}</p>
-          <div className="hero-actions">
-            {hero.actions.map((action) => (
-              <Link key={action.href} href={action.href}>
-                {action.label}
-              </Link>
-            ))}
-          </div>
           <SocialLinks className="social-links--hero" />
         </div>
         <div className="hero-side">

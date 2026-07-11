@@ -137,7 +137,7 @@ input {
   grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
   gap: 48px;
   align-items: start;
-  min-height: calc(100vh - 140px);
+  min-height: calc(100vh - 220px);
 }
 
 .hero-copy {
@@ -354,7 +354,7 @@ h3 {
 }
 
 .home-explorer {
-  padding-top: 42px;
+  padding-top: 18px;
 }
 
 .explorer-tabs {
@@ -397,10 +397,10 @@ h3 {
 
 .explorer-panel {
   min-height: 440px;
-  margin-top: 34px;
+  margin-top: 24px;
   border-top: 1px solid rgba(244, 239, 231, 0.1);
   border-bottom: 1px solid rgba(244, 239, 231, 0.1);
-  padding: 46px 0;
+  padding: 34px 0 46px;
   animation: explorer-reveal 280ms cubic-bezier(0.2, 0, 0, 1);
 }
 
@@ -422,7 +422,7 @@ h3 {
 
 .explorer-copy h2 {
   max-width: 780px;
-  margin-top: 18px;
+  margin-top: 0;
   font-size: clamp(2.2rem, 4.2vw, 4.1rem);
   line-height: 1;
   text-wrap: balance;
@@ -1230,7 +1230,7 @@ a:hover .browser-frame {
   }
 
   .home-explorer {
-    padding-top: 28px;
+    padding-top: 8px;
   }
 
   .explorer-tab {
@@ -1238,8 +1238,8 @@ a:hover .browser-frame {
   }
 
   .explorer-panel {
-    margin-top: 24px;
-    padding: 34px 0;
+    margin-top: 18px;
+    padding: 28px 0 34px;
   }
 
   .explorer-list article {

@@ -42,7 +42,7 @@ type Props = {
   projects: Project[];
 };
 
-const tabs: ExplorerKey[] = ["about", "aiAtWork", "projects"];
+const tabs: ExplorerKey[] = ["aiAtWork", "projects", "about"];
 
 export function HomeExplorer({
   about,
@@ -103,7 +103,6 @@ export function HomeExplorer({
         {active === "about" ? (
           <div className="explorer-about">
             <div className="explorer-copy">
-              <span className="eyebrow">{explorer.about.label}</span>
               <h2>{about.hero.headline}</h2>
               <p className="explorer-intro">{about.hero.body}</p>
               <p className="explorer-detail">{about.paragraphs[0]}</p>
@@ -124,7 +123,6 @@ export function HomeExplorer({
 
         {active === "aiAtWork" ? (
           <div className="explorer-copy">
-            <span className="eyebrow">{explorer.aiAtWork.label}</span>
             <h2>{aiAtWork.hero.headline}</h2>
             <p className="explorer-intro">{aiAtWork.hero.body}</p>
             <div className="explorer-list">
@@ -146,7 +144,6 @@ export function HomeExplorer({
 
         {active === "projects" ? (
           <div className="explorer-copy">
-            <span className="eyebrow">{explorer.projects.label}</span>
             <h2>{personalProjects.hero.headline}</h2>
             <p className="explorer-intro">{personalProjects.hero.body}</p>
             <div className="explorer-list">

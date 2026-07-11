@@ -44,17 +44,7 @@
         "Selling by day,",
         "Codex-ing by night."
       ],
-      "body": "Account Executive by profession. AI builder by curiosity. This is where I document the projects, experiments, and lessons from learning AI by building with it.",
-      "actions": [
-        {
-          "label": "AI at Work",
-          "href": "/ai-at-work"
-        },
-        {
-          "label": "Personal Projects",
-          "href": "/projects"
-        }
-      ]
+      "body": "Account Executive by profession. AI builder by curiosity. This is where I document the projects, experiments, and lessons from learning AI by building with it."
     },
     "sections": {
       "aiAtWork": {
