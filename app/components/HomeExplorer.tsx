@@ -9,6 +9,11 @@ type ExplorerKey = "about" | "aiAtWork" | "projects";
 type ExplorerCopy = {
   label: string;
   linkLabel: string;
+  title?: {
+    prefix: string;
+    accent: string;
+    suffix: string;
+  };
 };
 
 type About = {
@@ -43,6 +48,26 @@ type Props = {
 };
 
 const tabs: ExplorerKey[] = ["aiAtWork", "projects", "about"];
+
+function ExplorerHeading({
+  title,
+  fallback,
+}: {
+  title?: ExplorerCopy["title"];
+  fallback: string;
+}) {
+  if (!title) {
+    return <h2>{fallback}</h2>;
+  }
+
+  return (
+    <h2>
+      {title.prefix}
+      <span>{title.accent}</span>
+      {title.suffix}
+    </h2>
+  );
+}
 
 export function HomeExplorer({
   about,
@@ -103,7 +128,7 @@ export function HomeExplorer({
         {active === "about" ? (
           <div className="explorer-about">
             <div className="explorer-copy">
-              <h2>{about.hero.headline}</h2>
+              <ExplorerHeading title={explorer.about.title} fallback={about.hero.headline} />
               <p className="explorer-intro">{about.hero.body}</p>
               <p className="explorer-detail">{about.paragraphs[0]}</p>
               <Link className="text-link" href="/about">
@@ -123,7 +148,7 @@ export function HomeExplorer({
 
         {active === "aiAtWork" ? (
           <div className="explorer-copy">
-            <h2>{aiAtWork.hero.headline}</h2>
+            <ExplorerHeading title={explorer.aiAtWork.title} fallback={aiAtWork.hero.headline} />
             <p className="explorer-intro">{aiAtWork.hero.body}</p>
             <div className="explorer-list">
               {workStories.slice(0, 2).map((story, index) => (
@@ -144,7 +169,10 @@ export function HomeExplorer({
 
         {active === "projects" ? (
           <div className="explorer-copy">
-            <h2>{personalProjects.hero.headline}</h2>
+            <ExplorerHeading
+              title={explorer.projects.title}
+              fallback={personalProjects.hero.headline}
+            />
             <p className="explorer-intro">{personalProjects.hero.body}</p>
             <div className="explorer-list">
               {projects.slice(0, 2).map((project, index) => (

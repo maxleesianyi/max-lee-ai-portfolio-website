@@ -67,15 +67,25 @@
     "explorer": {
       "about": {
         "label": "About Me",
-        "linkLabel": "More about Max"
+        "linkLabel": "Get to know more About Me"
       },
       "aiAtWork": {
         "label": "AI at Work",
-        "linkLabel": "All AI at Work"
+        "linkLabel": "See how I use AI at Work",
+        "title": {
+          "prefix": "Leveraging ",
+          "accent": "AI at Work",
+          "suffix": ", automating workflows to achieve measurable sales outcomes."
+        }
       },
       "projects": {
         "label": "Personal Projects",
-        "linkLabel": "All Personal Projects"
+        "linkLabel": "Learn more about my Personal Projects",
+        "title": {
+          "prefix": "",
+          "accent": "Personal Projects",
+          "suffix": " built with passion, curiosity and AI"
+        }
       }
     }
   },

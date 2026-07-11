@@ -411,21 +411,25 @@ h3 {
 
 .explorer-about {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
-  gap: 72px;
+  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
+  gap: 48px;
   align-items: start;
 }
 
 .explorer-copy {
-  max-width: 790px;
+  max-width: none;
 }
 
 .explorer-copy h2 {
-  max-width: 780px;
+  max-width: 980px;
   margin-top: 0;
   font-size: clamp(2.2rem, 4.2vw, 4.1rem);
   line-height: 1;
   text-wrap: balance;
+}
+
+.explorer-copy h2 span {
+  color: var(--gold);
 }
 
 .explorer-intro,
@@ -438,11 +442,12 @@ h3 {
 }
 
 .explorer-intro {
+  max-width: 920px;
   margin-top: 26px;
 }
 
 .explorer-detail {
-  max-width: 700px;
+  max-width: 920px;
   margin-top: 18px;
 }
 
@@ -500,8 +505,33 @@ h3 {
 }
 
 .explorer-list p {
-  max-width: 740px;
+  max-width: none;
   margin-top: 9px;
+}
+
+.explorer-panel .text-link {
+  align-items: center;
+  border-color: var(--gold);
+  background: rgba(91, 189, 255, 0.2);
+  box-shadow: 0 12px 28px rgba(91, 189, 255, 0.16);
+  color: #bde8ff;
+  font-weight: 650;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.explorer-panel .text-link::after {
+  margin-left: 10px;
+  content: "->";
+}
+
+.explorer-panel .text-link:hover {
+  background: rgba(91, 189, 255, 0.3);
+  box-shadow: 0 16px 34px rgba(91, 189, 255, 0.24);
+  transform: translateY(-2px);
+}
+
+.explorer-panel .text-link:active {
+  transform: scale(0.96);
 }
 
 @keyframes explorer-reveal {
