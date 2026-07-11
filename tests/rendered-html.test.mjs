@@ -40,11 +40,14 @@ test("server-renders the portfolio from the no-code content file", async () => {
   assert.match(html, new RegExp(siteContent.site.socialLinks[0].href));
   assert.match(html, new RegExp(siteContent.site.socialLinks[1].href));
   assert.doesNotMatch(html, /promoted in 5 years at Docusign/);
-  assert.doesNotMatch(html, new RegExp(siteContent.pages.about.hero.headline));
+  assert.match(html, new RegExp(siteContent.pages.about.hero.headline));
   assert.match(html, new RegExp(siteContent.projects[0].title));
   assert.match(html, new RegExp(siteContent.workStories[0].title));
   assert.match(html, new RegExp(siteContent.experience[0].role));
   assert.doesNotMatch(html, /Ask Max|Ask Max AI/i);
+  assert.match(html, /About Me/);
+  assert.match(html, /AI at Work/);
+  assert.match(html, /Personal Projects/);
 });
 
 test("server-renders project detail pages from editable project content", async () => {

@@ -73,6 +73,20 @@
         "eyebrow": "Experience",
         "headline": "Commercial path"
       }
+    },
+    "explorer": {
+      "about": {
+        "label": "About Me",
+        "linkLabel": "More about Max"
+      },
+      "aiAtWork": {
+        "label": "AI at Work",
+        "linkLabel": "All AI at Work"
+      },
+      "projects": {
+        "label": "Personal Projects",
+        "linkLabel": "All Personal Projects"
+      }
     }
   },
   "pages": {

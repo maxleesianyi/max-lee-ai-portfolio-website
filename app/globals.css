@@ -353,6 +353,169 @@ h3 {
   padding-top: 42px;
 }
 
+.home-explorer {
+  padding-top: 42px;
+}
+
+.explorer-tabs {
+  display: inline-flex;
+  max-width: 100%;
+  overflow-x: auto;
+  border-bottom: 1px solid rgba(244, 239, 231, 0.14);
+}
+
+.explorer-tab {
+  min-height: 46px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  padding: 0 20px;
+  color: var(--muted);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.explorer-tab:hover {
+  background: rgba(91, 189, 255, 0.08);
+  color: #bde8ff;
+}
+
+.explorer-tab[aria-selected="true"] {
+  border-bottom-color: var(--gold);
+  color: var(--gold);
+}
+
+.explorer-tab:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+
+.explorer-panel {
+  min-height: 440px;
+  margin-top: 34px;
+  border-top: 1px solid rgba(244, 239, 231, 0.1);
+  border-bottom: 1px solid rgba(244, 239, 231, 0.1);
+  padding: 46px 0;
+  animation: explorer-reveal 280ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.explorer-panel:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
+}
+
+.explorer-about {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
+  gap: 72px;
+  align-items: start;
+}
+
+.explorer-copy {
+  max-width: 790px;
+}
+
+.explorer-copy h2 {
+  max-width: 780px;
+  margin-top: 18px;
+  font-size: clamp(2.2rem, 4.2vw, 4.1rem);
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.explorer-intro,
+.explorer-detail,
+.explorer-list p {
+  color: var(--dim);
+  font-size: 1.04rem;
+  line-height: 1.75;
+  text-wrap: pretty;
+}
+
+.explorer-intro {
+  margin-top: 26px;
+}
+
+.explorer-detail {
+  max-width: 700px;
+  margin-top: 18px;
+}
+
+.explorer-facts {
+  display: grid;
+  gap: 0;
+  margin: 0;
+  border-top: 1px solid rgba(244, 239, 231, 0.1);
+}
+
+.explorer-facts div {
+  display: grid;
+  gap: 8px;
+  border-bottom: 1px solid rgba(244, 239, 231, 0.1);
+  padding: 19px 0;
+}
+
+.explorer-facts dt {
+  color: var(--muted);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+}
+
+.explorer-facts dd {
+  margin: 0;
+  color: var(--bone);
+  font-size: 1.06rem;
+  line-height: 1.45;
+}
+
+.explorer-list {
+  display: grid;
+  margin-top: 38px;
+  border-top: 1px solid rgba(244, 239, 231, 0.1);
+}
+
+.explorer-list article {
+  display: grid;
+  grid-template-columns: 52px minmax(0, 1fr);
+  gap: 18px;
+  border-bottom: 1px solid rgba(244, 239, 231, 0.1);
+  padding: 24px 0;
+}
+
+.explorer-list article > span {
+  padding-top: 0.24rem;
+  color: var(--gold);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.76rem;
+}
+
+.explorer-list h3 {
+  font-size: 1.35rem;
+}
+
+.explorer-list p {
+  max-width: 740px;
+  margin-top: 9px;
+}
+
+@keyframes explorer-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .feature-stack {
   display: grid;
   gap: 112px;
@@ -992,6 +1155,7 @@ a:hover .browser-frame {
   .feature-row,
   .feature-row--reverse,
   .about-section,
+  .explorer-about,
   .timeline article,
   .case-body,
   .footer {
@@ -1054,11 +1218,33 @@ a:hover .browser-frame {
   .about-lists {
     grid-template-columns: 1fr;
   }
+
+  .explorer-panel {
+    min-height: 0;
+  }
 }
 
 @media (max-width: 560px) {
   .section-pad {
     padding: 70px 18px;
+  }
+
+  .home-explorer {
+    padding-top: 28px;
+  }
+
+  .explorer-tab {
+    padding: 0 15px;
+  }
+
+  .explorer-panel {
+    margin-top: 24px;
+    padding: 34px 0;
+  }
+
+  .explorer-list article {
+    grid-template-columns: 38px minmax(0, 1fr);
+    gap: 12px;
   }
 
   .subpage-hero,
@@ -1086,5 +1272,11 @@ a:hover .browser-frame {
   .about-facts div {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .explorer-panel {
+    animation: none;
   }
 }

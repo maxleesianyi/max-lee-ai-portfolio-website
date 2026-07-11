@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { PageShell, ProjectFeature, SocialLinks, WorkFeature } from "./components/PortfolioBlocks";
-import { experience, home, projects, workStories } from "./data";
+import { HomeExplorer } from "./components/HomeExplorer";
+import { PageShell, SocialLinks } from "./components/PortfolioBlocks";
+import { experience, home, pages, projects, workStories } from "./data";
 
 export default function Home() {
   const { hero, sections } = home;
@@ -37,35 +38,14 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-pad home-showcase home-showcase--first">
-        <div className="section-heading">
-          <h2>
-            <span>{sections.aiAtWork.accent}</span>{" "}
-            {sections.aiAtWork.headline}
-          </h2>
-          <Link href={sections.aiAtWork.href}>{sections.aiAtWork.linkLabel}</Link>
-        </div>
-        <div className="feature-stack">
-          {workStories.slice(0, 2).map((story, index) => (
-            <WorkFeature key={story.slug} story={story} index={index} />
-          ))}
-        </div>
-      </section>
-
-      <section className="section-pad home-showcase">
-        <div className="section-heading">
-          <h2>
-            <span>{sections.projects.accent}</span>{" "}
-            {sections.projects.headline}
-          </h2>
-          <Link href={sections.projects.href}>{sections.projects.linkLabel}</Link>
-        </div>
-        <div className="feature-stack">
-          {projects.map((project, index) => (
-            <ProjectFeature key={project.slug} project={project} index={index} />
-          ))}
-        </div>
-      </section>
+      <HomeExplorer
+        about={pages.about}
+        aiAtWork={pages.aiAtWork}
+        personalProjects={pages.projects}
+        explorer={home.explorer}
+        workStories={workStories}
+        projects={projects}
+      />
 
       <section className="section-pad experience-section">
         <div className="section-heading">

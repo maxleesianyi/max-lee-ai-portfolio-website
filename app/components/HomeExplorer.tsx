@@ -1,0 +1,171 @@
+"use client";
+
+import Link from "next/link";
+import { KeyboardEvent, useState } from "react";
+import type { Project, WorkStory } from "../data";
+
+type ExplorerKey = "about" | "aiAtWork" | "projects";
+
+type ExplorerCopy = {
+  label: string;
+  linkLabel: string;
+};
+
+type About = {
+  hero: {
+    headline: string;
+    body: string;
+  };
+  paragraphs: string[];
+  facts: Array<{
+    label: string;
+    value: string;
+  }>;
+};
+
+type Props = {
+  about: About;
+  aiAtWork: {
+    hero: {
+      headline: string;
+      body: string;
+    };
+  };
+  personalProjects: {
+    hero: {
+      headline: string;
+      body: string;
+    };
+  };
+  explorer: Record<ExplorerKey, ExplorerCopy>;
+  workStories: WorkStory[];
+  projects: Project[];
+};
+
+const tabs: ExplorerKey[] = ["about", "aiAtWork", "projects"];
+
+export function HomeExplorer({
+  about,
+  aiAtWork,
+  personalProjects,
+  explorer,
+  workStories,
+  projects,
+}: Props) {
+  const [active, setActive] = useState<ExplorerKey>("about");
+
+  function handleTabKeyDown(event: KeyboardEvent<HTMLButtonElement>, tab: ExplorerKey) {
+    const currentIndex = tabs.indexOf(tab);
+    let nextIndex = currentIndex;
+
+    if (event.key === "ArrowRight") nextIndex = (currentIndex + 1) % tabs.length;
+    if (event.key === "ArrowLeft") nextIndex = (currentIndex - 1 + tabs.length) % tabs.length;
+    if (event.key === "Home") nextIndex = 0;
+    if (event.key === "End") nextIndex = tabs.length - 1;
+
+    if (nextIndex !== currentIndex || event.key === "Home" || event.key === "End") {
+      event.preventDefault();
+      const nextTab = tabs[nextIndex];
+      setActive(nextTab);
+      document.getElementById(`explorer-tab-${nextTab}`)?.focus();
+    }
+  }
+
+  return (
+    <section className="home-explorer section-pad" aria-label="Explore Max Lee's work">
+      <div className="explorer-tabs" role="tablist" aria-label="Portfolio sections">
+        {tabs.map((tab) => (
+          <button
+            key={tab}
+            id={`explorer-tab-${tab}`}
+            className="explorer-tab"
+            type="button"
+            role="tab"
+            aria-selected={active === tab}
+            aria-controls={`explorer-panel-${tab}`}
+            tabIndex={active === tab ? 0 : -1}
+            onClick={() => setActive(tab)}
+            onKeyDown={(event) => handleTabKeyDown(event, tab)}
+          >
+            {explorer[tab].label}
+          </button>
+        ))}
+      </div>
+
+      <div
+        key={active}
+        id={`explorer-panel-${active}`}
+        className="explorer-panel"
+        role="tabpanel"
+        aria-labelledby={`explorer-tab-${active}`}
+        tabIndex={0}
+      >
+        {active === "about" ? (
+          <div className="explorer-about">
+            <div className="explorer-copy">
+              <span className="eyebrow">{explorer.about.label}</span>
+              <h2>{about.hero.headline}</h2>
+              <p className="explorer-intro">{about.hero.body}</p>
+              <p className="explorer-detail">{about.paragraphs[0]}</p>
+              <Link className="text-link" href="/about">
+                {explorer.about.linkLabel}
+              </Link>
+            </div>
+            <dl className="explorer-facts">
+              {about.facts.map((fact) => (
+                <div key={fact.label}>
+                  <dt>{fact.label}</dt>
+                  <dd>{fact.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        ) : null}
+
+        {active === "aiAtWork" ? (
+          <div className="explorer-copy">
+            <span className="eyebrow">{explorer.aiAtWork.label}</span>
+            <h2>{aiAtWork.hero.headline}</h2>
+            <p className="explorer-intro">{aiAtWork.hero.body}</p>
+            <div className="explorer-list">
+              {workStories.slice(0, 2).map((story, index) => (
+                <article key={story.slug}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>{story.title}</h3>
+                    <p>{story.summary}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <Link className="text-link" href="/ai-at-work">
+              {explorer.aiAtWork.linkLabel}
+            </Link>
+          </div>
+        ) : null}
+
+        {active === "projects" ? (
+          <div className="explorer-copy">
+            <span className="eyebrow">{explorer.projects.label}</span>
+            <h2>{personalProjects.hero.headline}</h2>
+            <p className="explorer-intro">{personalProjects.hero.body}</p>
+            <div className="explorer-list">
+              {projects.slice(0, 2).map((project, index) => (
+                <article key={project.slug}>
+                  <span>{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>{project.title}</h3>
+                    <p>{project.summary}</p>
+                  </div>
+                </article>
+              ))}
+            </div>
+            <Link className="text-link" href="/projects">
+              {explorer.projects.linkLabel}
+            </Link>
+          </div>
+        ) : null}
+      </div>
+    </section>
+  );
+}
