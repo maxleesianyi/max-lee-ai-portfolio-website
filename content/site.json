@@ -1,7 +1,7 @@
 {
   "site": {
     "brandName": "max.lee",
-    "footerText": "Account Executive in Singapore, building with AI at work and after hours.",
+    "footerText": "Designed and built with OpenAI Sites.",
     "email": "leesianyi@gmail.com",
     "metadata": {
       "title": "Max Lee - AI Sales Portfolio",
@@ -23,8 +23,8 @@
   "home": {
     "hero": {
       "eyebrow": "Account Executive - Singapore",
-      "headline": "I sell complex software, and I use AI to make the work sharper.",
-      "body": "I am Max Lee Sian Yi, a Docusign AE promoted four times in five years. I pair MEDDPICC discipline with practical AI workflows, from account research at work to private tools I build after hours.",
+      "headline": "Selling by day, Codex-ing by night.",
+      "body": "Account Executive by profession. AI builder by curiosity. This is where I document the projects, experiments, and lessons from learning AI by building with it.",
       "actions": [
         {
           "label": "AI at Work",
@@ -67,6 +67,44 @@
         "eyebrow": "Experience",
         "headline": "Commercial path"
       }
+    },
+    "about": {
+      "eyebrow": "About Me",
+      "headline": "I am learning AI the only way that really sticks: by building things I actually use.",
+      "intro": "I am an Account Executive in Singapore who spends the day selling complex software and the night turning AI ideas into working tools. This portfolio is where those two sides meet: commercial discipline, practical curiosity, and a bias toward shipping.",
+      "paragraphs": [
+        "At work, I use AI to make sales preparation sharper: researching accounts, understanding personas, finding buying signals, and turning messy information into a clearer point of view before customer conversations.",
+        "Outside work, I build small products around real problems in my own life, from interview-practice tools to household operations. I care less about demos that sound impressive and more about systems that survive real use."
+      ],
+      "facts": [
+        {
+          "label": "Based in",
+          "value": "Singapore"
+        },
+        {
+          "label": "Currently",
+          "value": "Account Executive at Docusign"
+        },
+        {
+          "label": "Focus",
+          "value": "AI workflows, sales execution, practical apps"
+        }
+      ],
+      "now": [
+        "Building personal AI tools with Codex",
+        "Applying AI to account research and sales execution",
+        "Documenting what I learn by shipping usable projects"
+      ],
+      "tools": [
+        "Codex",
+        "OpenAI",
+        "Next.js",
+        "Supabase",
+        "Vercel",
+        "Gemini",
+        "Glean",
+        "MEDDPICC"
+      ]
     }
   },
   "pages": {

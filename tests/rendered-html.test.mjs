@@ -34,6 +34,7 @@ test("server-renders the portfolio from the no-code content file", async () => {
 
   const html = await response.text();
   assert.match(html, new RegExp(siteContent.home.hero.headline));
+  assert.match(html, new RegExp(siteContent.home.about.headline));
   assert.match(html, new RegExp(siteContent.projects[0].title));
   assert.match(html, new RegExp(siteContent.workStories[0].title));
   assert.match(html, new RegExp(siteContent.experience[0].role));
