@@ -18,6 +18,10 @@
     {
       "label": "Projects",
       "href": "/projects"
+    },
+    {
+      "label": "About Me",
+      "href": "/about"
     }
   ],
   "home": {
@@ -67,11 +71,41 @@
         "eyebrow": "Experience",
         "headline": "Commercial path"
       }
+    }
+  },
+  "pages": {
+    "aiAtWork": {
+      "metadata": {
+        "title": "AI at Work - Max Lee",
+        "description": "How Max Lee uses AI in sales workflows and personal building."
+      },
+      "hero": {
+        "eyebrow": "AI at Work",
+        "headline": "AI as leverage inside real commercial work.",
+        "body": "These are the places where Max has used AI to reduce research time, sharpen sales execution, learn faster, and build useful internal tools."
+      }
+    },
+    "projects": {
+      "metadata": {
+        "title": "Projects - Max Lee",
+        "description": "AI and workflow projects built by Max Lee."
+      },
+      "hero": {
+        "eyebrow": "Projects",
+        "headline": "Tools built end to end around real workflows.",
+        "body": "A small set of focused builds: private AI practice, household operations, and the systems needed to make them usable."
+      }
     },
     "about": {
-      "eyebrow": "About Me",
-      "headline": "I am learning AI the only way that really sticks: by building things I actually use.",
-      "intro": "I am an Account Executive in Singapore who spends the day selling complex software and the night turning AI ideas into working tools. This portfolio is where those two sides meet: commercial discipline, practical curiosity, and a bias toward shipping.",
+      "metadata": {
+        "title": "About Me - Max Lee",
+        "description": "About Max Lee, an Account Executive in Singapore learning AI by building practical tools."
+      },
+      "hero": {
+        "eyebrow": "About Me",
+        "headline": "I am learning AI the only way that really sticks: by building things I actually use.",
+        "body": "I am an Account Executive in Singapore who spends the day selling complex software and the night turning AI ideas into working tools. This portfolio is where those two sides meet: commercial discipline, practical curiosity, and a bias toward shipping."
+      },
       "paragraphs": [
         "At work, I use AI to make sales preparation sharper: researching accounts, understanding personas, finding buying signals, and turning messy information into a clearer point of view before customer conversations.",
         "Outside work, I build small products around real problems in my own life, from interview-practice tools to household operations. I care less about demos that sound impressive and more about systems that survive real use."
@@ -105,30 +139,6 @@
         "Glean",
         "MEDDPICC"
       ]
-    }
-  },
-  "pages": {
-    "aiAtWork": {
-      "metadata": {
-        "title": "AI at Work - Max Lee",
-        "description": "How Max Lee uses AI in sales workflows and personal building."
-      },
-      "hero": {
-        "eyebrow": "AI at Work",
-        "headline": "AI as leverage inside real commercial work.",
-        "body": "These are the places where Max has used AI to reduce research time, sharpen sales execution, learn faster, and build useful internal tools."
-      }
-    },
-    "projects": {
-      "metadata": {
-        "title": "Projects - Max Lee",
-        "description": "AI and workflow projects built by Max Lee."
-      },
-      "hero": {
-        "eyebrow": "Projects",
-        "headline": "Tools built end to end around real workflows.",
-        "body": "A small set of focused builds: private AI practice, household operations, and the systems needed to make them usable."
-      }
     }
   },
   "resumeFacts": [

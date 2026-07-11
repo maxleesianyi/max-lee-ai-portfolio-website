@@ -34,7 +34,7 @@ test("server-renders the portfolio from the no-code content file", async () => {
 
   const html = await response.text();
   assert.match(html, new RegExp(siteContent.home.hero.headline));
-  assert.match(html, new RegExp(siteContent.home.about.headline));
+  assert.doesNotMatch(html, new RegExp(siteContent.pages.about.hero.headline));
   assert.match(html, new RegExp(siteContent.projects[0].title));
   assert.match(html, new RegExp(siteContent.workStories[0].title));
   assert.match(html, new RegExp(siteContent.experience[0].role));
@@ -53,6 +53,16 @@ test("server-renders project detail pages from editable project content", async 
   assert.match(html, /All projects/);
 });
 
+test("server-renders the about page from editable content", async () => {
+  const response = await render("/about");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, new RegExp(siteContent.pages.about.hero.headline));
+  assert.match(html, new RegExp(siteContent.pages.about.facts[0].value));
+  assert.match(html, /Tools I reach for/);
+});
+
 test("keeps no-code content structurally complete", async () => {
   const slugs = new Set(siteContent.projects.map((project) => project.slug));
 
@@ -61,6 +71,7 @@ test("keeps no-code content structurally complete", async () => {
   assert.ok(siteContent.workStories.length >= 1);
   assert.ok(siteContent.experience.length >= 1);
   assert.ok(siteContent.navigation.every((item) => item.label && item.href));
+  assert.ok(siteContent.navigation.some((item) => item.href === "/about"));
   assert.ok(siteContent.projects.every((project) => project.title && project.summary));
   assert.ok(siteContent.projects.every((project) => project.description.length >= 1));
 });

@@ -38,53 +38,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="about-section section-pad">
-        <div className="about-visual">
-          <div className="about-photo-placeholder" aria-label="About portrait placeholder">
-            <div>
-              <span>Portrait</span>
-              <strong>Replace with your photo</strong>
-            </div>
-          </div>
-          <dl className="about-facts">
-            {home.about.facts.map((fact) => (
-              <div key={fact.label}>
-                <dt>{fact.label}</dt>
-                <dd>{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-        <div className="about-copy">
-          <span className="eyebrow">{home.about.eyebrow}</span>
-          <h2>{home.about.headline}</h2>
-          <p className="about-intro">{home.about.intro}</p>
-          <div className="about-narrative">
-            {home.about.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-          <div className="about-lists">
-            <div>
-              <h3>Now</h3>
-              <ul>
-                {home.about.now.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3>Tools I reach for</h3>
-              <ul className="tag-list tag-list--solid">
-                {home.about.tools.map((tool) => (
-                  <li key={tool}>{tool}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="section-pad">
         <div className="section-heading">
           <span className="eyebrow">{sections.aiAtWork.eyebrow}</span>

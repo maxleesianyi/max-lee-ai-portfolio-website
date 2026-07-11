@@ -5,7 +5,7 @@ Edit `content/site.json` when you want to update the website without touching co
 ## What You Can Change
 
 - Homepage hero copy and proof points
-- About Me section
+- About Me page
 - AI at Work stories
 - Project titles, summaries, case study text, metrics, tags, and highlights
 - Work experience at the bottom of the homepage

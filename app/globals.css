@@ -118,7 +118,7 @@ input {
   display: grid;
   grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.65fr);
   gap: 56px;
-  align-items: center;
+  align-items: start;
   min-height: calc(100vh - 68px);
 }
 
@@ -240,6 +240,7 @@ h3 {
 .hero-side {
   display: grid;
   gap: 18px;
+  padding-top: 40px;
 }
 
 .hero-photo-placeholder,
@@ -361,6 +362,11 @@ h3 {
   border-top: 1px solid rgba(244, 239, 231, 0.08);
 }
 
+.about-page {
+  padding-top: 128px;
+  border-top: 0;
+}
+
 .about-visual {
   display: grid;
   gap: 20px;
@@ -404,6 +410,12 @@ h3 {
   margin-top: 18px;
   font-size: clamp(2.4rem, 5.2vw, 5.4rem);
   line-height: 0.98;
+}
+
+.about-copy h1 {
+  max-width: 860px;
+  font-size: clamp(3rem, 7vw, 6rem);
+  line-height: 0.96;
 }
 
 .about-intro,
@@ -948,6 +960,10 @@ a:hover .browser-frame {
     gap: 44px;
     min-height: auto;
     padding-top: 72px;
+  }
+
+  .hero-side {
+    padding-top: 0;
   }
 
   .hero-copy h1 {
