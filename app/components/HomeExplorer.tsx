@@ -22,10 +22,6 @@ type About = {
     body: string;
   };
   paragraphs: string[];
-  facts: Array<{
-    label: string;
-    value: string;
-  }>;
 };
 
 type Props = {
@@ -135,14 +131,6 @@ export function HomeExplorer({
                 {explorer.about.linkLabel}
               </Link>
             </div>
-            <dl className="explorer-facts">
-              {about.facts.map((fact) => (
-                <div key={fact.label}>
-                  <dt>{fact.label}</dt>
-                  <dd>{fact.value}</dd>
-                </div>
-              ))}
-            </dl>
           </div>
         ) : null}
 

@@ -354,6 +354,7 @@ h3 {
 }
 
 .home-explorer {
+  margin-top: -94px;
   padding-top: 18px;
 }
 
@@ -410,10 +411,7 @@ h3 {
 }
 
 .explorer-about {
-  display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);
-  gap: 48px;
-  align-items: start;
+  display: block;
 }
 
 .explorer-copy {
@@ -421,9 +419,9 @@ h3 {
 }
 
 .explorer-copy h2 {
-  max-width: 980px;
+  max-width: 100%;
   margin-top: 0;
-  font-size: clamp(2.2rem, 4.2vw, 4.1rem);
+  font-size: clamp(2.45rem, 5.2vw, 5.2rem);
   line-height: 1;
   text-wrap: balance;
 }
@@ -449,34 +447,6 @@ h3 {
 .explorer-detail {
   max-width: 920px;
   margin-top: 18px;
-}
-
-.explorer-facts {
-  display: grid;
-  gap: 0;
-  margin: 0;
-  border-top: 1px solid rgba(244, 239, 231, 0.1);
-}
-
-.explorer-facts div {
-  display: grid;
-  gap: 8px;
-  border-bottom: 1px solid rgba(244, 239, 231, 0.1);
-  padding: 19px 0;
-}
-
-.explorer-facts dt {
-  color: var(--muted);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.72rem;
-  text-transform: uppercase;
-}
-
-.explorer-facts dd {
-  margin: 0;
-  color: var(--bone);
-  font-size: 1.06rem;
-  line-height: 1.45;
 }
 
 .explorer-list {
@@ -517,11 +487,6 @@ h3 {
   color: #bde8ff;
   font-weight: 650;
   transition: border-color 180ms ease, color 180ms ease, background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-}
-
-.explorer-panel .text-link::after {
-  margin-left: 10px;
-  content: "->";
 }
 
 .explorer-panel .text-link:hover {
@@ -1185,7 +1150,6 @@ a:hover .browser-frame {
   .feature-row,
   .feature-row--reverse,
   .about-section,
-  .explorer-about,
   .timeline article,
   .case-body,
   .footer {
@@ -1251,6 +1215,10 @@ a:hover .browser-frame {
 
   .explorer-panel {
     min-height: 0;
+  }
+
+  .home-explorer {
+    margin-top: 0;
   }
 }
 
