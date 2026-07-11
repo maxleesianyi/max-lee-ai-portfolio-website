@@ -32,17 +32,15 @@ body {
   min-height: 100vh;
   margin: 0;
   background:
-    radial-gradient(circle at 8% 12%, rgba(244, 239, 231, 0.42) 0 0.8px, transparent 1.4px),
-    radial-gradient(circle at 19% 68%, rgba(189, 232, 255, 0.28) 0 0.7px, transparent 1.3px),
-    radial-gradient(circle at 31% 23%, rgba(244, 239, 231, 0.24) 0 0.6px, transparent 1.2px),
-    radial-gradient(circle at 43% 84%, rgba(244, 239, 231, 0.3) 0 0.8px, transparent 1.4px),
-    radial-gradient(circle at 56% 16%, rgba(189, 232, 255, 0.24) 0 0.6px, transparent 1.2px),
-    radial-gradient(circle at 67% 57%, rgba(244, 239, 231, 0.34) 0 0.7px, transparent 1.3px),
-    radial-gradient(circle at 78% 31%, rgba(244, 239, 231, 0.22) 0 0.6px, transparent 1.2px),
-    radial-gradient(circle at 91% 72%, rgba(189, 232, 255, 0.3) 0 0.8px, transparent 1.4px),
-    radial-gradient(circle at 73% 91%, rgba(244, 239, 231, 0.22) 0 0.6px, transparent 1.2px),
-    radial-gradient(circle at 4% 44%, rgba(244, 239, 231, 0.18) 0 0.6px, transparent 1.2px),
-    radial-gradient(ellipse at 52% 110%, rgba(23, 67, 96, 0.22), transparent 46rem),
+    radial-gradient(circle at 9% 14%, rgba(244, 239, 231, 0.92) 0 0.75px, rgba(244, 239, 231, 0.18) 1.1px, transparent 2.2px),
+    radial-gradient(circle at 23% 72%, rgba(189, 232, 255, 0.82) 0 0.7px, rgba(189, 232, 255, 0.16) 1.05px, transparent 2px),
+    radial-gradient(circle at 37% 18%, rgba(244, 239, 231, 0.74) 0 0.6px, rgba(244, 239, 231, 0.12) 0.95px, transparent 1.8px),
+    radial-gradient(circle at 54% 82%, rgba(244, 239, 231, 0.86) 0 0.7px, rgba(244, 239, 231, 0.16) 1.05px, transparent 2px),
+    radial-gradient(circle at 68% 24%, rgba(189, 232, 255, 0.76) 0 0.6px, rgba(189, 232, 255, 0.14) 0.95px, transparent 1.8px),
+    radial-gradient(circle at 84% 49%, rgba(244, 239, 231, 0.9) 0 0.75px, rgba(244, 239, 231, 0.18) 1.1px, transparent 2.2px),
+    radial-gradient(circle at 94% 15%, rgba(189, 232, 255, 0.64) 0 0.5px, rgba(189, 232, 255, 0.1) 0.85px, transparent 1.6px),
+    radial-gradient(circle at 74% 91%, rgba(244, 239, 231, 0.68) 0 0.55px, rgba(244, 239, 231, 0.1) 0.9px, transparent 1.7px),
+    radial-gradient(ellipse at 52% 110%, rgba(23, 67, 96, 0.18), transparent 46rem),
     linear-gradient(180deg, #050607 0%, #090d12 54%, #050607 100%);
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -116,8 +114,16 @@ input {
 }
 
 .nav-tabs a:hover {
-  background: rgba(244, 239, 231, 0.08);
-  color: var(--bone);
+  background: rgba(91, 189, 255, 0.16);
+  color: #bde8ff;
+}
+
+.nav-tabs a:focus-visible,
+.hero-actions a:focus-visible,
+.section-heading a:focus-visible,
+.text-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
 }
 
 .section-pad {
@@ -233,12 +239,6 @@ h3 {
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.82rem;
   transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
-}
-
-.hero-actions a:first-child,
-.text-link {
-  background: rgba(91, 189, 255, 0.12);
-  color: #bde8ff;
 }
 
 .hero-actions a:hover,
