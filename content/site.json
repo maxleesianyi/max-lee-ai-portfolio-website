@@ -28,7 +28,7 @@
       "href": "/ai-at-work"
     },
     {
-      "label": "Projects",
+      "label": "Personal Projects",
       "href": "/projects"
     },
     {
@@ -51,22 +51,22 @@
           "href": "/ai-at-work"
         },
         {
-          "label": "Projects",
+          "label": "Personal Projects",
           "href": "/projects"
         }
       ]
     },
     "sections": {
       "aiAtWork": {
-        "eyebrow": "AI at work",
-        "headline": "Practical AI workflows tied to measurable sales outcomes.",
+        "accent": "Using AI at work,",
+        "headline": "with practical workflows tied to measurable sales outcomes.",
         "linkLabel": "All AI at Work",
         "href": "/ai-at-work"
       },
       "projects": {
-        "eyebrow": "Projects",
-        "headline": "Tools built around real workflows, not portfolio filler.",
-        "linkLabel": "All Projects",
+        "accent": "Personal Projects",
+        "headline": "built with love and AI.",
+        "linkLabel": "All Personal Projects",
         "href": "/projects"
       },
       "experience": {
@@ -89,11 +89,11 @@
     },
     "projects": {
       "metadata": {
-        "title": "Projects - Max Lee",
+        "title": "Personal Projects - Max Lee",
         "description": "AI and workflow projects built by Max Lee."
       },
       "hero": {
-        "eyebrow": "Projects",
+        "eyebrow": "Personal Projects",
         "headline": "Tools built end to end around real workflows.",
         "body": "A small set of focused builds: private AI practice, household operations, and the systems needed to make them usable."
       }

@@ -45,7 +45,7 @@ export default async function ProjectDetailPage({ params }: Props) {
     <PageShell>
       <article className="case-study section-pad">
         <Link className="back-link" href="/projects">
-          All projects
+          All Personal Projects
         </Link>
         <div className="case-meta">
           <span>{project.year}</span>
@@ -85,7 +85,7 @@ export default async function ProjectDetailPage({ params }: Props) {
       {nextProject ? (
         <section className="next-project section-pad">
           <Link href={`/projects/${nextProject.slug}`}>
-            <span>Next project</span>
+            <span>Next personal project</span>
             <strong>{nextProject.title}</strong>
           </Link>
         </section>

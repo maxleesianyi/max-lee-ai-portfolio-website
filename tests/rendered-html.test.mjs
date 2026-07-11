@@ -56,7 +56,7 @@ test("server-renders project detail pages from editable project content", async 
   assert.match(html, new RegExp(project.title));
   assert.match(html, new RegExp(project.summary));
   assert.match(html, new RegExp(project.highlights[0]));
-  assert.match(html, /All projects/);
+  assert.match(html, /All Personal Projects/);
 });
 
 test("server-renders the about page from editable content", async () => {

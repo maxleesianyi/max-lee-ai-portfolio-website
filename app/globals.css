@@ -137,7 +137,7 @@ input {
   grid-template-columns: minmax(0, 1fr) minmax(280px, 340px);
   gap: 48px;
   align-items: start;
-  min-height: calc(100vh - 68px);
+  min-height: calc(100vh - 140px);
 }
 
 .hero-copy {
@@ -343,6 +343,14 @@ h3 {
 .section-heading h2 {
   max-width: 760px;
   margin-top: 18px;
+}
+
+.section-heading h2 span {
+  color: var(--gold);
+}
+
+.home-showcase--first {
+  padding-top: 42px;
 }
 
 .feature-stack {

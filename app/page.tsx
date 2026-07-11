@@ -37,10 +37,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-pad">
+      <section className="section-pad home-showcase home-showcase--first">
         <div className="section-heading">
-          <span className="eyebrow">{sections.aiAtWork.eyebrow}</span>
-          <h2>{sections.aiAtWork.headline}</h2>
+          <h2>
+            <span>{sections.aiAtWork.accent}</span>{" "}
+            {sections.aiAtWork.headline}
+          </h2>
           <Link href={sections.aiAtWork.href}>{sections.aiAtWork.linkLabel}</Link>
         </div>
         <div className="feature-stack">
@@ -50,10 +52,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-pad">
+      <section className="section-pad home-showcase">
         <div className="section-heading">
-          <span className="eyebrow">{sections.projects.eyebrow}</span>
-          <h2>{sections.projects.headline}</h2>
+          <h2>
+            <span>{sections.projects.accent}</span>{" "}
+            {sections.projects.headline}
+          </h2>
           <Link href={sections.projects.href}>{sections.projects.linkLabel}</Link>
         </div>
         <div className="feature-stack">
