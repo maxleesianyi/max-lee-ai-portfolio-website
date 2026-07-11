@@ -40,7 +40,9 @@ test("server-renders the portfolio from the no-code content file", async () => {
   assert.match(html, new RegExp(siteContent.site.socialLinks[0].href));
   assert.match(html, new RegExp(siteContent.site.socialLinks[1].href));
   assert.doesNotMatch(html, /promoted in 5 years at Docusign/);
-  assert.match(html, new RegExp(siteContent.pages.about.hero.headline));
+  for (const part of siteContent.pages.about.hero.headlineParts) {
+    assert.match(html, new RegExp(part.text));
+  }
   assert.match(html, new RegExp(siteContent.projects[0].title));
   assert.match(html, new RegExp(siteContent.workStories[0].title));
   assert.match(html, new RegExp(siteContent.experience[0].role));
@@ -67,7 +69,9 @@ test("server-renders the about page from editable content", async () => {
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, new RegExp(siteContent.pages.about.hero.headline));
+  for (const part of siteContent.pages.about.hero.headlineParts) {
+    assert.match(html, new RegExp(part.text));
+  }
   assert.match(html, new RegExp(siteContent.pages.about.facts[0].value));
   assert.match(html, /Tools I reach for/);
 });

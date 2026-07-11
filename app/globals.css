@@ -255,7 +255,6 @@ h3 {
   padding-top: 40px;
 }
 
-.hero-photo-placeholder,
 .about-photo-placeholder {
   position: relative;
   overflow: hidden;
@@ -268,12 +267,6 @@ h3 {
   box-shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
 }
 
-.hero-photo-placeholder {
-  aspect-ratio: 4 / 5;
-  min-height: 320px;
-}
-
-.hero-photo-placeholder::before,
 .about-photo-placeholder::before {
   position: absolute;
   right: 18%;
@@ -285,7 +278,6 @@ h3 {
   content: "";
 }
 
-.hero-photo-placeholder::after,
 .about-photo-placeholder::after {
   position: absolute;
   right: 8%;
@@ -297,7 +289,6 @@ h3 {
   content: "";
 }
 
-.hero-photo-placeholder div,
 .about-photo-placeholder div {
   position: absolute;
   right: 22px;
@@ -308,7 +299,6 @@ h3 {
   gap: 7px;
 }
 
-.hero-photo-placeholder span,
 .about-photo-placeholder span {
   color: var(--muted);
   font-family: var(--font-geist-mono), monospace;
@@ -317,11 +307,122 @@ h3 {
   text-transform: uppercase;
 }
 
-.hero-photo-placeholder strong,
 .about-photo-placeholder strong {
   color: var(--bone);
   font-size: 1.15rem;
   font-weight: 640;
+}
+
+.hero-photo-stack {
+  position: relative;
+  min-height: 320px;
+  aspect-ratio: 4 / 5;
+  isolation: isolate;
+}
+
+.hero-photo-card,
+.hero-photo-phase {
+  position: absolute;
+  inset: 0 14px 14px 0;
+  overflow: hidden;
+  border: 1px solid rgba(244, 239, 231, 0.16);
+  border-radius: 10px;
+  background-image: url("/hero-portrait-series.png");
+  background-repeat: no-repeat;
+  background-size: 200% 200%;
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.28);
+}
+
+.hero-photo-card--default {
+  z-index: 3;
+  background-position: 0 0;
+}
+
+.hero-photo-card--one {
+  z-index: 2;
+  background-position: 100% 0;
+  opacity: 0.68;
+  transform: translate(14px, 10px) rotate(3deg);
+}
+
+.hero-photo-card--two {
+  z-index: 1;
+  background-position: 0 100%;
+  opacity: 0.5;
+  transform: translate(-11px, -9px) rotate(-4deg);
+}
+
+.hero-photo-phase {
+  z-index: 5;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.hero-photo-phase--one {
+  background-position: 100% 0;
+}
+
+.hero-photo-phase--two {
+  background-position: 0 100%;
+}
+
+.hero-photo-phase--three {
+  background-position: 100% 100%;
+}
+
+.hero-photo-stack:hover .hero-photo-phase--one {
+  animation: hero-photo-one 9s cubic-bezier(0.2, 0, 0, 1) infinite;
+}
+
+.hero-photo-stack:hover .hero-photo-phase--two {
+  animation: hero-photo-two 9s cubic-bezier(0.2, 0, 0, 1) infinite;
+}
+
+.hero-photo-stack:hover .hero-photo-phase--three {
+  animation: hero-photo-three 9s cubic-bezier(0.2, 0, 0, 1) infinite;
+}
+
+.hero-photo-caption {
+  position: absolute;
+  right: 32px;
+  bottom: 32px;
+  left: 18px;
+  z-index: 6;
+  display: grid;
+  gap: 7px;
+  pointer-events: none;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.8);
+}
+
+.hero-photo-caption span {
+  color: rgba(244, 239, 231, 0.78);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hero-photo-caption strong {
+  color: var(--bone);
+  font-size: 1.15rem;
+  font-weight: 640;
+}
+
+@keyframes hero-photo-one {
+  0%, 5% { opacity: 0; transform: translateY(8px); }
+  9%, 31% { opacity: 1; transform: translateY(0); }
+  36%, 100% { opacity: 0; transform: translateY(-8px); }
+}
+
+@keyframes hero-photo-two {
+  0%, 36% { opacity: 0; transform: translateY(8px); }
+  41%, 63% { opacity: 1; transform: translateY(0); }
+  68%, 100% { opacity: 0; transform: translateY(-8px); }
+}
+
+@keyframes hero-photo-three {
+  0%, 68% { opacity: 0; transform: translateY(8px); }
+  73%, 100% { opacity: 1; transform: translateY(0); }
 }
 
 .metric-rail span,
@@ -911,6 +1012,14 @@ a:hover .browser-frame {
   border-top: 1px solid rgba(244, 239, 231, 0.08);
 }
 
+.experience-section .section-heading {
+  justify-content: flex-end;
+}
+
+.experience-section .section-heading h2 {
+  text-align: right;
+}
+
 .timeline {
   display: grid;
   gap: 0;
@@ -1184,6 +1293,10 @@ a:hover .browser-frame {
     flex-direction: column;
   }
 
+  .experience-section .section-heading {
+    align-items: flex-end;
+  }
+
   .mock-grid,
   .metric-rail {
     grid-template-columns: 1fr;
@@ -1262,7 +1375,7 @@ a:hover .browser-frame {
     max-width: 180px;
   }
 
-  .hero-photo-placeholder,
+  .hero-photo-stack,
   .about-photo-placeholder {
     min-height: 280px;
   }
@@ -1274,7 +1387,12 @@ a:hover .browser-frame {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .explorer-panel {
+  .explorer-panel,
+  .hero-photo-stack:hover .hero-photo-phase {
     animation: none;
+  }
+
+  .hero-photo-stack:hover .hero-photo-phase--one {
+    opacity: 1;
   }
 }

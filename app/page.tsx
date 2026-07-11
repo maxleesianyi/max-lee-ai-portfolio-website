@@ -21,9 +21,15 @@ export default function Home() {
           <SocialLinks className="social-links--hero" />
         </div>
         <div className="hero-side">
-          <div className="hero-photo-placeholder" aria-label="Portrait placeholder">
-            <div>
-              <span>Photo</span>
+          <div className="hero-photo-stack" aria-label="Portrait gallery placeholder">
+            <div className="hero-photo-card hero-photo-card--two" aria-hidden="true" />
+            <div className="hero-photo-card hero-photo-card--one" aria-hidden="true" />
+            <div className="hero-photo-card hero-photo-card--default" aria-hidden="true" />
+            <div className="hero-photo-phase hero-photo-phase--one" aria-hidden="true" />
+            <div className="hero-photo-phase hero-photo-phase--two" aria-hidden="true" />
+            <div className="hero-photo-phase hero-photo-phase--three" aria-hidden="true" />
+            <div className="hero-photo-caption">
+              <span>Portrait gallery</span>
               <strong>Max Lee</strong>
             </div>
           </div>
@@ -41,7 +47,6 @@ export default function Home() {
 
       <section className="section-pad experience-section">
         <div className="section-heading">
-          <span className="eyebrow">{sections.experience.eyebrow}</span>
           <h2>{sections.experience.headline}</h2>
         </div>
         <div className="timeline">

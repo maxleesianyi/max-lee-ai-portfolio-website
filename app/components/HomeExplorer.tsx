@@ -6,6 +6,11 @@ import type { Project, WorkStory } from "../data";
 
 type ExplorerKey = "about" | "aiAtWork" | "projects";
 
+type HeadlinePart = {
+  text: string;
+  color?: string;
+};
+
 type ExplorerCopy = {
   label: string;
   linkLabel: string;
@@ -20,6 +25,7 @@ type About = {
   hero: {
     headline: string;
     body: string;
+    headlineParts?: HeadlinePart[];
   };
   paragraphs: string[];
 };
@@ -48,10 +54,28 @@ const tabs: ExplorerKey[] = ["aiAtWork", "projects", "about"];
 function ExplorerHeading({
   title,
   fallback,
+  parts,
 }: {
   title?: ExplorerCopy["title"];
   fallback: string;
+  parts?: HeadlinePart[];
 }) {
+  if (parts && parts.length > 0) {
+    return (
+      <h2>
+        {parts.map((part, index) =>
+          part.color ? (
+            <span key={`${part.text}-${index}`} style={{ color: part.color }}>
+              {part.text}
+            </span>
+          ) : (
+            part.text
+          ),
+        )}
+      </h2>
+    );
+  }
+
   if (!title) {
     return <h2>{fallback}</h2>;
   }
@@ -124,7 +148,11 @@ export function HomeExplorer({
         {active === "about" ? (
           <div className="explorer-about">
             <div className="explorer-copy">
-              <ExplorerHeading title={explorer.about.title} fallback={about.hero.headline} />
+              <ExplorerHeading
+                title={explorer.about.title}
+                fallback={about.hero.headline}
+                parts={about.hero.headlineParts}
+              />
               <p className="explorer-intro">{about.hero.body}</p>
               <p className="explorer-detail">{about.paragraphs[0]}</p>
               <Link className="text-link" href="/about">

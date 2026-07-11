@@ -30,7 +30,17 @@ export default function AboutPage() {
         </div>
         <div className="about-copy">
           <span className="eyebrow">{about.hero.eyebrow}</span>
-          <h1>{about.hero.headline}</h1>
+          <h1>
+            {about.hero.headlineParts?.map((part, index) =>
+              part.color ? (
+                <span key={`${part.text}-${index}`} style={{ color: part.color }}>
+                  {part.text}
+                </span>
+              ) : (
+                part.text
+              ),
+            ) ?? about.hero.headline}
+          </h1>
           <p className="about-intro">{about.hero.body}</p>
           <div className="about-narrative">
             {about.paragraphs.map((paragraph) => (
