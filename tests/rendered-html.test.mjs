@@ -33,7 +33,13 @@ test("server-renders the portfolio from the no-code content file", async () => {
   assert.match(response.headers.get("content-type") ?? "", /^text\/html\b/i);
 
   const html = await response.text();
-  assert.match(html, new RegExp(siteContent.home.hero.headline));
+  for (const line of siteContent.home.hero.headlineLines) {
+    assert.match(html, new RegExp(line));
+  }
+  assert.match(html, new RegExp(siteContent.site.footerText));
+  assert.match(html, new RegExp(siteContent.site.socialLinks[0].href));
+  assert.match(html, new RegExp(siteContent.site.socialLinks[1].href));
+  assert.doesNotMatch(html, /promoted in 5 years at Docusign/);
   assert.doesNotMatch(html, new RegExp(siteContent.pages.about.hero.headline));
   assert.match(html, new RegExp(siteContent.projects[0].title));
   assert.match(html, new RegExp(siteContent.workStories[0].title));
@@ -72,6 +78,7 @@ test("keeps no-code content structurally complete", async () => {
   assert.ok(siteContent.experience.length >= 1);
   assert.ok(siteContent.navigation.every((item) => item.label && item.href));
   assert.ok(siteContent.navigation.some((item) => item.href === "/about"));
+  assert.ok(siteContent.site.socialLinks.every((item) => item.label && item.href && item.icon));
   assert.ok(siteContent.projects.every((project) => project.title && project.summary));
   assert.ok(siteContent.projects.every((project) => project.description.length >= 1));
 });

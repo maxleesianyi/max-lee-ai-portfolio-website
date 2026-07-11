@@ -1,22 +1,35 @@
 import Link from "next/link";
 import { PageShell, ProjectFeature, WorkFeature } from "./components/PortfolioBlocks";
-import { experience, home, projects, workStories } from "./data";
+import { experience, home, projects, site, workStories } from "./data";
 
 export default function Home() {
   const { hero, sections } = home;
+  const headlineLines =
+    hero.headlineLines && hero.headlineLines.length > 0 ? hero.headlineLines : [hero.headline];
 
   return (
     <PageShell>
       <section className="hero section-pad">
         <div className="hero-copy">
           <span className="eyebrow">{hero.eyebrow}</span>
-          <h1>{hero.headline}</h1>
+          <h1>
+            {headlineLines.map((line) => (
+              <span key={line}>{line}</span>
+            ))}
+          </h1>
           <p>{hero.body}</p>
           <div className="hero-actions">
             {hero.actions.map((action) => (
               <Link key={action.href} href={action.href}>
                 {action.label}
               </Link>
+            ))}
+          </div>
+          <div className="social-links social-links--hero" aria-label="Social links">
+            {site.socialLinks.map((item) => (
+              <a key={item.href} href={item.href} aria-label={item.label}>
+                <span aria-hidden="true">{item.icon}</span>
+              </a>
             ))}
           </div>
         </div>
@@ -26,14 +39,6 @@ export default function Home() {
               <span>Photo</span>
               <strong>Max Lee</strong>
             </div>
-          </div>
-          <div className="hero-proof" aria-label="Career highlights">
-            {hero.proof.map((metric) => (
-              <div key={metric.label}>
-                <strong>{metric.value}</strong>
-                <span>{metric.label}</span>
-              </div>
-            ))}
           </div>
         </div>
       </section>

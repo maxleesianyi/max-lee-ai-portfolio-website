@@ -162,9 +162,14 @@ h1 {
 }
 
 .hero-copy h1 {
-  max-width: 620px;
-  font-size: clamp(3rem, 6.3vw, 5.85rem);
+  max-width: 680px;
+  font-size: clamp(3rem, 6vw, 5.35rem);
   line-height: 0.96;
+}
+
+.hero-copy h1 span {
+  display: block;
+  white-space: nowrap;
 }
 
 h2 {
@@ -230,11 +235,6 @@ h3 {
   border-color: var(--gold);
   background: rgba(217, 154, 61, 0.16);
   color: #ffd18c;
-}
-
-.hero-proof {
-  display: grid;
-  gap: 14px;
 }
 
 .hero-side {
@@ -312,22 +312,6 @@ h3 {
   font-weight: 640;
 }
 
-.hero-proof div {
-  min-height: 104px;
-  padding: 18px;
-  border: 1px solid rgba(244, 239, 231, 0.1);
-  border-radius: 8px;
-  background: linear-gradient(135deg, rgba(244, 239, 231, 0.07), rgba(244, 239, 231, 0.025));
-}
-
-.hero-proof strong {
-  display: block;
-  color: var(--bone);
-  font-size: 2rem;
-  line-height: 1;
-}
-
-.hero-proof span,
 .metric-rail span,
 .mock-grid small {
   color: var(--muted);
@@ -926,6 +910,38 @@ a:hover .browser-frame {
 
 .footer-links a:hover {
   color: var(--bone);
+}
+
+.social-links {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+}
+
+.social-links a {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(244, 239, 231, 0.14);
+  border-radius: 999px;
+  background: rgba(244, 239, 231, 0.045);
+  color: var(--bone);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.social-links a:hover {
+  border-color: var(--gold);
+  background: rgba(217, 154, 61, 0.14);
+  color: #ffd18c;
+}
+
+.social-links--hero {
+  margin-top: 22px;
 }
 
 @media (max-width: 860px) {

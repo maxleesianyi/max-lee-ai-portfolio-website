@@ -1,8 +1,20 @@
 {
   "site": {
     "brandName": "max.lee",
-    "footerText": "Designed and built with OpenAI Sites.",
+    "footerText": "Design and built with Codex Sites.",
     "email": "leesianyi@gmail.com",
+    "socialLinks": [
+      {
+        "label": "LinkedIn",
+        "href": "https://www.linkedin.com/in/max-lee-sian-yi/",
+        "icon": "in"
+      },
+      {
+        "label": "GitHub",
+        "href": "https://github.com/maxleesianyi",
+        "icon": "GH"
+      }
+    ],
     "metadata": {
       "title": "Max Lee - AI Sales Portfolio",
       "description": "Portfolio for Max Lee Sian Yi, a Docusign Account Executive using AI in sales workflows and personal projects.",
@@ -27,7 +39,11 @@
   "home": {
     "hero": {
       "eyebrow": "Account Executive - Singapore",
-      "headline": "Selling by day, Codex-ing by night.",
+      "headline": "Selling by Day Codex-ing by night.",
+      "headlineLines": [
+        "Selling by Day",
+        "Codex-ing by night."
+      ],
       "body": "Account Executive by profession. AI builder by curiosity. This is where I document the projects, experiments, and lessons from learning AI by building with it.",
       "actions": [
         {
@@ -37,20 +53,6 @@
         {
           "label": "Projects",
           "href": "/projects"
-        }
-      ],
-      "proof": [
-        {
-          "value": "4x",
-          "label": "promoted in 5 years at Docusign"
-        },
-        {
-          "value": "$3M",
-          "label": "largest commercial territory in Asia"
-        },
-        {
-          "value": "55%",
-          "label": "less account research time using AI"
         }
       ]
     },

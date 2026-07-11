@@ -52,6 +52,13 @@ export function Footer() {
           </Link>
         ))}
         <a href={`mailto:${site.email}`}>Email</a>
+        <div className="social-links" aria-label="Social links">
+          {site.socialLinks.map((item) => (
+            <a key={item.href} href={item.href} aria-label={item.label}>
+              <span aria-hidden="true">{item.icon}</span>
+            </a>
+          ))}
+        </div>
       </div>
     </footer>
   );
