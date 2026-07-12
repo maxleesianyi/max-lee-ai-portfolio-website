@@ -31,6 +31,7 @@ type Props = {
 
 type TimelineEntry = {
   role: string;
+  titleLines?: string[];
   period?: string;
 };
 
@@ -57,7 +58,9 @@ function CompanyTimeline({
       <div className="company-timeline-track">
         {entries.map((entry) => (
           <article className="timeline-role-card" key={entry.role}>
-            <h3>{entry.role}</h3>
+            <h3>
+              {entry.titleLines?.map((line) => <span key={line}>{line}</span>) ?? entry.role}
+            </h3>
             {entry.period ? <p>{entry.period}</p> : null}
           </article>
         ))}

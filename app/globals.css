@@ -1267,13 +1267,14 @@ a:hover .browser-frame {
 }
 
 .timeline-company--nodeflair .timeline-company-logo img {
-  width: 72px;
+  width: 88px;
   height: 72px;
   border-radius: 6px;
 }
 
 .timeline-company--docusign .timeline-company-logo img {
-  width: min(100%, 168px);
+  width: min(100%, 220px);
+  height: 72px;
 }
 
 .company-timeline-track {
@@ -1294,6 +1295,8 @@ a:hover .browser-frame {
 
 .timeline-role-card {
   position: relative;
+  display: flex;
+  flex-direction: column;
   min-height: 142px;
   padding: 20px 14px 14px;
   border: 1px solid rgba(244, 239, 231, 0.12);
@@ -1308,12 +1311,20 @@ a:hover .browser-frame {
   line-height: 1.25;
 }
 
+.timeline-role-card h3 span {
+  display: block;
+}
+
 .timeline-role-card p {
-  margin-top: 10px;
+  align-self: flex-end;
+  margin-top: auto;
   color: var(--muted);
   font-family: var(--font-geist-mono), monospace;
-  font-size: 0.68rem;
+  font-size: clamp(0.72rem, 0.85vw, 0.88rem);
+  font-variant-numeric: tabular-nums;
   line-height: 1.45;
+  text-align: right;
+  white-space: nowrap;
 }
 
 .timeline-company:hover .timeline-company-logo,

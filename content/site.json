@@ -121,6 +121,10 @@
           },
           {
             "role": "BDR, Enterprise",
+            "titleLines": [
+              "BDR,",
+              "Enterprise"
+            ],
             "period": "Mar 2022 - Jan 2023"
           },
           {
