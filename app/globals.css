@@ -600,6 +600,10 @@ h3 {
   transform: scale(0.96);
 }
 
+.explorer-gallery + .text-link {
+  margin-top: 42px;
+}
+
 .explorer-gallery {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1106,6 +1110,113 @@ a:hover .browser-frame {
   padding-top: 60px;
 }
 
+.experience-explorer {
+  margin-top: -64px;
+  border-top: 1px solid rgba(244, 239, 231, 0.08);
+  padding-top: 40px;
+}
+
+.experience-tabs {
+  display: flex;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  overflow-x: auto;
+  border-bottom: 1px solid rgba(244, 239, 231, 0.14);
+}
+
+.experience-tab {
+  min-height: 46px;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  padding: 0 20px;
+  color: var(--muted);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: border-color 180ms ease, color 180ms ease, background 180ms ease;
+}
+
+.experience-tab:hover {
+  background: rgba(91, 189, 255, 0.08);
+  color: #bde8ff;
+}
+
+.experience-tab[aria-selected="true"] {
+  border-bottom-color: var(--gold);
+  color: var(--gold);
+}
+
+.experience-tab:focus-visible {
+  position: relative;
+  z-index: 1;
+  outline: 2px solid var(--gold);
+  outline-offset: -2px;
+}
+
+.experience-panel {
+  margin-top: 24px;
+  border-top: 1px solid rgba(244, 239, 231, 0.1);
+  border-bottom: 1px solid rgba(244, 239, 231, 0.1);
+  padding: 34px 0 46px;
+  animation: explorer-reveal 280ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.experience-panel:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 5px;
+}
+
+.life-experience {
+  text-align: right;
+}
+
+.life-experience h2 {
+  max-width: 930px;
+  margin-left: auto;
+  font-size: clamp(2rem, 3.6vw, 3.75rem);
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.life-experience > p {
+  max-width: 720px;
+  margin-top: 22px;
+  margin-left: auto;
+  color: var(--dim);
+  font-size: 1.04rem;
+  line-height: 1.75;
+}
+
+.life-experience-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 36px;
+  border-top: 1px solid rgba(244, 239, 231, 0.1);
+}
+
+.life-experience-list article {
+  min-width: 0;
+  padding: 22px 22px 0;
+}
+
+.life-experience-list article + article {
+  border-left: 1px solid rgba(244, 239, 231, 0.1);
+}
+
+.life-experience-list h3 {
+  font-size: 1.1rem;
+}
+
+.life-experience-list p {
+  margin-top: 10px;
+  color: var(--dim);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .experience-section {
   border-top: 1px solid rgba(244, 239, 231, 0.08);
 }
@@ -1432,6 +1543,25 @@ a:hover .browser-frame {
     margin-top: 0;
   }
 
+  .experience-explorer {
+    margin-top: -40px;
+    padding-top: 32px;
+  }
+
+  .life-experience-list {
+    grid-template-columns: 1fr;
+  }
+
+  .life-experience-list article {
+    padding: 20px 0 0;
+  }
+
+  .life-experience-list article + article {
+    margin-top: 20px;
+    border-top: 1px solid rgba(244, 239, 231, 0.1);
+    border-left: 0;
+  }
+
   .explorer-gallery {
     grid-auto-columns: minmax(255px, 62vw);
     grid-auto-flow: column;
@@ -1465,6 +1595,11 @@ a:hover .browser-frame {
 
   .home-explorer {
     padding-top: 8px;
+  }
+
+  .experience-explorer {
+    margin-top: -28px;
+    padding-top: 30px;
   }
 
   .explorer-tab {

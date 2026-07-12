@@ -1,9 +1,10 @@
+import { ExperienceExplorer } from "./components/ExperienceExplorer";
 import { HomeExplorer } from "./components/HomeExplorer";
 import { PageShell, SocialLinks } from "./components/PortfolioBlocks";
 import { experience, home, pages, projects, workStories } from "./data";
 
 export default function Home() {
-  const { hero, sections } = home;
+  const { hero } = home;
   const headlineLines =
     hero.headlineLines && hero.headlineLines.length > 0 ? hero.headlineLines : [hero.headline];
 
@@ -45,28 +46,7 @@ export default function Home() {
         projects={projects}
       />
 
-      <section className="section-pad experience-section">
-        <div className="section-heading">
-          <h2>{sections.experience.headline}</h2>
-        </div>
-        <div className="timeline">
-          {experience.map((item) => (
-            <article key={`${item.company}-${item.role}`}>
-              <div>
-                <h3>{item.role}</h3>
-                <p>
-                  {item.company} - {item.period}
-                </p>
-              </div>
-              <ul>
-                {item.bullets.map((bullet) => (
-                  <li key={bullet}>{bullet}</li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-      </section>
+      <ExperienceExplorer content={home.experienceExplorer} experience={experience} />
     </PageShell>
   );
 }
