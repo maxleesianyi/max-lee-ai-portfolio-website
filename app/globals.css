@@ -600,6 +600,103 @@ h3 {
   transform: scale(0.96);
 }
 
+.explorer-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.explorer-gallery-item {
+  min-width: 0;
+}
+
+.explorer-gallery-item .browser-frame {
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.28);
+}
+
+.explorer-gallery-item .browser-canvas {
+  min-height: 174px;
+  padding: 14px;
+}
+
+.explorer-gallery-item .mock-dashboard,
+.explorer-gallery-item .mock-research {
+  min-height: 146px;
+}
+
+.explorer-gallery-item .mock-dashboard {
+  grid-template-columns: 42px minmax(0, 1fr);
+}
+
+.explorer-gallery-item .mock-sidebar {
+  gap: 8px;
+  padding: 12px;
+}
+
+.explorer-gallery-item .mock-sidebar span {
+  width: 18px;
+  height: 18px;
+}
+
+.explorer-gallery-item .mock-main,
+.explorer-gallery-item .mock-research {
+  gap: 10px;
+  padding: 16px;
+}
+
+.explorer-gallery-item .mock-main h3,
+.explorer-gallery-item .mock-research h3 {
+  overflow: hidden;
+  font-size: 0.92rem;
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.explorer-gallery-item .mock-research p {
+  display: -webkit-box;
+  overflow: hidden;
+  font-size: 0.71rem;
+  line-height: 1.35;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.explorer-gallery-item .mock-grid {
+  gap: 6px;
+}
+
+.explorer-gallery-item .mock-grid div {
+  min-height: 44px;
+  padding: 8px;
+}
+
+.explorer-gallery-item .mock-grid strong {
+  margin-bottom: 3px;
+  font-size: 1rem;
+}
+
+.explorer-gallery-item .mock-grid small {
+  display: block;
+  overflow: hidden;
+  font-size: 0.58rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.explorer-gallery-item > p {
+  overflow: hidden;
+  margin-top: 11px;
+  color: var(--dim);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 @keyframes explorer-reveal {
   from {
     opacity: 0;
@@ -1332,6 +1429,31 @@ a:hover .browser-frame {
 
   .home-explorer {
     margin-top: 0;
+  }
+
+  .explorer-gallery {
+    grid-auto-columns: minmax(255px, 62vw);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x proximity;
+  }
+
+  .explorer-gallery-item {
+    scroll-snap-align: start;
+  }
+
+  .explorer-gallery-item .mock-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .explorer-gallery-item .mock-dashboard {
+    grid-template-columns: 42px minmax(0, 1fr);
+  }
+
+  .explorer-gallery-item .mock-sidebar {
+    display: grid;
   }
 }
 

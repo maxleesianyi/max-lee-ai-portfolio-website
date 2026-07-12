@@ -70,21 +70,11 @@
       },
       "aiAtWork": {
         "label": "AI at Work",
-        "linkLabel": "See how I use AI at Work",
-        "title": {
-          "prefix": "Leveraging ",
-          "accent": "AI at Work",
-          "suffix": ", automating workflows to achieve measurable sales outcomes."
-        }
+        "linkLabel": "See how I use AI at Work"
       },
       "projects": {
         "label": "Personal Projects",
-        "linkLabel": "Learn more about my Personal Projects",
-        "title": {
-          "prefix": "",
-          "accent": "Personal Projects",
-          "suffix": " built with passion, curiosity and AI"
-        }
+        "linkLabel": "Learn more about my Personal Projects"
       }
     }
   },
@@ -96,7 +86,12 @@
       },
       "hero": {
         "eyebrow": "AI at Work",
-        "headline": "AI as leverage inside real commercial work.",
+        "headline": "Leveraging AI at Work, automating workflows to achieve measurable sales outcomes.",
+        "headlineParts": [
+          { "text": "Leveraging " },
+          { "text": "AI at Work", "color": "#5BBDFF" },
+          { "text": ", automating workflows to achieve measurable sales outcomes." }
+        ],
         "body": "These are the places where Max has used AI to reduce research time, sharpen sales execution, learn faster, and build useful internal tools."
       }
     },
@@ -107,7 +102,11 @@
       },
       "hero": {
         "eyebrow": "Personal Projects",
-        "headline": "Tools built end to end around real workflows.",
+        "headline": "Personal Projects built with passion, curiosity and AI",
+        "headlineParts": [
+          { "text": "Personal Projects", "color": "#5BBDFF" },
+          { "text": " built with passion, curiosity and AI" }
+        ],
         "body": "A small set of focused builds: private AI practice, household operations, and the systems needed to make them usable."
       }
     },
@@ -186,6 +185,7 @@
       "kicker": "Voice practice coach for OpenAI interview fluency",
       "status": "Private beta",
       "summary": "A private record-and-review practice app that helps Max prepare crisp spoken answers on OpenAI products, AI concepts, competitor positioning, and APAC customer value.",
+      "galleryDescription": "Voice practice and structured feedback for OpenAI interview fluency.",
       "description": [
         "This app is not a generic quiz tool. It is an interview-performance training system built around daily five-question voice sessions, topic mastery, retry logic, and commercially grounded feedback.",
         "The browser captures a single answer, sends temporary audio to the backend, transcribes it with OpenAI speech-to-text, then discards the raw audio. The transcript is evaluated with structured AI scoring across technical accuracy, simple explanation, business relevance, OpenAI positioning, interview structure, and concision.",
@@ -229,6 +229,7 @@
       "kicker": "Mobile household stock and perishables tracker",
       "status": "Live app",
       "summary": "A mobile-friendly household stock taking app for tracking daily necessities and food that should be consumed soon.",
+      "galleryDescription": "A mobile household stock and perishables tracker.",
       "description": [
         "Crib Stock Taker was built for a small household team with two admins and one helper. The helper-facing workflow uses large controls, clear item names, optional photos, and minimal settings so daily updates stay simple.",
         "The app tracks stock items like toilet paper, detergent, rice, sauces, and cleaning supplies, plus one-off perishables like vegetables, fruit, bread, cake, and takeaway food. Attention counts show low-stock items and perishables that have reached their alert day.",
@@ -262,8 +263,49 @@
         "Supabase Auth profiles connect app-specific roles to real users."
       ],
       "role": "Solo builder for a real household workflow.",
-      "next": "openai-bdr-interviewer-buddy",
+      "next": "max-lee-ai-portfolio",
       "accent": "teal"
+    },
+    {
+      "slug": "max-lee-ai-portfolio",
+      "title": "Max Lee AI Portfolio",
+      "year": "2026",
+      "kicker": "Recruiter-facing portfolio built and iterated with Codex",
+      "status": "Live site",
+      "summary": "A recruiter-facing portfolio that brings together Max's sales experience, AI-at-work stories, and personal projects in one interactive site.",
+      "galleryDescription": "A recruiter-facing portfolio built and iterated with Codex.",
+      "description": [
+        "This portfolio was designed to make Max's work easy to explore: practical AI workflows, personal builds, and commercial experience live in one place.",
+        "Codex supported the implementation loop from layout and content modeling to visual refinements, responsive interactions, and deployment."
+      ],
+      "tags": [
+        "Codex",
+        "Next.js",
+        "Portfolio",
+        "Sites"
+      ],
+      "metrics": [
+        {
+          "value": "3",
+          "label": "portfolio sections"
+        },
+        {
+          "value": "4",
+          "label": "interactive views"
+        },
+        {
+          "value": "1",
+          "label": "live portfolio"
+        }
+      ],
+      "highlights": [
+        "Built around editable content so copy and projects can change without code.",
+        "Uses an interactive homepage explorer and responsive route-level case studies.",
+        "Iterated directly from recruiter-focused feedback."
+      ],
+      "role": "Product owner, designer, and builder.",
+      "next": "openai-bdr-interviewer-buddy",
+      "accent": "violet"
     }
   ],
   "workStories": [
@@ -273,6 +315,7 @@
       "eyebrow": "Docusign",
       "year": "2024-2026",
       "summary": "Used Gemini and Glean to compress account research, sharpen persona insights, identify buying signals, and personalize outreach.",
+      "galleryDescription": "Research faster, surface buying signals, and sharpen outreach.",
       "details": [
         "Max used AI to make pre-call and prospecting research faster and more precise. The workflow supported account planning, persona research, value-based positioning, and buying-signal discovery.",
         "The measurable outcome from the resume: account research time fell by 55%, overall pipeline increased by 25%, and reply rates improved by 4%."
@@ -311,6 +354,7 @@
       "eyebrow": "Docusign",
       "year": "2025",
       "summary": "First AE in Docusign Asia to sell two newly launched AI product lines within the first month, before established playbooks existed.",
+      "galleryDescription": "Turned newly launched AI products into early customer wins.",
       "details": [
         "The resume positions this as an execution story: Max sold newly launched AI product lines early, operating without mature playbooks, while applying structured discovery and deal execution.",
         "This sits alongside one of the first major Docusign Intelligent Agreement Management platform deals at US$120k ARR, recognized internally for MEDDPICC execution, multi-threading, and executive sponsorship."
@@ -349,6 +393,7 @@
       "eyebrow": "Personal AI workflow",
       "year": "2026",
       "summary": "Used Codex to build and ship personal tools, including this portfolio, the interview-practice app, and the household stock tracker.",
+      "galleryDescription": "Used Codex to turn product ideas into deployed tools.",
       "details": [
         "The local project history shows Max using Codex-style workflows to turn product specs into working apps, connect services like Supabase and Vercel, and iterate from product decisions into implementation.",
         "For this portfolio, Codex was used to inspect source material, mirror a requested reference layout, and build a recruiter-facing site grounded in resume, portfolio, and project material."

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { KeyboardEvent, useState } from "react";
 import type { Project, WorkStory } from "../data";
+import { ProjectVisual, WorkVisual } from "./PortfolioBlocks";
 
 type ExplorerKey = "about" | "aiAtWork" | "projects";
 
@@ -14,11 +15,6 @@ type HeadlinePart = {
 type ExplorerCopy = {
   label: string;
   linkLabel: string;
-  title?: {
-    prefix: string;
-    accent: string;
-    suffix: string;
-  };
 };
 
 type About = {
@@ -36,12 +32,14 @@ type Props = {
     hero: {
       headline: string;
       body: string;
+      headlineParts?: HeadlinePart[];
     };
   };
   personalProjects: {
     hero: {
       headline: string;
       body: string;
+      headlineParts?: HeadlinePart[];
     };
   };
   explorer: Record<ExplorerKey, ExplorerCopy>;
@@ -52,11 +50,9 @@ type Props = {
 const tabs: ExplorerKey[] = ["aiAtWork", "projects", "about"];
 
 function ExplorerHeading({
-  title,
   fallback,
   parts,
 }: {
-  title?: ExplorerCopy["title"];
   fallback: string;
   parts?: HeadlinePart[];
 }) {
@@ -76,17 +72,7 @@ function ExplorerHeading({
     );
   }
 
-  if (!title) {
-    return <h2>{fallback}</h2>;
-  }
-
-  return (
-    <h2>
-      {title.prefix}
-      <span>{title.accent}</span>
-      {title.suffix}
-    </h2>
-  );
+  return <h2>{fallback}</h2>;
 }
 
 export function HomeExplorer({
@@ -149,7 +135,6 @@ export function HomeExplorer({
           <div className="explorer-about">
             <div className="explorer-copy">
               <ExplorerHeading
-                title={explorer.about.title}
                 fallback={about.hero.headline}
                 parts={about.hero.headlineParts}
               />
@@ -164,16 +149,12 @@ export function HomeExplorer({
 
         {active === "aiAtWork" ? (
           <div className="explorer-copy">
-            <ExplorerHeading title={explorer.aiAtWork.title} fallback={aiAtWork.hero.headline} />
-            <p className="explorer-intro">{aiAtWork.hero.body}</p>
-            <div className="explorer-list">
-              {workStories.slice(0, 2).map((story, index) => (
-                <article key={story.slug}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <div>
-                    <h3>{story.title}</h3>
-                    <p>{story.summary}</p>
-                  </div>
+            <ExplorerHeading fallback={aiAtWork.hero.headline} parts={aiAtWork.hero.headlineParts} />
+            <div className="explorer-gallery" aria-label="AI at Work highlights">
+              {workStories.slice(0, 3).map((story) => (
+                <article className="explorer-gallery-item" key={story.slug}>
+                  <WorkVisual story={story} />
+                  <p>{story.galleryDescription}</p>
                 </article>
               ))}
             </div>
@@ -186,18 +167,14 @@ export function HomeExplorer({
         {active === "projects" ? (
           <div className="explorer-copy">
             <ExplorerHeading
-              title={explorer.projects.title}
               fallback={personalProjects.hero.headline}
+              parts={personalProjects.hero.headlineParts}
             />
-            <p className="explorer-intro">{personalProjects.hero.body}</p>
-            <div className="explorer-list">
-              {projects.slice(0, 2).map((project, index) => (
-                <article key={project.slug}>
-                  <span>{String(index + 1).padStart(2, "0")}</span>
-                  <div>
-                    <h3>{project.title}</h3>
-                    <p>{project.summary}</p>
-                  </div>
+            <div className="explorer-gallery" aria-label="Personal project highlights">
+              {projects.slice(0, 3).map((project) => (
+                <article className="explorer-gallery-item" key={project.slug}>
+                  <ProjectVisual project={project} />
+                  <p>{project.galleryDescription}</p>
                 </article>
               ))}
             </div>

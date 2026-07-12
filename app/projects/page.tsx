@@ -13,7 +13,17 @@ export default function ProjectsPage() {
     <PageShell>
       <section className="subpage-hero section-pad">
         <span className="eyebrow">{hero.eyebrow}</span>
-        <h1>{hero.headline}</h1>
+        <h1>
+          {hero.headlineParts?.map((part, index) =>
+            part.color ? (
+              <span key={`${part.text}-${index}`} style={{ color: part.color }}>
+                {part.text}
+              </span>
+            ) : (
+              part.text
+            ),
+          ) ?? hero.headline}
+        </h1>
         <p>{hero.body}</p>
       </section>
       <section className="section-pad feature-stack subpage-stack">

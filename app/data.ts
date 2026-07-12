@@ -12,6 +12,7 @@ export type Project = {
   kicker: string;
   status: string;
   summary: string;
+  galleryDescription: string;
   description: string[];
   tags: string[];
   metrics: Metric[];
@@ -27,6 +28,7 @@ export type WorkStory = {
   eyebrow: string;
   year: string;
   summary: string;
+  galleryDescription: string;
   details: string[];
   tags: string[];
   metrics: Metric[];
