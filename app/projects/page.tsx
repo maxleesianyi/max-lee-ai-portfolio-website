@@ -12,7 +12,6 @@ export default function ProjectsPage() {
   return (
     <PageShell>
       <section className="subpage-hero section-pad">
-        <span className="eyebrow">{hero.eyebrow}</span>
         <h1>
           {hero.headlineParts?.map((part, index) =>
             part.color ? (

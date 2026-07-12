@@ -774,7 +774,7 @@ h3 {
 
 .about-copy h1 {
   max-width: 860px;
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2.8rem, 5vw, 4.35rem);
   line-height: 0.96;
 }
 
@@ -1093,7 +1093,8 @@ a:hover .browser-frame {
 
 .subpage-hero h1 {
   max-width: 860px;
-  font-size: clamp(3rem, 7vw, 6rem);
+  font-size: clamp(2.8rem, 5vw, 4.35rem);
+  line-height: 0.96;
 }
 
 .subpage-hero p {

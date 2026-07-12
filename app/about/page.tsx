@@ -29,7 +29,6 @@ export default function AboutPage() {
           </dl>
         </div>
         <div className="about-copy">
-          <span className="eyebrow">{about.hero.eyebrow}</span>
           <h1>
             {about.hero.headlineParts?.map((part, index) =>
               part.color ? (
