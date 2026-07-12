@@ -501,7 +501,6 @@ h3 {
   min-height: 440px;
   margin-top: 24px;
   border-top: 1px solid rgba(244, 239, 231, 0.1);
-  border-bottom: 1px solid rgba(244, 239, 231, 0.1);
   padding: 34px 0 46px;
   animation: explorer-reveal 280ms cubic-bezier(0.2, 0, 0, 1);
 }
@@ -1217,41 +1216,6 @@ a:hover .browser-frame {
   line-height: 1.6;
 }
 
-.experience-section {
-  border-top: 1px solid rgba(244, 239, 231, 0.08);
-}
-
-.experience-section .section-heading {
-  justify-content: flex-end;
-}
-
-.experience-section .section-heading h2 {
-  text-align: right;
-}
-
-.timeline {
-  display: grid;
-  gap: 0;
-  border-top: 1px solid rgba(244, 239, 231, 0.1);
-}
-
-.timeline article {
-  display: grid;
-  grid-template-columns: 0.72fr 1.28fr;
-  gap: 38px;
-  padding: 34px 0;
-  border-bottom: 1px solid rgba(244, 239, 231, 0.1);
-}
-
-.timeline p {
-  margin-top: 8px;
-  color: var(--muted);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.76rem;
-  line-height: 1.45;
-}
-
-.timeline ul,
 .case-aside ul {
   display: grid;
   gap: 12px;
@@ -1260,7 +1224,6 @@ a:hover .browser-frame {
   list-style: none;
 }
 
-.timeline li,
 .case-aside li {
   position: relative;
   padding-left: 22px;
@@ -1268,7 +1231,6 @@ a:hover .browser-frame {
   line-height: 1.65;
 }
 
-.timeline li::before,
 .case-aside li::before {
   position: absolute;
   top: 0.78em;
@@ -1277,6 +1239,126 @@ a:hover .browser-frame {
   height: 1px;
   background: var(--gold);
   content: "";
+}
+
+.professional-timeline {
+  display: grid;
+  grid-template-columns: minmax(155px, 0.82fr) minmax(0, 5fr);
+  gap: 30px;
+}
+
+.timeline-company {
+  min-width: 0;
+}
+
+.timeline-company-logo {
+  display: flex;
+  height: 72px;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.45;
+  transition: opacity 220ms ease, filter 220ms ease, transform 220ms ease;
+}
+
+.timeline-company-logo img {
+  display: block;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.timeline-company--nodeflair .timeline-company-logo img {
+  width: 72px;
+  height: 72px;
+  border-radius: 6px;
+}
+
+.timeline-company--docusign .timeline-company-logo img {
+  width: min(100%, 168px);
+  filter: invert(1);
+  mix-blend-mode: screen;
+}
+
+.company-timeline-track {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--timeline-steps), minmax(0, 1fr));
+  gap: 12px;
+  padding-top: 20px;
+}
+
+.timeline-company--nodeflair .company-timeline-track {
+  --timeline-steps: 1;
+}
+
+.timeline-company--docusign .company-timeline-track {
+  --timeline-steps: 5;
+}
+
+.company-timeline-track::before {
+  position: absolute;
+  top: 26px;
+  right: 10%;
+  left: 10%;
+  height: 1px;
+  background: rgba(244, 239, 231, 0.16);
+  content: "";
+}
+
+.timeline-role-card {
+  position: relative;
+  min-height: 142px;
+  padding: 28px 14px 14px;
+  border: 1px solid rgba(244, 239, 231, 0.12);
+  border-radius: 8px;
+  background: rgba(244, 239, 231, 0.035);
+  opacity: 0.45;
+  transition: border-color 220ms ease, background 220ms ease, box-shadow 220ms ease, opacity 220ms ease, transform 220ms ease;
+}
+
+.timeline-role-card > span {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 11px;
+  height: 11px;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--gold);
+  transform: translate(-50%, -50%);
+}
+
+.timeline-role-card h3 {
+  font-size: 0.9rem;
+  line-height: 1.25;
+}
+
+.timeline-role-card p {
+  margin-top: 10px;
+  color: var(--muted);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.68rem;
+  line-height: 1.45;
+}
+
+.timeline-company:hover .timeline-company-logo,
+.timeline-company:focus-within .timeline-company-logo,
+.timeline-company:hover .timeline-role-card,
+.timeline-company:focus-within .timeline-role-card {
+  opacity: 1;
+}
+
+.timeline-company:hover .timeline-company-logo,
+.timeline-company:focus-within .timeline-company-logo {
+  filter: drop-shadow(0 0 16px rgba(91, 189, 255, 0.22));
+  transform: translateY(-2px);
+}
+
+.timeline-company:hover .timeline-role-card,
+.timeline-company:focus-within .timeline-role-card {
+  border-color: rgba(91, 189, 255, 0.42);
+  background: rgba(91, 189, 255, 0.1);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
 }
 
 .case-study {
@@ -1468,7 +1550,6 @@ a:hover .browser-frame {
   .feature-row,
   .feature-row--reverse,
   .about-section,
-  .timeline article,
   .case-body,
   .footer {
     grid-template-columns: 1fr;
@@ -1500,10 +1581,6 @@ a:hover .browser-frame {
   .footer {
     align-items: start;
     flex-direction: column;
-  }
-
-  .experience-section .section-heading {
-    align-items: flex-end;
   }
 
   .mock-grid,
@@ -1562,6 +1639,24 @@ a:hover .browser-frame {
     border-left: 0;
   }
 
+  .professional-timeline {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .timeline-company--docusign .company-timeline-track {
+    grid-auto-columns: minmax(168px, 42vw);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x proximity;
+  }
+
+  .timeline-company--docusign .timeline-role-card {
+    scroll-snap-align: start;
+  }
+
   .explorer-gallery {
     grid-auto-columns: minmax(255px, 62vw);
     grid-auto-flow: column;
@@ -1600,6 +1695,14 @@ a:hover .browser-frame {
   .experience-explorer {
     margin-top: -28px;
     padding-top: 30px;
+  }
+
+  .professional-timeline {
+    gap: 30px;
+  }
+
+  .timeline-company--docusign .company-timeline-track {
+    grid-auto-columns: minmax(190px, 72vw);
   }
 
   .explorer-tab {

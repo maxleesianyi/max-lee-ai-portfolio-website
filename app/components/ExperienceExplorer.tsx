@@ -1,7 +1,6 @@
 "use client";
 
 import { KeyboardEvent, useState } from "react";
-import type { Experience } from "../data";
 
 type ExperienceKey = "life" | "professional";
 
@@ -24,14 +23,51 @@ type Props = {
     };
     professional: {
       label: string;
+      nodeflair: TimelineEntry[];
+      docusign: TimelineEntry[];
     };
   };
-  experience: Experience[];
+};
+
+type TimelineEntry = {
+  role: string;
+  period?: string;
 };
 
 const tabs: ExperienceKey[] = ["life", "professional"];
 
-export function ExperienceExplorer({ content, experience }: Props) {
+function CompanyTimeline({
+  company,
+  entries,
+}: {
+  company: "nodeflair" | "docusign";
+  entries: TimelineEntry[];
+}) {
+  const isDocusign = company === "docusign";
+  const companyName = isDocusign ? "Docusign" : "NodeFlair";
+
+  return (
+    <section className={`timeline-company timeline-company--${company}`} aria-label={`${companyName} experience`}>
+      <div className="timeline-company-logo">
+        <img
+          src={isDocusign ? "/docusign-logo.png" : "/nodeflair-logo.png"}
+          alt={`${companyName} logo`}
+        />
+      </div>
+      <div className="company-timeline-track">
+        {entries.map((entry) => (
+          <article className="timeline-role-card" key={entry.role}>
+            <span aria-hidden="true" />
+            <h3>{entry.role}</h3>
+            {entry.period ? <p>{entry.period}</p> : null}
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
+export function ExperienceExplorer({ content }: Props) {
   const [active, setActive] = useState<ExperienceKey>("professional");
 
   function handleTabKeyDown(event: KeyboardEvent<HTMLButtonElement>, tab: ExperienceKey) {
@@ -104,22 +140,9 @@ export function ExperienceExplorer({ content, experience }: Props) {
             </div>
           </div>
         ) : (
-          <div className="timeline">
-            {experience.map((item) => (
-              <article key={`${item.company}-${item.role}`}>
-                <div>
-                  <h3>{item.role}</h3>
-                  <p>
-                    {item.company} - {item.period}
-                  </p>
-                </div>
-                <ul>
-                  {item.bullets.map((bullet) => (
-                    <li key={bullet}>{bullet}</li>
-                  ))}
-                </ul>
-              </article>
-            ))}
+          <div className="professional-timeline" aria-label="Professional timeline">
+            <CompanyTimeline company="nodeflair" entries={content.professional.nodeflair} />
+            <CompanyTimeline company="docusign" entries={content.professional.docusign} />
           </div>
         )}
       </div>

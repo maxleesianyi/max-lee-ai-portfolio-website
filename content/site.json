@@ -107,7 +107,33 @@
         ]
       },
       "professional": {
-        "label": "Professional Experience"
+        "label": "Professional Experience",
+        "nodeflair": [
+          {
+            "role": "Business Development Lead",
+            "period": "Feb 2019 - Jan 2021"
+          }
+        ],
+        "docusign": [
+          {
+            "role": "Sales Development Representative"
+          },
+          {
+            "role": "Enterprise Business Development"
+          },
+          {
+            "role": "Account Executive, SMB",
+            "period": "Feb 2023 - Jul 2024"
+          },
+          {
+            "role": "Account Executive, Mid Market",
+            "period": "Aug 2024 - Jan 2026"
+          },
+          {
+            "role": "Account Executive, Majors",
+            "period": "Feb 2026 - Present"
+          }
+        ]
       }
     }
   },

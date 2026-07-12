@@ -1,7 +1,7 @@
 import { ExperienceExplorer } from "./components/ExperienceExplorer";
 import { HomeExplorer } from "./components/HomeExplorer";
 import { PageShell, SocialLinks } from "./components/PortfolioBlocks";
-import { experience, home, pages, projects, workStories } from "./data";
+import { home, pages, projects, workStories } from "./data";
 
 export default function Home() {
   const { hero } = home;
@@ -46,7 +46,7 @@ export default function Home() {
         projects={projects}
       />
 
-      <ExperienceExplorer content={home.experienceExplorer} experience={experience} />
+      <ExperienceExplorer content={home.experienceExplorer} />
     </PageShell>
   );
 }
