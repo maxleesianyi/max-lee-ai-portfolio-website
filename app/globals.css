@@ -1267,9 +1267,8 @@ a:hover .browser-frame {
 }
 
 .timeline-company--nodeflair .timeline-company-logo img {
-  width: 88px;
+  width: min(100%, 220px);
   height: 72px;
-  border-radius: 6px;
 }
 
 .timeline-company--docusign .timeline-company-logo img {
