@@ -57,7 +57,6 @@ function CompanyTimeline({
       <div className="company-timeline-track">
         {entries.map((entry) => (
           <article className="timeline-role-card" key={entry.role}>
-            <span aria-hidden="true" />
             <h3>{entry.role}</h3>
             {entry.period ? <p>{entry.period}</p> : null}
           </article>

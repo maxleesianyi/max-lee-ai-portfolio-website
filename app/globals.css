@@ -1274,8 +1274,6 @@ a:hover .browser-frame {
 
 .timeline-company--docusign .timeline-company-logo img {
   width: min(100%, 168px);
-  filter: invert(1);
-  mix-blend-mode: screen;
 }
 
 .company-timeline-track {
@@ -1294,37 +1292,15 @@ a:hover .browser-frame {
   --timeline-steps: 5;
 }
 
-.company-timeline-track::before {
-  position: absolute;
-  top: 26px;
-  right: 10%;
-  left: 10%;
-  height: 1px;
-  background: rgba(244, 239, 231, 0.16);
-  content: "";
-}
-
 .timeline-role-card {
   position: relative;
   min-height: 142px;
-  padding: 28px 14px 14px;
+  padding: 20px 14px 14px;
   border: 1px solid rgba(244, 239, 231, 0.12);
   border-radius: 8px;
   background: rgba(244, 239, 231, 0.035);
   opacity: 0.45;
   transition: border-color 220ms ease, background 220ms ease, box-shadow 220ms ease, opacity 220ms ease, transform 220ms ease;
-}
-
-.timeline-role-card > span {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 11px;
-  height: 11px;
-  border: 2px solid var(--ink);
-  border-radius: 50%;
-  background: var(--gold);
-  transform: translate(-50%, -50%);
 }
 
 .timeline-role-card h3 {
