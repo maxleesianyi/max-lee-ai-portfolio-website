@@ -1110,9 +1110,8 @@ a:hover .browser-frame {
 }
 
 .experience-explorer {
-  margin-top: -64px;
-  border-top: 1px solid rgba(244, 239, 231, 0.08);
-  padding-top: 40px;
+  margin-top: 40px;
+  padding-top: 0;
 }
 
 .experience-tabs {
@@ -1166,6 +1165,10 @@ a:hover .browser-frame {
 .experience-panel:focus-visible {
   outline: 2px solid var(--gold);
   outline-offset: 5px;
+}
+
+.experience-explorer--nested + .text-link {
+  margin-top: 42px;
 }
 
 .life-experience {
@@ -1607,8 +1610,8 @@ a:hover .browser-frame {
   }
 
   .experience-explorer {
-    margin-top: -40px;
-    padding-top: 32px;
+    margin-top: 34px;
+    padding-top: 0;
   }
 
   .life-experience-list {
@@ -1679,8 +1682,8 @@ a:hover .browser-frame {
   }
 
   .experience-explorer {
-    margin-top: -28px;
-    padding-top: 30px;
+    margin-top: 30px;
+    padding-top: 0;
   }
 
   .professional-timeline {

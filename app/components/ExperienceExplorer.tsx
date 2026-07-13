@@ -9,24 +9,27 @@ type HeadlinePart = {
   color?: string;
 };
 
-type Props = {
-  content: {
-    life: {
-      label: string;
-      headline: string;
-      headlineParts?: HeadlinePart[];
-      body: string;
-      items: Array<{
-        title: string;
-        description: string;
-      }>;
-    };
-    professional: {
-      label: string;
-      nodeflair: TimelineEntry[];
-      docusign: TimelineEntry[];
-    };
+export type ExperienceExplorerContent = {
+  life: {
+    label: string;
+    headline: string;
+    headlineParts?: HeadlinePart[];
+    body: string;
+    items: Array<{
+      title: string;
+      description: string;
+    }>;
   };
+  professional: {
+    label: string;
+    nodeflair: TimelineEntry[];
+    docusign: TimelineEntry[];
+  };
+};
+
+type Props = {
+  content: ExperienceExplorerContent;
+  nested?: boolean;
 };
 
 type TimelineEntry = {
@@ -69,7 +72,7 @@ function CompanyTimeline({
   );
 }
 
-export function ExperienceExplorer({ content }: Props) {
+export function ExperienceExplorer({ content, nested = false }: Props) {
   const [active, setActive] = useState<ExperienceKey>("professional");
 
   function handleTabKeyDown(event: KeyboardEvent<HTMLButtonElement>, tab: ExperienceKey) {
@@ -90,7 +93,10 @@ export function ExperienceExplorer({ content }: Props) {
   }
 
   return (
-    <section className="experience-explorer section-pad" aria-label="Max Lee's experience">
+    <section
+      className={`experience-explorer${nested ? " experience-explorer--nested" : " section-pad"}`}
+      aria-label="Max Lee's experience"
+    >
       <div className="experience-tabs" role="tablist" aria-label="Experience sections">
         {tabs.map((tab) => (
           <button

@@ -44,7 +44,7 @@
         "Selling by day,",
         "Codex-ing by night."
       ],
-      "body": "Account Executive by profession. AI builder by curiosity. This is where I document the projects, experiments, and lessons from learning AI by building with it."
+      "body": "Documenting what I build, automate, and learn as I sharpen my craft in AI GTM."
     },
     "sections": {
       "aiAtWork": {
@@ -70,11 +70,11 @@
       },
       "aiAtWork": {
         "label": "AI at Work",
-        "linkLabel": "See how I use AI at Work"
+        "linkLabel": "Learn how I use AI at Work"
       },
       "projects": {
         "label": "Personal Projects",
-        "linkLabel": "Learn more about my Personal Projects"
+        "linkLabel": "See all my Personal Projects"
       }
     },
     "experienceExplorer": {

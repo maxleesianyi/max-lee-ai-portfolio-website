@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { KeyboardEvent, useState } from "react";
 import type { Project, WorkStory } from "../data";
+import { ExperienceExplorer, type ExperienceExplorerContent } from "./ExperienceExplorer";
 import { ProjectVisual, WorkVisual } from "./PortfolioBlocks";
 
 type ExplorerKey = "about" | "aiAtWork" | "projects";
@@ -43,6 +44,7 @@ type Props = {
     };
   };
   explorer: Record<ExplorerKey, ExplorerCopy>;
+  experienceExplorer: ExperienceExplorerContent;
   workStories: WorkStory[];
   projects: Project[];
 };
@@ -80,6 +82,7 @@ export function HomeExplorer({
   aiAtWork,
   personalProjects,
   explorer,
+  experienceExplorer,
   workStories,
   projects,
 }: Props) {
@@ -140,6 +143,7 @@ export function HomeExplorer({
               />
               <p className="explorer-intro">{about.hero.body}</p>
               <p className="explorer-detail">{about.paragraphs[0]}</p>
+              <ExperienceExplorer content={experienceExplorer} nested />
               <Link className="text-link" href="/about">
                 {explorer.about.linkLabel}
               </Link>

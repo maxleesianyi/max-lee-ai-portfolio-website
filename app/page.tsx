@@ -1,4 +1,3 @@
-import { ExperienceExplorer } from "./components/ExperienceExplorer";
 import { HomeExplorer } from "./components/HomeExplorer";
 import { PageShell, SocialLinks } from "./components/PortfolioBlocks";
 import { home, pages, projects, workStories } from "./data";
@@ -42,11 +41,10 @@ export default function Home() {
         aiAtWork={pages.aiAtWork}
         personalProjects={pages.projects}
         explorer={home.explorer}
+        experienceExplorer={home.experienceExplorer}
         workStories={workStories}
         projects={projects}
       />
-
-      <ExperienceExplorer content={home.experienceExplorer} />
     </PageShell>
   );
 }
