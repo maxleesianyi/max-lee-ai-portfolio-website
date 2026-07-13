@@ -322,19 +322,20 @@ h3 {
 
 .hero-portrait-outline {
   position: absolute;
-  inset: 0;
+  inset: 14px 0 0 14px;
   border-radius: 8px;
   background: linear-gradient(145deg, #5BBDFF 0%, #5B6BFF 100%);
-  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.22);
+  transform: rotate(3deg);
+  box-shadow: 0 24px 54px rgba(0, 0, 0, 0.2);
 }
 
 .hero-portrait-primary {
   position: absolute;
-  inset: 32px 0 0 32px;
+  inset: 0 14px 14px 0;
   z-index: 1;
   overflow: hidden;
   border: 1px solid rgba(244, 239, 231, 0.16);
-  border-radius: 8px 0 0 0;
+  border-radius: 8px;
   background-image: url("/hero-portrait-series.png");
   background-repeat: no-repeat;
   background-size: 200% 200%;
