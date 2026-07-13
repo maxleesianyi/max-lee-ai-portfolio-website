@@ -141,8 +141,6 @@ export function HomeExplorer({
                 fallback={about.hero.headline}
                 parts={about.hero.headlineParts}
               />
-              <p className="explorer-intro">{about.hero.body}</p>
-              <p className="explorer-detail">{about.paragraphs[0]}</p>
               <ExperienceExplorer content={experienceExplorer} nested />
               <Link className="text-link" href="/about">
                 {explorer.about.linkLabel}

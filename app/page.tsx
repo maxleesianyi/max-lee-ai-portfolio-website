@@ -21,17 +21,9 @@ export default function Home() {
           <SocialLinks className="social-links--hero" />
         </div>
         <div className="hero-side">
-          <div className="hero-photo-stack" aria-label="Portrait gallery placeholder">
-            <div className="hero-photo-card hero-photo-card--two" aria-hidden="true" />
-            <div className="hero-photo-card hero-photo-card--one" aria-hidden="true" />
-            <div className="hero-photo-card hero-photo-card--default" aria-hidden="true" />
-            <div className="hero-photo-phase hero-photo-phase--one" aria-hidden="true" />
-            <div className="hero-photo-phase hero-photo-phase--two" aria-hidden="true" />
-            <div className="hero-photo-phase hero-photo-phase--three" aria-hidden="true" />
-            <div className="hero-photo-caption">
-              <span>Portrait gallery</span>
-              <strong>Max Lee</strong>
-            </div>
+          <div className="hero-portrait" aria-label="Portrait placeholder">
+            <div className="hero-portrait-outline" aria-hidden="true" />
+            <div className="hero-portrait-primary" role="img" aria-label="Max Lee portrait placeholder" />
           </div>
         </div>
       </section>
