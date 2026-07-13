@@ -80,29 +80,15 @@
     "experienceExplorer": {
       "life": {
         "label": "Life Experience",
-        "headline": "A monk, a commando, and a chef walked into a bar. They're all Max.",
-        "headlineParts": [
-          { "text": "A " },
-          { "text": "monk", "color": "#5BBDFF" },
-          { "text": ", a " },
-          { "text": "commando", "color": "#5B6BFF" },
-          { "text": ", and a " },
-          { "text": "chef", "color": "#5BFFEF" },
-          { "text": " walked into a bar. They're all Max." }
-        ],
-        "body": "A few perspectives that shape how Max works, learns, and builds.",
         "items": [
           {
-            "title": "The monk",
-            "description": "Focus, reflection, and patience for the long game."
+            "title": "The Monk"
           },
           {
-            "title": "The commando",
-            "description": "Comfortable learning fast and stepping into unfamiliar ground."
+            "title": "The Commando"
           },
           {
-            "title": "The chef",
-            "description": "Finding joy in making something useful from a messy set of ingredients."
+            "title": "The Coach"
           }
         ]
       },

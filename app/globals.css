@@ -1172,51 +1172,58 @@ a:hover .browser-frame {
 }
 
 .life-experience {
-  text-align: right;
-}
-
-.life-experience h2 {
-  max-width: 930px;
+  width: min(100%, 920px);
   margin-left: auto;
-  font-size: clamp(2rem, 3.6vw, 3.75rem);
-  line-height: 1;
-  text-wrap: balance;
-}
-
-.life-experience > p {
-  max-width: 720px;
-  margin-top: 22px;
-  margin-left: auto;
-  color: var(--dim);
-  font-size: 1.04rem;
-  line-height: 1.75;
 }
 
 .life-experience-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 36px;
-  border-top: 1px solid rgba(244, 239, 231, 0.1);
+  gap: 18px;
 }
 
 .life-experience-list article {
   min-width: 0;
-  padding: 22px 22px 0;
+  padding: 0;
 }
 
-.life-experience-list article + article {
-  border-left: 1px solid rgba(244, 239, 231, 0.1);
+.life-experience-photo {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(244, 239, 231, 0.14);
+  border-radius: 8px;
+  background: var(--ink-2);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.14);
+}
+
+.life-experience-photo::before,
+.life-experience-photo::after {
+  position: absolute;
+  left: 50%;
+  background: rgba(244, 239, 231, 0.1);
+  content: "";
+  transform: translateX(-50%);
+}
+
+.life-experience-photo::before {
+  top: 25%;
+  width: 28%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+
+.life-experience-photo::after {
+  bottom: -8%;
+  width: 64%;
+  height: 46%;
+  border-radius: 50% 50% 0 0;
 }
 
 .life-experience-list h3 {
-  font-size: 1.1rem;
-}
-
-.life-experience-list p {
-  margin-top: 10px;
-  color: var(--dim);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  margin-top: 13px;
+  font-size: 1rem;
+  text-align: center;
 }
 
 .case-aside ul {
@@ -1615,17 +1622,16 @@ a:hover .browser-frame {
   }
 
   .life-experience-list {
-    grid-template-columns: 1fr;
+    grid-auto-columns: minmax(210px, 40vw);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x proximity;
   }
 
   .life-experience-list article {
-    padding: 20px 0 0;
-  }
-
-  .life-experience-list article + article {
-    margin-top: 20px;
-    border-top: 1px solid rgba(244, 239, 231, 0.1);
-    border-left: 0;
+    scroll-snap-align: start;
   }
 
   .professional-timeline {
@@ -1688,6 +1694,10 @@ a:hover .browser-frame {
 
   .professional-timeline {
     gap: 30px;
+  }
+
+  .life-experience-list {
+    grid-auto-columns: minmax(210px, 70vw);
   }
 
   .timeline-company--docusign .company-timeline-track {

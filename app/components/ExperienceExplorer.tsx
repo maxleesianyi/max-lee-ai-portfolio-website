@@ -4,20 +4,11 @@ import { KeyboardEvent, useState } from "react";
 
 type ExperienceKey = "life" | "professional";
 
-type HeadlinePart = {
-  text: string;
-  color?: string;
-};
-
 export type ExperienceExplorerContent = {
   life: {
     label: string;
-    headline: string;
-    headlineParts?: HeadlinePart[];
-    body: string;
     items: Array<{
       title: string;
-      description: string;
     }>;
   };
   professional: {
@@ -126,23 +117,11 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
       >
         {active === "life" ? (
           <div className="life-experience">
-            <h2>
-              {content.life.headlineParts?.map((part, index) =>
-                part.color ? (
-                  <span key={`${part.text}-${index}`} style={{ color: part.color }}>
-                    {part.text}
-                  </span>
-                ) : (
-                  part.text
-                ),
-              ) ?? content.life.headline}
-            </h2>
-            <p>{content.life.body}</p>
             <div className="life-experience-list">
               {content.life.items.map((item) => (
                 <article key={item.title}>
+                  <div className="life-experience-photo" role="img" aria-label={`${item.title} photo placeholder`} />
                   <h3>{item.title}</h3>
-                  <p>{item.description}</p>
                 </article>
               ))}
             </div>
