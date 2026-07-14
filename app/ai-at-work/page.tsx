@@ -11,7 +11,7 @@ export default function AiAtWorkPage() {
 
   return (
     <PageShell>
-      <section className="subpage-hero subpage-hero--wide section-pad">
+      <section className="subpage-hero subpage-hero--wide subpage-hero--ai-at-work section-pad">
         <h1>
           {hero.headlineParts?.map((part, index) =>
             part.color ? (

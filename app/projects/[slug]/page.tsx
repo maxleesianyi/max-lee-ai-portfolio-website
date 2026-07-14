@@ -49,7 +49,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         </Link>
         <div className="case-meta">
           <span>{project.year}</span>
-          <span>{project.kicker}</span>
+          {project.kicker ? <span>{project.kicker}</span> : null}
           <span>{project.status}</span>
         </div>
         <h1>{project.title}</h1>

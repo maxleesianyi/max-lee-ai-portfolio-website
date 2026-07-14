@@ -137,11 +137,11 @@
       },
       "hero": {
         "eyebrow": "AI at Work",
-        "headline": "Leveraging AI at Work, automating workflows to achieve measurable sales outcomes.",
+        "headline": "Leveraging AI at Work,\nautomating workflows to\nachieve measurable sales outcomes.",
         "headlineParts": [
           { "text": "Leveraging " },
           { "text": "AI at Work", "color": "#5BBDFF" },
-          { "text": ", automating workflows to achieve measurable sales outcomes." }
+          { "text": ",\nautomating workflows to\nachieve measurable sales outcomes." }
         ],
         "body": "Reducing manual work, making better decisions, and spending more time engaging customers"
       }
@@ -153,10 +153,10 @@
       },
       "hero": {
         "eyebrow": "Personal Projects",
-        "headline": "Personal Projects built with passion, curiosity and AI",
+        "headline": "Personal Projects built with\npassion, curiosity and AI",
         "headlineParts": [
           { "text": "Personal Projects", "color": "#5BBDFF" },
-          { "text": " built with passion, curiosity and AI" }
+          { "text": " built with\npassion, curiosity and AI" }
         ],
         "body": "Real apps that I've built to solve everyday problems"
       }
@@ -233,9 +233,9 @@
       "slug": "openai-bdr-interviewer-buddy",
       "title": "OpenAI BDR Interviewer Buddy",
       "year": "2026",
-      "kicker": "Voice practice coach for OpenAI interview fluency",
+      "kicker": "",
       "status": "Private beta",
-      "summary": "A private record-and-review practice app that helps Max prepare crisp spoken answers on OpenAI products, AI concepts, competitor positioning, and APAC customer value.",
+      "summary": "A record-and-review practice app that helps Max prepare AI concepts, OpenAI products, and real life business value.",
       "galleryDescription": "Voice practice and structured feedback for OpenAI interview fluency.",
       "description": [
         "This app is not a generic quiz tool. It is an interview-performance training system built around daily five-question voice sessions, topic mastery, retry logic, and commercially grounded feedback.",
@@ -244,10 +244,10 @@
       ],
       "tags": [
         "Next.js",
-        "OpenAI",
-        "Speech-to-text",
-        "Structured scoring",
-        "Supabase"
+        "TypeScript",
+        "OpenAI API",
+        "Supabase",
+        "Vercel"
       ],
       "metrics": [
         {
@@ -270,8 +270,50 @@
         "Designed for Singapore and APAC commercial fluency, not generic AI trivia."
       ],
       "role": "Product owner, designer, and builder.",
-      "next": "crib-stock-taker",
+      "next": "max-lee-ai-portfolio",
       "accent": "gold"
+    },
+    {
+      "slug": "max-lee-ai-portfolio",
+      "title": "AI Portfolio Website",
+      "year": "2026",
+      "kicker": "",
+      "status": "Live site",
+      "summary": "A portfolio that brings together Max's sales experience, AI at Work stories, and Personal Projects in one interactive site.",
+      "galleryDescription": "An interactive site for Max's sales, AI at Work stories, and Personal Projects.",
+      "description": [
+        "This portfolio was designed to make Max's work easy to explore: practical AI workflows, personal builds, and commercial experience live in one place.",
+        "Codex supported the implementation loop from layout and content modeling to visual refinements, responsive interactions, and deployment."
+      ],
+      "tags": [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "OpenAI Sites",
+        "Codex"
+      ],
+      "metrics": [
+        {
+          "value": "3",
+          "label": "portfolio sections"
+        },
+        {
+          "value": "4",
+          "label": "interactive views"
+        },
+        {
+          "value": "1",
+          "label": "live portfolio"
+        }
+      ],
+      "highlights": [
+        "Built around editable content so copy and projects can change without code.",
+        "Uses an interactive homepage explorer and responsive route-level case studies.",
+        "Iterated directly from recruiter-focused feedback."
+      ],
+      "role": "Product owner, designer, and builder.",
+      "next": "crib-stock-taker",
+      "accent": "violet"
     },
     {
       "slug": "crib-stock-taker",
@@ -287,11 +329,11 @@
         "Supabase powers authentication, roles, database tables, and private photo storage. The frontend is a static HTML, CSS, and JavaScript app hosted on Vercel."
       ],
       "tags": [
-        "Supabase",
-        "Vercel",
         "JavaScript",
-        "Auth",
-        "Storage"
+        "Supabase",
+        "Supabase Auth",
+        "Supabase Storage",
+        "Vercel"
       ],
       "metrics": [
         {
@@ -314,49 +356,8 @@
         "Supabase Auth profiles connect app-specific roles to real users."
       ],
       "role": "Solo builder for a real household workflow.",
-      "next": "max-lee-ai-portfolio",
-      "accent": "teal"
-    },
-    {
-      "slug": "max-lee-ai-portfolio",
-      "title": "Max Lee AI Portfolio",
-      "year": "2026",
-      "kicker": "Recruiter-facing portfolio built and iterated with Codex",
-      "status": "Live site",
-      "summary": "A recruiter-facing portfolio that brings together Max's sales experience, AI-at-work stories, and personal projects in one interactive site.",
-      "galleryDescription": "A recruiter-facing portfolio built and iterated with Codex.",
-      "description": [
-        "This portfolio was designed to make Max's work easy to explore: practical AI workflows, personal builds, and commercial experience live in one place.",
-        "Codex supported the implementation loop from layout and content modeling to visual refinements, responsive interactions, and deployment."
-      ],
-      "tags": [
-        "Codex",
-        "Next.js",
-        "Portfolio",
-        "Sites"
-      ],
-      "metrics": [
-        {
-          "value": "3",
-          "label": "portfolio sections"
-        },
-        {
-          "value": "4",
-          "label": "interactive views"
-        },
-        {
-          "value": "1",
-          "label": "live portfolio"
-        }
-      ],
-      "highlights": [
-        "Built around editable content so copy and projects can change without code.",
-        "Uses an interactive homepage explorer and responsive route-level case studies.",
-        "Iterated directly from recruiter-focused feedback."
-      ],
-      "role": "Product owner, designer, and builder.",
       "next": "openai-bdr-interviewer-buddy",
-      "accent": "violet"
+      "accent": "teal"
     }
   ],
   "workStories": [

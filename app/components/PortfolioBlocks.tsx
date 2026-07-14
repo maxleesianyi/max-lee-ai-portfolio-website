@@ -184,15 +184,10 @@ export function ProjectFeature({ project, index }: { project: Project; index: nu
         <ProjectVisual project={project} />
       </Link>
       <div className="feature-copy">
-        <div className="meta-line">
-          <span>{String(index + 1).padStart(2, "0")}</span>
-          <span>{project.year}</span>
-          <span>{project.status}</span>
-        </div>
         <Link href={`/projects/${project.slug}`}>
           <h2>{project.title}</h2>
         </Link>
-        <p className="mono-note">{project.kicker}</p>
+        {project.kicker ? <p className="mono-note">{project.kicker}</p> : null}
         <p>{project.summary}</p>
         <ul className="tag-list">
           {project.tags.map((tag) => (

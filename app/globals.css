@@ -1021,9 +1021,13 @@ a:hover .browser-frame {
 
 .subpage-hero--wide h1 {
   max-width: 100%;
-  margin-left: auto;
-  text-align: right;
-  text-wrap: balance;
+  margin-left: 0;
+  text-align: left;
+  white-space: pre-line;
+}
+
+.subpage-hero--ai-at-work h1 {
+  font-size: clamp(2.8rem, 4.25vw, 3.95rem);
 }
 
 .subpage-hero p {
