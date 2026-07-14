@@ -22,6 +22,8 @@ export type Project = {
   accent: string;
   externalLabel?: string;
   externalUrl?: string;
+  githubLabel?: string;
+  githubUrl?: string;
 };
 
 export type WorkStory = {

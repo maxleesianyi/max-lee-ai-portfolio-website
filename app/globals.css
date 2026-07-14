@@ -848,6 +848,17 @@ h3 {
   margin-top: 0;
 }
 
+.project-github-link {
+  align-items: center;
+  gap: 8px;
+}
+
+.project-github-link svg {
+  width: 15px;
+  height: 15px;
+  fill: currentColor;
+}
+
 .browser-frame {
   overflow: hidden;
   border: 1px solid rgba(244, 239, 231, 0.1);
@@ -1047,8 +1058,8 @@ a:hover .browser-frame {
 }
 
 .subpage-hero-footer {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 410px);
+  display: flex;
+  flex-wrap: nowrap;
   gap: 28px;
   align-items: start;
   margin-top: 26px;
@@ -1061,8 +1072,8 @@ a:hover .browser-frame {
 }
 
 .ai-use-disclaimer {
-  justify-self: end;
-  width: 100%;
+  width: 272px;
+  margin-left: auto;
   overflow: hidden;
   border: 1px solid rgba(91, 189, 255, 0.32);
   border-radius: 8px;
@@ -1070,11 +1081,12 @@ a:hover .browser-frame {
   padding: 13px 16px;
   color: #bde8ff;
   cursor: default;
-  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  transition: width 240ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .ai-use-disclaimer strong {
   display: block;
+  white-space: nowrap;
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.78rem;
   font-weight: 650;
@@ -1093,6 +1105,7 @@ a:hover .browser-frame {
 
 .ai-use-disclaimer:hover,
 .ai-use-disclaimer:focus-visible {
+  width: 410px;
   border-color: rgba(91, 189, 255, 0.62);
   background: rgba(91, 189, 255, 0.13);
   box-shadow: 0 14px 30px rgba(91, 189, 255, 0.12);
@@ -1527,7 +1540,7 @@ a:hover .browser-frame {
 
 @media (max-width: 860px) {
   .subpage-hero-footer {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 18px;
   }
 
@@ -1536,7 +1549,13 @@ a:hover .browser-frame {
   }
 
   .ai-use-disclaimer {
-    justify-self: stretch;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .ai-use-disclaimer:hover,
+  .ai-use-disclaimer:focus-visible {
+    width: 100%;
   }
 
   .nav-shell {

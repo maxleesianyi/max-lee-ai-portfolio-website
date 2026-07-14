@@ -203,6 +203,12 @@ export function ProjectFeature({ project, index }: { project: Project; index: nu
               {project.externalLabel}
             </a>
           ) : null}
+          {project.githubUrl ? (
+            <a className="text-link project-github-link" href={project.githubUrl} target="_blank" rel="noreferrer">
+              <SocialIcon label="GitHub" />
+              {project.githubLabel ?? "GitHub"}
+            </a>
+          ) : null}
         </div>
       </div>
     </article>

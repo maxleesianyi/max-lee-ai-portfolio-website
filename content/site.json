@@ -273,7 +273,8 @@
       "next": "max-lee-ai-portfolio",
       "accent": "gold",
       "externalLabel": "Try it out",
-      "externalUrl": "https://ai-gtm-learning-lab.vercel.app/"
+      "externalUrl": "https://ai-gtm-learning-lab.vercel.app/",
+      "githubUrl": "https://github.com/maxleesianyi/AI-GTM-Learning-Lab"
     },
     {
       "slug": "max-lee-ai-portfolio",
@@ -315,7 +316,9 @@
       ],
       "role": "Product owner, designer, and builder.",
       "next": "crib-stock-taker",
-      "accent": "violet"
+      "accent": "violet",
+      "githubLabel": "GitHub profile",
+      "githubUrl": "https://github.com/maxleesianyi"
     },
     {
       "slug": "crib-stock-taker",
@@ -359,7 +362,8 @@
       ],
       "role": "Solo builder for a real household workflow.",
       "next": "bus-15-telegram-alert",
-      "accent": "teal"
+      "accent": "teal",
+      "githubUrl": "https://github.com/maxleesianyi/crib-stock-taker"
     },
     {
       "slug": "bus-15-telegram-alert",
@@ -404,7 +408,8 @@
       ],
       "role": "Product owner and builder for a personal commuting workflow.",
       "next": "daily-ai-newsletter",
-      "accent": "blue"
+      "accent": "blue",
+      "githubUrl": "https://github.com/maxleesianyi/bus-telegram-alert"
     },
     {
       "slug": "daily-ai-newsletter",
@@ -448,7 +453,9 @@
       ],
       "role": "Workflow designer for a personal learning habit.",
       "next": "openai-bdr-interviewer-buddy",
-      "accent": "red"
+      "accent": "red",
+      "githubLabel": "GitHub profile",
+      "githubUrl": "https://github.com/maxleesianyi"
     }
   ],
   "workStories": [
