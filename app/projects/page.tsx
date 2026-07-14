@@ -11,7 +11,7 @@ export default function ProjectsPage() {
 
   return (
     <PageShell>
-      <section className="subpage-hero section-pad">
+      <section className="subpage-hero subpage-hero--wide section-pad">
         <h1>
           {hero.headlineParts?.map((part, index) =>
             part.color ? (

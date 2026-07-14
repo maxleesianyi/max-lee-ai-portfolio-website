@@ -1019,6 +1019,13 @@ a:hover .browser-frame {
   line-height: 0.96;
 }
 
+.subpage-hero--wide h1 {
+  max-width: 100%;
+  margin-left: auto;
+  text-align: right;
+  text-wrap: balance;
+}
+
 .subpage-hero p {
   max-width: 660px;
   margin-top: 26px;
