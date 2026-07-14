@@ -458,7 +458,7 @@
   "workStories": [
     {
       "slug": "ai-research-at-docusign",
-      "title": "AI-assisted account research",
+      "title": "Pipeline Generation",
       "eyebrow": "Docusign",
       "year": "2024-2026",
       "summary": "Used Gemini and Glean to compress account research, sharpen persona insights, identify buying signals, and personalize outreach.",
@@ -497,7 +497,7 @@
     },
     {
       "slug": "ai-product-launch-selling",
-      "title": "Selling new AI product lines",
+      "title": "Opportunity Management",
       "eyebrow": "Docusign",
       "year": "2025",
       "summary": "First AE in Docusign Asia to sell two newly launched AI product lines within the first month, before established playbooks existed.",
@@ -535,43 +535,82 @@
       "accent": "red"
     },
     {
-      "slug": "codex-built-portfolio",
-      "title": "Building with Codex",
-      "eyebrow": "Personal AI workflow",
-      "year": "2026",
-      "summary": "Used Codex to build and ship personal tools, including this portfolio, the interview-practice app, and the household stock tracker.",
-      "galleryDescription": "Used Codex to turn product ideas into deployed tools.",
+      "slug": "leadership-alignment",
+      "title": "Leadership Alignment",
+      "eyebrow": "Docusign",
+      "year": "2025",
+      "summary": "Used structured discovery, multi-threading, and executive sponsorship to align stakeholders around new AI and IAM opportunities.",
+      "galleryDescription": "Aligned stakeholders around the value and execution of complex AI opportunities.",
       "details": [
-        "The local project history shows Max using Codex-style workflows to turn product specs into working apps, connect services like Supabase and Vercel, and iterate from product decisions into implementation.",
-        "For this portfolio, Codex was used to inspect source material, mirror a requested reference layout, and build a recruiter-facing site grounded in resume, portfolio, and project material."
+        "The resume describes one of the first major Docusign Intelligent Agreement Management platform deals at US$120k ARR, supported by MEDDPICC execution, multi-threading, and executive sponsorship.",
+        "The same commercial discipline helped turn newly launched AI product value into aligned customer conversations before mature playbooks existed."
       ],
       "tags": [
-        "Codex",
-        "Product specs",
-        "Supabase",
-        "Vercel",
-        "Portfolio"
+        "Executive sponsorship",
+        "Multi-threading",
+        "MEDDPICC",
+        "IAM",
+        "Stakeholder alignment"
       ],
       "metrics": [
         {
-          "value": "3",
-          "label": "portfolio source groups"
+          "value": "$120k",
+          "label": "major IAM ARR deal"
         },
         {
           "value": "2",
-          "label": "shipped app surfaces"
+          "label": "AI products sold early"
         },
         {
           "value": "1",
-          "label": "recruiter-facing portfolio"
+          "label": "Asia AE milestone"
         }
       ],
       "highlights": [
-        "Uses AI as a builder and reviewer across product, code, copy, and deployment.",
-        "Keeps AI claims grounded in resume, portfolio, and project source material.",
-        "Turns vague product ideas into usable internal tools."
+        "Connected new AI product value to executive-level business conversations.",
+        "Used structured qualification to keep multi-stakeholder opportunities focused.",
+        "Built credibility with cross-functional execution and executive sponsorship."
       ],
       "accent": "violet"
+    },
+    {
+      "slug": "internal-intelligence-compliance",
+      "title": "Internal Intelligence & Compliance",
+      "eyebrow": "Docusign",
+      "year": "2024-2026",
+      "summary": "Developed AI workflows within Docusign's approved tools, access controls, and data-governance policies.",
+      "galleryDescription": "Practical AI workflows designed within responsible-use guardrails.",
+      "details": [
+        "The examples on this page were developed within Docusign's approved tools, access controls, and data-governance policies.",
+        "Some workflows are intentionally limited without external integrations, AI agents, or access to restricted systems."
+      ],
+      "tags": [
+        "Approved tools",
+        "Access controls",
+        "Data governance",
+        "Responsible AI",
+        "Internal intelligence"
+      ],
+      "metrics": [
+        {
+          "value": "Approved",
+          "label": "tools"
+        },
+        {
+          "value": "Scoped",
+          "label": "access"
+        },
+        {
+          "value": "Governed",
+          "label": "data"
+        }
+      ],
+      "highlights": [
+        "Kept workflows within approved tools and access boundaries.",
+        "Applied data-governance requirements when designing examples.",
+        "Made responsible-use constraints explicit instead of obscuring them."
+      ],
+      "accent": "blue"
     }
   ],
   "experience": [

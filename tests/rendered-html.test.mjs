@@ -89,3 +89,15 @@ test("keeps no-code content structurally complete", async () => {
   assert.ok(siteContent.projects.every((project) => project.title && project.summary));
   assert.ok(siteContent.projects.every((project) => project.description.length >= 1));
 });
+
+test("keeps the four AI-at-work categories available", () => {
+  assert.deepEqual(
+    siteContent.workStories.map((story) => story.title),
+    [
+      "Pipeline Generation",
+      "Opportunity Management",
+      "Leadership Alignment",
+      "Internal Intelligence & Compliance",
+    ],
+  );
+});
