@@ -470,15 +470,15 @@
       "tags": [
         {
           "name": "Gemini",
-          "logo": "https://cdn.simpleicons.org/googlegemini/8E75B2"
+          "logo": "/logos/gemini.png"
         },
         {
           "name": "Glean",
-          "logo": "https://cdn.simpleicons.org/glean/5BBDFF"
+          "logo": "/logos/glean.png"
         },
         {
           "name": "Slackbot",
-          "logo": "https://cdn.simpleicons.org/slack/36C5F0"
+          "logo": "/logos/slackbot.png"
         }
       ],
       "metrics": [
@@ -516,19 +516,19 @@
       "tags": [
         {
           "name": "Gemini",
-          "logo": "https://cdn.simpleicons.org/googlegemini/8E75B2"
+          "logo": "/logos/gemini.png"
         },
         {
           "name": "Gong",
-          "logo": "https://cdn.simpleicons.org/gong/8A3FFC"
+          "logo": "/logos/gong.png"
         },
         {
           "name": "Glean",
-          "logo": "https://cdn.simpleicons.org/glean/5BBDFF"
+          "logo": "/logos/glean.png"
         },
         {
           "name": "Slackbot",
-          "logo": "https://cdn.simpleicons.org/slack/36C5F0"
+          "logo": "/logos/slackbot.png"
         }
       ],
       "metrics": [
@@ -566,15 +566,15 @@
       "tags": [
         {
           "name": "Gemini",
-          "logo": "https://cdn.simpleicons.org/googlegemini/8E75B2"
+          "logo": "/logos/gemini.png"
         },
         {
           "name": "Gong",
-          "logo": "https://cdn.simpleicons.org/gong/8A3FFC"
+          "logo": "/logos/gong.png"
         },
         {
           "name": "Slackbot",
-          "logo": "https://cdn.simpleicons.org/slack/36C5F0"
+          "logo": "/logos/slackbot.png"
         }
       ],
       "metrics": [
@@ -612,11 +612,11 @@
       "tags": [
         {
           "name": "Gemini",
-          "logo": "https://cdn.simpleicons.org/googlegemini/8E75B2"
+          "logo": "/logos/gemini.png"
         },
         {
           "name": "Glean",
-          "logo": "https://cdn.simpleicons.org/glean/5BBDFF"
+          "logo": "/logos/glean.png"
         }
       ],
       "metrics": [
