@@ -194,9 +194,16 @@ export function ProjectFeature({ project, index }: { project: Project; index: nu
             <li key={tag}>{tag}</li>
           ))}
         </ul>
-        <Link className="text-link" href={`/projects/${project.slug}`}>
-          Case study
-        </Link>
+        <div className="feature-actions">
+          <Link className="text-link" href={`/projects/${project.slug}`}>
+            Case study
+          </Link>
+          {project.externalUrl && project.externalLabel ? (
+            <a className="text-link" href={project.externalUrl} target="_blank" rel="noreferrer">
+              {project.externalLabel}
+            </a>
+          ) : null}
+        </div>
       </div>
     </article>
   );

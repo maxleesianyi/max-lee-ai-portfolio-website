@@ -271,7 +271,9 @@
       ],
       "role": "Product owner, designer, and builder.",
       "next": "max-lee-ai-portfolio",
-      "accent": "gold"
+      "accent": "gold",
+      "externalLabel": "Try it out",
+      "externalUrl": "https://ai-gtm-learning-lab.vercel.app/"
     },
     {
       "slug": "max-lee-ai-portfolio",
@@ -356,8 +358,97 @@
         "Supabase Auth profiles connect app-specific roles to real users."
       ],
       "role": "Solo builder for a real household workflow.",
-      "next": "openai-bdr-interviewer-buddy",
+      "next": "bus-15-telegram-alert",
       "accent": "teal"
+    },
+    {
+      "slug": "bus-15-telegram-alert",
+      "title": "Bus 15 Telegram Alert",
+      "year": "2026",
+      "kicker": "Weekday bus arrival and leave-time automation",
+      "status": "Live automation",
+      "summary": "A weekday automation that checks real-time Bus 15 arrivals and sends Max a Telegram alert with the next catchable bus and when to leave home.",
+      "galleryDescription": "Real-time Bus 15 alerts with practical leave-time guidance.",
+      "description": [
+        "This automation was built around a practical morning decision: which Bus 15 can Max actually catch after a 10-minute walk and a two-minute buffer?",
+        "A Supabase Edge Function checks the official LTA DataMall Bus Arrival endpoint on weekday mornings, then sends the next and subsequent arrival times through Telegram with a clear leave-time recommendation.",
+        "Supabase Cron is the live scheduler because GitHub Actions scheduled jobs were too unreliable for a time-sensitive alert. Telegram reply commands can pause, stop, or resume alerts for the current day."
+      ],
+      "tags": [
+        "Supabase",
+        "Edge Functions",
+        "Supabase Cron",
+        "Telegram Bot API",
+        "LTA DataMall",
+        "TypeScript"
+      ],
+      "metrics": [
+        {
+          "value": "5",
+          "label": "weekday checks"
+        },
+        {
+          "value": "10 min",
+          "label": "walk time"
+        },
+        {
+          "value": "2 min",
+          "label": "safety buffer"
+        }
+      ],
+      "highlights": [
+        "Uses live LTA arrival data rather than scraping a transit webpage.",
+        "Recommends the best catchable bus instead of merely forwarding arrival times.",
+        "Supports Telegram pause, stop, and resume commands for the current day.",
+        "Uses Supabase Cron for dependable weekday-morning execution."
+      ],
+      "role": "Product owner and builder for a personal commuting workflow.",
+      "next": "daily-ai-newsletter",
+      "accent": "blue"
+    },
+    {
+      "slug": "daily-ai-newsletter",
+      "title": "Daily AI Newsletter",
+      "year": "2026",
+      "kicker": "A scheduled personal AI intelligence briefing",
+      "status": "Scheduled task",
+      "summary": "A scheduled ChatGPT task that researches key AI developments and emails Max a concise daily briefing.",
+      "galleryDescription": "A daily, source-linked AI briefing delivered by email.",
+      "description": [
+        "This personal automation reviews important AI developments from roughly the last 24 hours, prioritising OpenAI, Anthropic, Google and DeepMind, and material policy, market, safety, infrastructure, and talent moves.",
+        "Each email starts with a short executive summary, then covers the major labs, other important AI moves, and why the developments matter for OpenAI.",
+        "The scheduled task sends the newsletter directly to Max's Gmail account, includes source links, and closes with a watchlist for the next 24 to 72 hours."
+      ],
+      "tags": [
+        "ChatGPT Tasks",
+        "GPT-5.5",
+        "Web Research",
+        "Gmail",
+        "OpenAI"
+      ],
+      "metrics": [
+        {
+          "value": "5",
+          "label": "report sections"
+        },
+        {
+          "value": "3-5",
+          "label": "executive bullets"
+        },
+        {
+          "value": "24 hrs",
+          "label": "news window"
+        }
+      ],
+      "highlights": [
+        "Researches and links to reliable primary or high-quality sources.",
+        "Turns a broad news cycle into a brief designed for fast personal reading.",
+        "Separates what happened from why it matters for OpenAI.",
+        "Maintains a short watchlist rather than filling space with low-signal news."
+      ],
+      "role": "Workflow designer for a personal learning habit.",
+      "next": "openai-bdr-interviewer-buddy",
+      "accent": "red"
     }
   ],
   "workStories": [

@@ -837,6 +837,17 @@ h3 {
   margin-top: 28px;
 }
 
+.feature-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.feature-actions .text-link {
+  margin-top: 0;
+}
+
 .browser-frame {
   overflow: hidden;
   border: 1px solid rgba(244, 239, 231, 0.1);

@@ -20,6 +20,8 @@ export type Project = {
   role: string;
   next?: string;
   accent: string;
+  externalLabel?: string;
+  externalUrl?: string;
 };
 
 export type WorkStory = {
