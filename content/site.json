@@ -468,11 +468,18 @@
         "The measurable outcome from the resume: account research time fell by 55%, overall pipeline increased by 25%, and reply rates improved by 4%."
       ],
       "tags": [
-        "Gemini",
-        "Glean",
-        "Persona research",
-        "Buying signals",
-        "Pipeline"
+        {
+          "name": "Gemini",
+          "logo": "https://cdn.simpleicons.org/googlegemini/8E75B2"
+        },
+        {
+          "name": "Glean",
+          "logo": "https://cdn.simpleicons.org/glean/5BBDFF"
+        },
+        {
+          "name": "Slackbot",
+          "logo": "https://cdn.simpleicons.org/slack/36C5F0"
+        }
       ],
       "metrics": [
         {
@@ -507,11 +514,22 @@
         "This sits alongside one of the first major Docusign Intelligent Agreement Management platform deals at US$120k ARR, recognized internally for MEDDPICC execution, multi-threading, and executive sponsorship."
       ],
       "tags": [
-        "AI product lines",
-        "IAM",
-        "MEDDPICC",
-        "Multi-threading",
-        "Executive sponsorship"
+        {
+          "name": "Gemini",
+          "logo": "https://cdn.simpleicons.org/googlegemini/8E75B2"
+        },
+        {
+          "name": "Gong",
+          "logo": "https://cdn.simpleicons.org/gong/8A3FFC"
+        },
+        {
+          "name": "Glean",
+          "logo": "https://cdn.simpleicons.org/glean/5BBDFF"
+        },
+        {
+          "name": "Slackbot",
+          "logo": "https://cdn.simpleicons.org/slack/36C5F0"
+        }
       ],
       "metrics": [
         {
@@ -546,11 +564,18 @@
         "The same commercial discipline helped turn newly launched AI product value into aligned customer conversations before mature playbooks existed."
       ],
       "tags": [
-        "Executive sponsorship",
-        "Multi-threading",
-        "MEDDPICC",
-        "IAM",
-        "Stakeholder alignment"
+        {
+          "name": "Gemini",
+          "logo": "https://cdn.simpleicons.org/googlegemini/8E75B2"
+        },
+        {
+          "name": "Gong",
+          "logo": "https://cdn.simpleicons.org/gong/8A3FFC"
+        },
+        {
+          "name": "Slackbot",
+          "logo": "https://cdn.simpleicons.org/slack/36C5F0"
+        }
       ],
       "metrics": [
         {
@@ -585,11 +610,14 @@
         "Some workflows are intentionally limited without external integrations, AI agents, or access to restricted systems."
       ],
       "tags": [
-        "Approved tools",
-        "Access controls",
-        "Data governance",
-        "Responsible AI",
-        "Internal intelligence"
+        {
+          "name": "Gemini",
+          "logo": "https://cdn.simpleicons.org/googlegemini/8E75B2"
+        },
+        {
+          "name": "Glean",
+          "logo": "https://cdn.simpleicons.org/glean/5BBDFF"
+        }
       ],
       "metrics": [
         {

@@ -101,3 +101,21 @@ test("keeps the four AI-at-work categories available", () => {
     ],
   );
 });
+
+test("renders a case study CTA and placeholder page for every AI-at-work category", async () => {
+  const indexResponse = await render("/ai-at-work");
+  assert.equal(indexResponse.status, 200);
+
+  const indexHtml = await indexResponse.text();
+  for (const story of siteContent.workStories) {
+    assert.match(indexHtml, new RegExp(`Case Study`));
+    assert.match(indexHtml, new RegExp(`/ai-at-work/${story.slug}`));
+
+    const caseStudyResponse = await render(`/ai-at-work/${story.slug}`);
+    assert.equal(caseStudyResponse.status, 200);
+
+    const caseStudyHtml = await caseStudyResponse.text();
+    assert.match(caseStudyHtml, /Placeholder case study/);
+    assert.match(caseStudyHtml, /A fuller walkthrough is coming soon\./);
+  }
+});

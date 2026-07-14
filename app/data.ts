@@ -5,6 +5,11 @@ export type Metric = {
   label: string;
 };
 
+export type ToolTag = {
+  name: string;
+  logo: string;
+};
+
 export type Project = {
   slug: string;
   title: string;
@@ -34,7 +39,7 @@ export type WorkStory = {
   summary: string;
   galleryDescription: string;
   details: string[];
-  tags: string[];
+  tags: ToolTag[];
   metrics: Metric[];
   highlights: string[];
   accent: string;

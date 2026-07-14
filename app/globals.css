@@ -832,6 +832,18 @@ h3 {
   background: rgba(244, 239, 231, 0.06);
 }
 
+.tag-list li.tool-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.tool-tag img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
 .text-link {
   display: inline-flex;
   margin-top: 28px;

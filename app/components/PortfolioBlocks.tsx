@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { navigation, site, type Metric, type Project, type WorkStory } from "../data";
+import { navigation, site, type Metric, type Project, type ToolTag, type WorkStory } from "../data";
 
 function BrandMark() {
   const dotIndex = site.brandName.indexOf(".");
@@ -177,6 +177,19 @@ export function WorkVisual({ story }: { story: WorkStory }) {
   );
 }
 
+export function ToolTagList({ tags, solid = false }: { tags: ToolTag[]; solid?: boolean }) {
+  return (
+    <ul className={`tag-list tool-tag-list ${solid ? "tag-list--solid" : ""}`}>
+      {tags.map((tag) => (
+        <li className="tool-tag" key={tag.name}>
+          <img src={tag.logo} alt="" aria-hidden="true" />
+          <span>{tag.name}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
 export function ProjectFeature({ project, index }: { project: Project; index: number }) {
   return (
     <article className={`feature-row ${index % 2 ? "feature-row--reverse" : ""}`}>
@@ -222,11 +235,12 @@ export function WorkFeature({ story, index }: { story: WorkStory; index: number 
       <div className="feature-copy">
         <h2>{story.title}</h2>
         <p>{story.summary}</p>
-        <ul className="tag-list">
-          {story.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
+        <ToolTagList tags={story.tags} />
+        <div className="feature-actions">
+          <Link className="text-link" href={`/ai-at-work/${story.slug}`}>
+            Case Study
+          </Link>
+        </div>
       </div>
     </article>
   );
