@@ -214,11 +214,6 @@ export function WorkFeature({ story, index }: { story: WorkStory; index: number 
     <article className={`feature-row ${index % 2 ? "feature-row--reverse" : ""}`}>
       <WorkVisual story={story} />
       <div className="feature-copy">
-        <div className="meta-line">
-          <span>{String(index + 1).padStart(2, "0")}</span>
-          <span>{story.year}</span>
-          <span>{story.eyebrow}</span>
-        </div>
         <h2>{story.title}</h2>
         <p>{story.summary}</p>
         <ul className="tag-list">

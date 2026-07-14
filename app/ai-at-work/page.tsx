@@ -23,7 +23,17 @@ export default function AiAtWorkPage() {
             ),
           ) ?? hero.headline}
         </h1>
-        <p>{hero.body}</p>
+        <div className="subpage-hero-footer">
+          <p>{hero.body}</p>
+          <aside className="ai-use-disclaimer" tabIndex={0} aria-label="A note on responsible AI use">
+            <strong>A note on responsible AI use</strong>
+            <p>
+              All examples shown here were developed within Docusign&apos;s approved tools, access controls,
+              and data-governance policies. Some workflows are therefore intentionally limited without
+              external integrations, AI agents, or access to restricted systems.
+            </p>
+          </aside>
+        </div>
       </section>
       <section className="section-pad feature-stack subpage-stack">
         {workStories.map((story, index) => (
