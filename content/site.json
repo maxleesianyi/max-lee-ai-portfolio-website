@@ -274,7 +274,7 @@
       "accent": "gold",
       "externalLabel": "Try it out",
       "externalUrl": "https://ai-gtm-learning-lab.vercel.app/",
-      "githubUrl": "https://github.com/maxleesianyi/AI-GTM-Learning-Lab"
+      "githubUrl": "https://github.com/maxleesianyi/max-lee-OpenAI-BDR-Interviewer-Buddy"
     },
     {
       "slug": "max-lee-ai-portfolio",
@@ -317,8 +317,7 @@
       "role": "Product owner, designer, and builder.",
       "next": "crib-stock-taker",
       "accent": "violet",
-      "githubLabel": "GitHub profile",
-      "githubUrl": "https://github.com/maxleesianyi"
+      "githubUrl": "https://github.com/maxleesianyi/max-lee-ai-portfolio-website"
     },
     {
       "slug": "crib-stock-taker",
@@ -453,9 +452,7 @@
       ],
       "role": "Workflow designer for a personal learning habit.",
       "next": "openai-bdr-interviewer-buddy",
-      "accent": "red",
-      "githubLabel": "GitHub profile",
-      "githubUrl": "https://github.com/maxleesianyi"
+      "accent": "red"
     }
   ],
   "workStories": [

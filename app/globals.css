@@ -1072,7 +1072,8 @@ a:hover .browser-frame {
 }
 
 .ai-use-disclaimer {
-  width: 272px;
+  width: fit-content;
+  max-width: 100%;
   margin-left: auto;
   overflow: hidden;
   border: 1px solid rgba(91, 189, 255, 0.32);
@@ -1081,7 +1082,7 @@ a:hover .browser-frame {
   padding: 13px 16px;
   color: #bde8ff;
   cursor: default;
-  transition: width 240ms ease, background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
 .ai-use-disclaimer strong {
