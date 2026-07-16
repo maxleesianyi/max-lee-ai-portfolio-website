@@ -11,9 +11,25 @@ export type ToolTag = {
   scale?: number;
 };
 
+export type CaseStudyBlock = {
+  title: string;
+  paragraphs?: string[];
+  items?: string[];
+  afterItems?: string[];
+};
+
+export type CaseStudySection = {
+  title: string;
+  paragraphs?: string[];
+  items?: string[];
+  process?: string[];
+  blocks?: CaseStudyBlock[];
+};
+
 export type Project = {
   slug: string;
   title: string;
+  titleLines?: string[];
   year: string;
   kicker: string;
   status: string;
@@ -31,6 +47,7 @@ export type Project = {
   externalUrl?: string;
   githubLabel?: string;
   githubUrl?: string;
+  caseStudySections?: CaseStudySection[];
 };
 
 export type WorkStory = {
@@ -45,6 +62,7 @@ export type WorkStory = {
   metrics: Metric[];
   highlights: string[];
   accent: string;
+  caseStudySections?: CaseStudySection[];
 };
 
 export type Experience = {

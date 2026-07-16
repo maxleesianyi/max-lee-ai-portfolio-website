@@ -232,6 +232,10 @@
     {
       "slug": "openai-bdr-interviewer-buddy",
       "title": "OpenAI BDR Interviewer Buddy",
+      "titleLines": [
+        "OpenAI BDR",
+        "Interviewer Buddy"
+      ],
       "year": "2026",
       "kicker": "",
       "status": "Private beta",
@@ -273,6 +277,152 @@
       "role": "Product owner, designer, and builder.",
       "next": "max-lee-ai-portfolio",
       "accent": "gold",
+      "caseStudySections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Interviewer Buddy was inspired by my experience interviewing for an AI GTM role.",
+            "Although I was comfortable preparing answers to common interview questions, I found that traditional preparation methods did not recreate the pressure or unpredictability of a real interview. Static question lists could not challenge vague answers, probe inconsistencies, or respond intelligently to what I had just said.",
+            "I built Interviewer Buddy to create a more realistic practice experience. It uses a candidate's resume and target job description to conduct a personalised interview, ask relevant follow-up questions, and turn each session into a practical improvement plan.",
+            "The goal is not to predict whether someone will be hired. It is to help candidates communicate their experience with greater clarity, specificity, and confidence."
+          ]
+        },
+        {
+          "title": "Key Features",
+          "blocks": [
+            {
+              "title": "Personalised Interview Preparation",
+              "paragraphs": [
+                "The application analyses the candidate's resume and target job description to identify relevant experiences, likely competency areas, and potential interview themes."
+              ]
+            },
+            {
+              "title": "Adaptive Follow-Up Questions",
+              "paragraphs": [
+                "Rather than following a fixed question list, the interviewer responds to each answer.",
+                "It can challenge vague claims, request supporting metrics, explore the candidate's personal contribution, and probe areas that require greater clarity."
+              ]
+            },
+            {
+              "title": "Structured Feedback",
+              "paragraphs": [
+                "Answers are assessed across areas such as:"
+              ],
+              "items": [
+                "Relevance",
+                "Structure",
+                "Specificity",
+                "Supporting evidence",
+                "Business impact",
+                "Communication clarity"
+              ],
+              "afterItems": [
+                "The application explains how an answer could be improved rather than returning only a numerical score."
+              ]
+            },
+            {
+              "title": "Personalised Improvement Plan",
+              "paragraphs": [
+                "At the end of the interview, the candidate receives:"
+              ],
+              "items": [
+                "Key strengths",
+                "Areas for improvement",
+                "Missed opportunities",
+                "Suggested practice exercises",
+                "Recommended answer structures"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "How It Works",
+          "items": [
+            "The candidate provides a resume and target job description.",
+            "GPT-5.6 analyses both and creates a personalised interview plan.",
+            "The application begins the mock interview.",
+            "Each answer is assessed before the next question is selected.",
+            "GPT-5.6 generates follow-up questions based on the candidate's response.",
+            "The application consolidates observations into a final feedback report and improvement plan."
+          ],
+          "process": [
+            "Candidate information",
+            "Interview plan",
+            "Adaptive interview",
+            "Feedback",
+            "Practice plan"
+          ]
+        },
+        {
+          "title": "Building with AI",
+          "blocks": [
+            {
+              "title": "Codex",
+              "paragraphs": [
+                "I used Codex as my development partner throughout the project.",
+                "It helped me:"
+              ],
+              "items": [
+                "Understand the existing application structure",
+                "Break the product into manageable features",
+                "Implement and debug the interview workflow",
+                "Connect the application to Supabase",
+                "Improve the user interface",
+                "Test edge cases",
+                "Document the project and deployment process"
+              ],
+              "afterItems": [
+                "As a non-technical builder, Codex also helped translate unfamiliar engineering concepts into plain English so I could make informed product decisions."
+              ]
+            },
+            {
+              "title": "GPT-5.6",
+              "paragraphs": [
+                "GPT-5.6 powers the application's reasoning layer.",
+                "It is used to:"
+              ],
+              "items": [
+                "Analyse resumes and job descriptions",
+                "Generate role-specific interview questions",
+                "Evaluate candidate responses",
+                "Determine appropriate follow-up questions",
+                "Identify missing evidence or unclear reasoning",
+                "Produce personalised coaching and practice recommendations"
+              ],
+              "afterItems": [
+                "Human judgement remains important. The feedback is intended to support reflection and practice, not replace professional career advice or predict hiring outcomes."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Outcome and Learnings",
+          "paragraphs": [
+            "Interviewer Buddy became both a practical interview-preparation tool and a hands-on way for me to deepen my understanding of AI product development.",
+            "The project taught me that:"
+          ],
+          "items": [
+            "A useful AI product begins with a clearly defined problem, not a model capability.",
+            "Adaptive questioning creates a more realistic experience than static question banks.",
+            "Feedback is more useful when it explains the evidence behind an assessment.",
+            "AI-generated coaching should support human judgement rather than present itself as an objective hiring verdict.",
+            "Codex is most effective when treated as a collaborative builder, while the user remains responsible for scope, decisions, and quality."
+          ]
+        },
+        {
+          "title": "What's Next",
+          "paragraphs": [
+            "Future improvements could include:"
+          ],
+          "items": [
+            "Voice-based interview simulations",
+            "Progress tracking across multiple sessions",
+            "Different interviewer styles and difficulty levels",
+            "Role- and industry-specific interview frameworks",
+            "Targeted practice drills based on recurring weaknesses"
+          ]
+        }
+      ],
       "externalLabel": "Try it out",
       "externalUrl": "https://ai-gtm-learning-lab.vercel.app/",
       "githubUrl": "https://github.com/maxleesianyi/max-lee-OpenAI-BDR-Interviewer-Buddy"

@@ -1413,24 +1413,13 @@ a:hover .browser-frame {
   padding-top: 112px;
 }
 
-.back-link {
-  color: var(--muted);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.8rem;
-  transition: color 180ms ease;
-}
-
-.back-link:hover {
-  color: var(--bone);
-}
-
-.case-meta {
-  margin-top: 36px;
-}
-
 .case-study h1 {
   max-width: 880px;
   font-size: clamp(3.4rem, 8vw, 7rem);
+}
+
+.case-title-lines span {
+  display: block;
 }
 
 .case-lede {
@@ -1454,6 +1443,76 @@ a:hover .browser-frame {
   grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.85fr);
   gap: 70px;
   margin-top: 70px;
+}
+
+.case-sections {
+  display: grid;
+  max-width: 880px;
+  gap: 88px;
+  margin: 76px auto 0;
+}
+
+.case-section h2 {
+  margin-bottom: 26px;
+  font-size: clamp(2.25rem, 4vw, 4rem);
+}
+
+.case-section p {
+  max-width: 760px;
+  color: var(--dim);
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.case-section p + p {
+  margin-top: 18px;
+}
+
+.case-section-block {
+  margin-top: 38px;
+}
+
+.case-section-block h3 {
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.case-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 20px;
+  padding-left: 1.15rem;
+  color: var(--dim);
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.case-after-list {
+  margin-top: 20px;
+}
+
+.case-process {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  align-items: center;
+  margin-top: 30px;
+  color: var(--bone) !important;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.86rem !important;
+  line-height: 1.5 !important;
+}
+
+.case-process span {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.case-process b {
+  color: var(--sky);
+  font-size: 1rem;
+  font-weight: 500;
 }
 
 .case-narrative {

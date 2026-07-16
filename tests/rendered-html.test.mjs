@@ -60,9 +60,13 @@ test("server-renders project detail pages from editable project content", async 
   const html = await response.text();
   assert.match(html, new RegExp(project.title));
   assert.match(html, new RegExp(project.summary));
-  assert.match(html, new RegExp(project.highlights[0]));
+  assert.match(html, /Overview/);
+  assert.match(html, /Key Features/);
+  assert.match(html, /Building with AI/);
+  assert.match(html, /What's Next/);
   assert.match(html, /\/projects\/openai-bdr-interviewer-buddy\.png/);
-  assert.match(html, /All Personal Projects/);
+  assert.doesNotMatch(html, /All Personal Projects/);
+  assert.doesNotMatch(html, /Private beta/);
 });
 
 test("server-renders the about page from editable content", async () => {
@@ -122,7 +126,6 @@ test("renders a case study CTA and placeholder page for every AI-at-work categor
     assert.equal(caseStudyResponse.status, 200);
 
     const caseStudyHtml = await caseStudyResponse.text();
-    assert.match(caseStudyHtml, /Placeholder case study/);
     assert.match(caseStudyHtml, /A fuller walkthrough is coming soon\./);
   }
 });

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
+  CaseStudySections,
   MetricRail,
   PageShell,
   ProjectVisual,
@@ -44,43 +45,43 @@ export default async function ProjectDetailPage({ params }: Props) {
   return (
     <PageShell>
       <article className="case-study section-pad">
-        <Link className="back-link" href="/projects">
-          All Personal Projects
-        </Link>
-        <div className="case-meta">
-          <span>{project.year}</span>
-          {project.kicker ? <span>{project.kicker}</span> : null}
-          <span>{project.status}</span>
-        </div>
-        <h1>{project.title}</h1>
+        <h1 className={project.titleLines ? "case-title-lines" : undefined}>
+          {project.titleLines
+            ? project.titleLines.map((line) => <span key={line}>{line}</span>)
+            : project.title}
+        </h1>
         <p className="case-lede">{project.summary}</p>
         <MetricRail metrics={project.metrics} />
         <div className="case-visual">
           <ProjectVisual project={project} />
         </div>
 
-        <div className="case-body">
-          <div className="case-narrative">
-            {project.description.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+        {project.caseStudySections ? (
+          <CaseStudySections sections={project.caseStudySections} />
+        ) : (
+          <div className="case-body">
+            <div className="case-narrative">
+              {project.description.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+            <aside className="case-aside">
+              <span className="eyebrow">Highlights</span>
+              <ul>
+                {project.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+              <span className="eyebrow built-with">Built with</span>
+              <ul className="tag-list tag-list--solid">
+                {project.tags.map((tag) => (
+                  <li key={tag}>{tag}</li>
+                ))}
+              </ul>
+              <p className="role-note">{project.role}</p>
+            </aside>
           </div>
-          <aside className="case-aside">
-            <span className="eyebrow">Highlights</span>
-            <ul>
-              {project.highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
-              ))}
-            </ul>
-            <span className="eyebrow built-with">Built with</span>
-            <ul className="tag-list tag-list--solid">
-              {project.tags.map((tag) => (
-                <li key={tag}>{tag}</li>
-              ))}
-            </ul>
-            <p className="role-note">{project.role}</p>
-          </aside>
-        </div>
+        )}
       </article>
       {nextProject ? (
         <section className="next-project section-pad">

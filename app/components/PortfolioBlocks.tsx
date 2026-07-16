@@ -1,5 +1,13 @@
 import Link from "next/link";
-import { navigation, site, type Metric, type Project, type ToolTag, type WorkStory } from "../data";
+import {
+  navigation,
+  site,
+  type CaseStudySection,
+  type Metric,
+  type Project,
+  type ToolTag,
+  type WorkStory,
+} from "../data";
 
 function BrandMark() {
   const dotIndex = site.brandName.indexOf(".");
@@ -267,6 +275,56 @@ export function MetricRail({ metrics }: { metrics: Metric[] }) {
           <strong>{metric.value}</strong>
           <span>{metric.label}</span>
         </div>
+      ))}
+    </div>
+  );
+}
+
+export function CaseStudySections({ sections }: { sections: CaseStudySection[] }) {
+  return (
+    <div className="case-sections">
+      {sections.map((section) => (
+        <section className="case-section" key={section.title}>
+          <h2>{section.title}</h2>
+          {section.paragraphs?.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+          {section.items ? (
+            <ul className="case-list">
+              {section.items.map((item) => (
+                <li key={item}>{item}</li>
+              ))}
+            </ul>
+          ) : null}
+          {section.blocks?.map((block) => (
+            <div className="case-section-block" key={block.title}>
+              <h3>{block.title}</h3>
+              {block.paragraphs?.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+              {block.items ? (
+                <ul className="case-list">
+                  {block.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              ) : null}
+              {block.afterItems?.map((paragraph) => (
+                <p className="case-after-list" key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          ))}
+          {section.process ? (
+            <p className="case-process" aria-label={section.process.join(" then ")}>
+              {section.process.map((step, index) => (
+                <span key={step}>
+                  {index > 0 ? <b aria-hidden="true">→</b> : null}
+                  {step}
+                </span>
+              ))}
+            </p>
+          ) : null}
+        </section>
       ))}
     </div>
   );

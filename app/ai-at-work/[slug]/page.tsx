@@ -1,6 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MetricRail, PageShell, ToolTagList, WorkVisual } from "../../components/PortfolioBlocks";
+import {
+  CaseStudySections,
+  MetricRail,
+  PageShell,
+  ToolTagList,
+  WorkVisual,
+} from "../../components/PortfolioBlocks";
 import { site, workStories } from "../../data";
 
 type Props = {
@@ -40,14 +46,6 @@ export default async function WorkStoryCaseStudyPage({ params }: Props) {
   return (
     <PageShell>
       <article className="case-study section-pad">
-        <Link className="back-link" href="/ai-at-work">
-          All AI at Work
-        </Link>
-        <div className="case-meta">
-          <span>{story.eyebrow}</span>
-          <span>{story.year}</span>
-          <span>Placeholder case study</span>
-        </div>
         <h1>{story.title}</h1>
         <p className="case-lede">{story.summary}</p>
         <MetricRail metrics={story.metrics} />
@@ -55,24 +53,28 @@ export default async function WorkStoryCaseStudyPage({ params }: Props) {
           <WorkVisual story={story} />
         </div>
 
-        <div className="case-body">
-          <div className="case-narrative">
-            {story.details.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-          <aside className="case-aside">
-            <span className="eyebrow">Highlights</span>
-            <ul>
-              {story.highlights.map((highlight) => (
-                <li key={highlight}>{highlight}</li>
+        {story.caseStudySections ? (
+          <CaseStudySections sections={story.caseStudySections} />
+        ) : (
+          <div className="case-body">
+            <div className="case-narrative">
+              {story.details.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
               ))}
-            </ul>
-            <span className="eyebrow built-with">AI solutions used</span>
-            <ToolTagList tags={story.tags} solid />
-            <p className="role-note">A fuller walkthrough is coming soon.</p>
-          </aside>
-        </div>
+            </div>
+            <aside className="case-aside">
+              <span className="eyebrow">Highlights</span>
+              <ul>
+                {story.highlights.map((highlight) => (
+                  <li key={highlight}>{highlight}</li>
+                ))}
+              </ul>
+              <span className="eyebrow built-with">AI solutions used</span>
+              <ToolTagList tags={story.tags} solid />
+              <p className="role-note">A fuller walkthrough is coming soon.</p>
+            </aside>
+          </div>
+        )}
       </article>
       {nextStory ? (
         <section className="next-project section-pad">
