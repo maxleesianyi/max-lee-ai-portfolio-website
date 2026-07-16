@@ -52,7 +52,7 @@ export default async function ProjectDetailPage({ params }: Props) {
         <p className="case-lede">{project.summary}</p>
         <div className="case-build-stack">
           <span className="eyebrow">Built with</span>
-          <ul className="case-tech-cards">
+          <ul className="tag-list case-tech-cards">
             {project.tags.map((tag) => (
               <li key={tag}>{tag}</li>
             ))}

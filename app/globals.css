@@ -1445,24 +1445,7 @@ a:hover .browser-frame {
 }
 
 .case-tech-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  max-width: 760px;
   margin-top: 14px;
-  padding: 0;
-  list-style: none;
-}
-
-.case-tech-cards li {
-  padding: 9px 12px;
-  border: 1px solid rgba(91, 189, 255, 0.22);
-  border-radius: 6px;
-  background: rgba(91, 189, 255, 0.06);
-  color: var(--bone);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.78rem;
-  line-height: 1.35;
 }
 
 .case-visual {
