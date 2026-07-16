@@ -125,6 +125,14 @@ export function BrowserFrame({
 }
 
 export function ProjectVisual({ project }: { project: Project }) {
+  if (project.imageUrl) {
+    return (
+      <div className="project-image-frame">
+        <img src={project.imageUrl} alt={`${project.title} app interface`} />
+      </div>
+    );
+  }
+
   return (
     <BrowserFrame title={project.slug.replaceAll("-", ".")} accent={project.accent}>
       <div className="mock-dashboard">
@@ -182,7 +190,12 @@ export function ToolTagList({ tags, solid = false }: { tags: ToolTag[]; solid?: 
     <ul className={`tag-list tool-tag-list ${solid ? "tag-list--solid" : ""}`}>
       {tags.map((tag) => (
         <li className="tool-tag" key={tag.name}>
-          <img src={tag.logo} alt="" aria-hidden="true" />
+          <img
+            src={tag.logo}
+            alt=""
+            aria-hidden="true"
+            style={tag.scale ? { transform: `scale(${tag.scale})` } : undefined}
+          />
           <span>{tag.name}</span>
         </li>
       ))}

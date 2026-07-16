@@ -8,6 +8,7 @@ export type Metric = {
 export type ToolTag = {
   name: string;
   logo: string;
+  scale?: number;
 };
 
 export type Project = {
@@ -18,6 +19,7 @@ export type Project = {
   status: string;
   summary: string;
   galleryDescription: string;
+  imageUrl?: string;
   description: string[];
   tags: string[];
   metrics: Metric[];

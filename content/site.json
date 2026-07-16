@@ -237,6 +237,7 @@
       "status": "Private beta",
       "summary": "A record-and-review practice app that helps Max prepare AI concepts, OpenAI products, and real life business value.",
       "galleryDescription": "Voice practice and structured feedback for OpenAI interview fluency.",
+      "imageUrl": "/projects/openai-bdr-interviewer-buddy.png",
       "description": [
         "This app is not a generic quiz tool. It is an interview-performance training system built around daily five-question voice sessions, topic mastery, retry logic, and commercially grounded feedback.",
         "The browser captures a single answer, sends temporary audio to the backend, transcribes it with OpenAI speech-to-text, then discards the raw audio. The transcript is evaluated with structured AI scoring across technical accuracy, simple explanation, business relevance, OpenAI positioning, interview structure, and concision.",
@@ -520,7 +521,8 @@
         },
         {
           "name": "Gong",
-          "logo": "/logos/gong.png"
+          "logo": "/logos/gong.png",
+          "scale": 1.65
         },
         {
           "name": "Glean",
@@ -570,7 +572,8 @@
         },
         {
           "name": "Gong",
-          "logo": "/logos/gong.png"
+          "logo": "/logos/gong.png",
+          "scale": 1.65
         },
         {
           "name": "Slackbot",

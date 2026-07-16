@@ -61,6 +61,7 @@ test("server-renders project detail pages from editable project content", async 
   assert.match(html, new RegExp(project.title));
   assert.match(html, new RegExp(project.summary));
   assert.match(html, new RegExp(project.highlights[0]));
+  assert.match(html, /\/projects\/openai-bdr-interviewer-buddy\.png/);
   assert.match(html, /All Personal Projects/);
 });
 
@@ -99,6 +100,12 @@ test("keeps the four AI-at-work categories available", () => {
       "Leadership Alignment",
       "Internal Intelligence & Compliance",
     ],
+  );
+  assert.ok(
+    siteContent.workStories
+      .flatMap((story) => story.tags)
+      .filter((tag) => tag.name === "Gong")
+      .every((tag) => tag.scale === 1.65),
   );
 });
 
