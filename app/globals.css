@@ -1493,13 +1493,21 @@ a:hover .browser-frame {
 }
 
 .case-list {
-  display: grid;
-  gap: 10px;
+  list-style: disc;
+  list-style-position: outside;
   margin-top: 20px;
-  padding-left: 1.15rem;
+  padding-left: 1.3rem;
   color: var(--dim);
   font-size: 1.02rem;
   line-height: 1.65;
+}
+
+.case-list li + li {
+  margin-top: 10px;
+}
+
+.case-list li::marker {
+  color: var(--sky);
 }
 
 .case-after-list {
