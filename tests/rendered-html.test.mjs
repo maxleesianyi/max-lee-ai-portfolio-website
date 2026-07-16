@@ -64,9 +64,14 @@ test("server-renders project detail pages from editable project content", async 
   assert.match(html, /Key Features/);
   assert.match(html, /Building with AI/);
   assert.match(html, /What's Next/);
+  assert.match(html, /Built with/);
+  for (const tag of project.tags) {
+    assert.match(html, new RegExp(tag));
+  }
   assert.match(html, /\/projects\/openai-bdr-interviewer-buddy\.png/);
   assert.doesNotMatch(html, /All Personal Projects/);
   assert.doesNotMatch(html, /Private beta/);
+  assert.doesNotMatch(html, /daily questions/);
 });
 
 test("server-renders the about page from editable content", async () => {

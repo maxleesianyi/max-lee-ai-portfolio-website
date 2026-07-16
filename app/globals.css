@@ -1418,8 +1418,15 @@ a:hover .browser-frame {
   font-size: clamp(3.4rem, 8vw, 7rem);
 }
 
+.case-study h1.case-title-lines {
+  max-width: 1080px;
+  font-size: clamp(2.25rem, 6vw, 5.8rem);
+  line-height: 0.98;
+}
+
 .case-title-lines span {
   display: block;
+  white-space: nowrap;
 }
 
 .case-lede {
@@ -1431,6 +1438,34 @@ a:hover .browser-frame {
 .metric-rail {
   max-width: 760px;
   margin-top: 34px;
+}
+
+.case-build-stack {
+  margin-top: 34px;
+}
+
+.case-tech-cards {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 980px;
+  margin-top: 14px;
+  padding: 0;
+  list-style: none;
+}
+
+.case-tech-cards li {
+  display: flex;
+  align-items: center;
+  min-height: 72px;
+  padding: 16px;
+  border: 1px solid rgba(91, 189, 255, 0.22);
+  border-radius: 6px;
+  background: rgba(91, 189, 255, 0.06);
+  color: var(--bone);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.82rem;
+  line-height: 1.35;
 }
 
 .case-visual {
@@ -1447,9 +1482,9 @@ a:hover .browser-frame {
 
 .case-sections {
   display: grid;
-  max-width: 880px;
+  max-width: 1160px;
   gap: 88px;
-  margin: 76px auto 0;
+  margin: 76px 0 0;
 }
 
 .case-section h2 {
@@ -1458,7 +1493,7 @@ a:hover .browser-frame {
 }
 
 .case-section p {
-  max-width: 760px;
+  max-width: 1080px;
   color: var(--dim);
   font-size: 1.06rem;
   line-height: 1.75;
@@ -1513,6 +1548,16 @@ a:hover .browser-frame {
   color: var(--sky);
   font-size: 1rem;
   font-weight: 500;
+}
+
+@media (max-width: 760px) {
+  .case-tech-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-tech-cards li:last-child {
+    grid-column: span 2;
+  }
 }
 
 .case-narrative {

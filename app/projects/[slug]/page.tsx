@@ -2,7 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   CaseStudySections,
-  MetricRail,
   PageShell,
   ProjectVisual,
 } from "../../components/PortfolioBlocks";
@@ -51,7 +50,14 @@ export default async function ProjectDetailPage({ params }: Props) {
             : project.title}
         </h1>
         <p className="case-lede">{project.summary}</p>
-        <MetricRail metrics={project.metrics} />
+        <div className="case-build-stack">
+          <span className="eyebrow">Built with</span>
+          <ul className="case-tech-cards">
+            {project.tags.map((tag) => (
+              <li key={tag}>{tag}</li>
+            ))}
+          </ul>
+        </div>
         <div className="case-visual">
           <ProjectVisual project={project} />
         </div>
