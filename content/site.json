@@ -248,9 +248,10 @@
         "The app also includes production plumbing for Supabase persistence, private login placeholders, daily practice, manual practice modes, topic mastery, and a future freshness review queue for approved OpenAI and competitor source updates."
       ],
       "tags": [
+        "Codex",
+        "OpenAI API",
         "Next.js",
         "TypeScript",
-        "OpenAI API",
         "Supabase",
         "Vercel"
       ],
