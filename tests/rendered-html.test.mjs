@@ -61,9 +61,9 @@ test("server-renders project detail pages from editable project content", async 
   assert.match(html, new RegExp(project.title));
   assert.match(html, new RegExp(project.summary));
   assert.match(html, /Overview/);
-  assert.match(html, /Key Features/);
-  assert.match(html, /Building with AI/);
-  assert.match(html, /What's Next/);
+  assert.match(html, /Why I Built It/);
+  assert.match(html, /Outcomes and Learnings/);
+  assert.match(html, /How This Project Changed Me/);
   assert.match(html, /Built with/);
   for (const tag of project.tags) {
     assert.match(html, new RegExp(tag));
