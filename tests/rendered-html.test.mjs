@@ -74,6 +74,21 @@ test("server-renders project detail pages from editable project content", async 
   assert.doesNotMatch(html, /daily questions/);
 });
 
+test("server-renders the Bus 15 case study without the legacy side panel", async () => {
+  const project = siteContent.projects.find((item) => item.slug === "bus-15-telegram-alert");
+  const response = await render(`/projects/${project.slug}`);
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Overview/);
+  assert.match(html, /Why I Built It/);
+  assert.match(html, /Outcomes and Learnings/);
+  assert.match(html, /How This Project Changed Me/);
+  assert.match(html, /Codex/);
+  assert.match(html, /GPT-5\.5/);
+  assert.doesNotMatch(html, /<span class="eyebrow">Highlights<\/span>/);
+});
+
 test("server-renders the about page from editable content", async () => {
   const response = await render("/about");
   assert.equal(response.status, 200);

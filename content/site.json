@@ -428,6 +428,8 @@
         "Supabase Cron is the live scheduler because GitHub Actions scheduled jobs were too unreliable for a time-sensitive alert. Telegram reply commands can pause, stop, or resume alerts for the current day."
       ],
       "tags": [
+        "Codex",
+        "GPT-5.5",
         "Supabase",
         "Edge Functions",
         "Supabase Cron",
@@ -458,6 +460,40 @@
       "role": "Product owner and builder for a personal commuting workflow.",
       "next": "daily-ai-newsletter",
       "accent": "blue",
+      "caseStudySections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Bus 15 Telegram Alert is a personal automation that turns real-time public-transport information into a practical morning decision.",
+            "It calls Singapore's Land Transport Authority API, checks Bus 15 arrivals at my usual stop, and sends a concise Telegram message showing the next two buses, along with a recommendation on when I should leave home.",
+            "The project also supports one-off lookups in Telegram using a simple command such as \"Bus 20 76953\"."
+          ]
+        },
+        {
+          "title": "Why I Built It",
+          "paragraphs": [
+            "Checking bus timings while carrying a toddler and three bags is an unnecessary morning headache. A missed bus can mean my son arriving 20 minutes late for school and me starting work 20 minutes behind schedule. The real question was never simply \"When is the next bus?\", but \"Which bus can I realistically catch, and when should I leave?\".",
+            "I wanted that decision delivered automatically in an app I already use, rather than repeatedly opening a transport app and calculating the timing in my head."
+          ]
+        },
+        {
+          "title": "Outcomes and Learnings",
+          "paragraphs": [
+            "The project evolved from a basic GitHub Actions script into a more reliable Vercel, QStash, Upstash Redis, and Telegram workflow.",
+            "Along the way, I learned that automation is not just about getting code to run. It is also about making schedules dependable, preventing duplicate alerts, protecting secrets, handling failures, and giving the user control when plans change.",
+            "The result is a small system that now fits naturally into my morning."
+          ]
+        },
+        {
+          "title": "How This Project Changed Me",
+          "paragraphs": [
+            "This project changed how I think about AI-assisted development.",
+            "I used to assume that automation had to begin with a large idea or elaborate product. Instead, I learned that a narrow, recurring frustration can be an excellent starting point.",
+            "It also taught me to think more like a product owner: identify the real decision the user needs to make, simplify the experience around that decision, and improve reliability through iteration.",
+            "Most importantly, it gave me confidence that I can take a personal workflow from an idea, through several imperfect versions, into a working tool that I genuinely rely on."
+          ]
+        }
+      ],
       "githubUrl": "https://github.com/maxleesianyi/bus-telegram-alert"
     },
     {
