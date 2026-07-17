@@ -513,8 +513,7 @@
         "ChatGPT Tasks",
         "GPT-5.5",
         "Web Research",
-        "Gmail",
-        "OpenAI"
+        "Gmail"
       ],
       "metrics": [
         {
@@ -538,7 +537,44 @@
       ],
       "role": "Workflow designer for a personal learning habit.",
       "next": "openai-bdr-interviewer-buddy",
-      "accent": "red"
+      "accent": "red",
+      "caseStudySections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Daily AI Newsletter is a scheduled briefing that delivers a concise summary of the AI developments most relevant to me.",
+            "Each edition scans recent updates across foundation models, AI products, enterprise adoption, go-to-market developments, and the companies I am actively following. It then filters and summarises the most important stories into a structured email that I can review before starting the day.",
+            "Rather than presenting a generic list of headlines, the newsletter focuses on why each development matters, how it may affect enterprise customers, and what it could mean for someone building a career in AI go-to-market."
+          ]
+        },
+        {
+          "title": "Why I Built It",
+          "paragraphs": [
+            "There was no shortage of news, product announcements, research updates, and opinions. The real challenge was deciding what deserved my attention and how each development connected to the commercial conversations I wanted to become better at having.",
+            "I found myself checking multiple sources throughout the day, saving articles I rarely returned to, and consuming information without consistently turning it into useful understanding.",
+            "I built the newsletter to create a more deliberate learning habit. Instead of repeatedly searching for updates, I receive one focused briefing that helps me understand what changed, why it matters, and which topics are worth exploring further."
+          ]
+        },
+        {
+          "title": "Outcomes and Learnings",
+          "paragraphs": [
+            "The most useful outcome has been consistency.",
+            "The newsletter gives me a dependable way to stay informed without allowing news consumption to take over my day. It has also helped me build a broader view of the AI market by connecting technical developments with product strategy, enterprise adoption, competitive positioning, and go-to-market implications.",
+            "Through the project, I learned that a useful briefing is not defined by the number of articles it includes. Its value comes from prioritisation, context, and relevance.",
+            "I also learned that automated research still requires clear editorial judgement. Sources must be assessed carefully, repeated stories need to be removed, and important announcements should be distinguished from speculation or noise."
+          ]
+        },
+        {
+          "title": "How This Project Changed Me",
+          "paragraphs": [
+            "This project changed the way I approach learning.",
+            "I previously treated staying informed as a reactive activity: read whatever appeared in my feed, save interesting links, and hope the important ideas stayed with me.",
+            "Building the newsletter pushed me to define the subjects I genuinely care about, create a repeatable system around them, and connect daily developments to longer-term career goals.",
+            "It also reinforced that AI is most useful when it helps create better habits rather than simply producing more information.",
+            "The newsletter began as a way to keep up with a fast-moving industry. It has since become part of how I steadily build the market awareness, technical fluency, and commercial perspective required for a career in AI."
+          ]
+        }
+      ]
     }
   ],
   "workStories": [
