@@ -109,8 +109,13 @@ test("features the linked OpenAI Build Week credential for Do Already?", async (
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  assert.match(html, /Built for/);
+  assert.match(html, /Submitted to OpenAI Build Week/);
+  assert.doesNotMatch(html, /Built for OpenAI Build Week/);
   assert.match(html, /OpenAI Build Week/);
+  assert.match(
+    html,
+    /An accountability assistant that turns The Wife&#x27;s instructions on Telegram into actionable tasks, while keeping playful with a reward system\./,
+  );
   assert.match(html, /https:\/\/devpost\.com\/software\/placeholder-for-now-th2j86/);
 });
 

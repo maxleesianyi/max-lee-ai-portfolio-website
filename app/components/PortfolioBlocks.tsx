@@ -229,8 +229,7 @@ export function ProjectFeature({ project, index }: { project: Project; index: nu
               target="_blank"
               rel="noreferrer"
             >
-              <span>{project.kicker}</span>
-              {project.kickerEmphasis ? <strong>{project.kickerEmphasis}</strong> : null}
+              {project.kicker}
             </a>
           ) : (
             <p className="mono-note">{project.kicker}</p>

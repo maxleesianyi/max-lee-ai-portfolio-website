@@ -32,7 +32,6 @@ export type Project = {
   titleLines?: string[];
   year: string;
   kicker: string;
-  kickerEmphasis?: string;
   kickerUrl?: string;
   status: string;
   summary: string;
