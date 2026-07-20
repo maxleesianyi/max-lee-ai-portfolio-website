@@ -84,13 +84,34 @@ input {
 }
 
 .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
   font-family: var(--font-geist-mono), monospace;
   font-size: 0.9rem;
   color: var(--bone);
 }
 
-.brand span {
+.brand-wordmark > span {
   color: var(--gold);
+}
+
+.brand-icon-crop {
+  position: relative;
+  display: inline-grid;
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  place-items: center;
+  overflow: hidden;
+}
+
+.brand-icon-crop img {
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  max-width: none;
+  object-fit: cover;
 }
 
 .nav-tabs {

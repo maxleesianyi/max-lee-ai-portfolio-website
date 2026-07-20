@@ -13,14 +13,26 @@ function BrandMark() {
   const dotIndex = site.brandName.indexOf(".");
 
   if (dotIndex === -1) {
-    return <>{site.brandName}</>;
+    return (
+      <>
+        <span className="brand-wordmark">{site.brandName}</span>
+        <span className="brand-icon-crop" aria-hidden="true">
+          <img src="/max-lee-mark.png" alt="" />
+        </span>
+      </>
+    );
   }
 
   return (
     <>
-      {site.brandName.slice(0, dotIndex)}
-      <span>.</span>
-      {site.brandName.slice(dotIndex + 1)}
+      <span className="brand-wordmark">
+        {site.brandName.slice(0, dotIndex)}
+        <span>.</span>
+        {site.brandName.slice(dotIndex + 1)}
+      </span>
+      <span className="brand-icon-crop" aria-hidden="true">
+        <img src="/max-lee-mark.png" alt="" />
+      </span>
     </>
   );
 }
