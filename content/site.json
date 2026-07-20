@@ -335,6 +335,7 @@
       "status": "Live demo",
       "summary": "An accountability assistant that turns The Wife's instructions on Telegram into actionable tasks, while keeping playful with a reward system.",
       "galleryDescription": "A playful mobile-first dashboard for keeping promises made at home.",
+      "imageUrl": "/projects/do-already.png",
       "description": [
         "Do Already? turns a consented Telegram instruction from a partner into an editable household promise.",
         "GPT-5.6 Luna extracts structured task details, routes clear tasks automatically, and asks for approval on medium-confidence messages. Low-confidence chat is ignored.",
