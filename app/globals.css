@@ -343,7 +343,7 @@ h3 {
 
 .hero-portrait-outline {
   position: absolute;
-  inset: 26px 0 0 26px;
+  inset: 40px -10px -10px 40px;
   border-radius: 8px;
   background: linear-gradient(145deg, #5BBDFF 0%, #5B6BFF 100%);
   transform: rotate(3deg);
@@ -352,7 +352,7 @@ h3 {
 
 .hero-portrait-primary {
   position: absolute;
-  inset: 0 36px 36px 0;
+  inset: 0 48px 48px 0;
   z-index: 1;
   border: 1px solid rgba(244, 239, 231, 0.16);
   border-radius: 8px;
@@ -923,6 +923,14 @@ h3 {
   height: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+.project-image-frame--do-already {
+  border-radius: 18px;
+}
+
+.project-image-frame--do-already img {
+  object-fit: cover;
 }
 
 a:hover .project-image-frame,

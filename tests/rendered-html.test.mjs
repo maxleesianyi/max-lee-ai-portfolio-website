@@ -116,6 +116,7 @@ test("features the linked OpenAI Build Week credential for Do Already?", async (
   assert.doesNotMatch(html, /Built for OpenAI Build Week/);
   assert.match(html, /OpenAI Build Week/);
   assert.match(html, /\/projects\/do-already\.png/);
+  assert.match(html, /project-image-frame project-image-frame--do-already/);
   assert.match(
     html,
     /An accountability assistant that turns The Wife&#x27;s instructions on Telegram into actionable tasks, while keeping playful with a reward system\./,
