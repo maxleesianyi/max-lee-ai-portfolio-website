@@ -21,9 +21,9 @@ export default function Home() {
           <SocialLinks className="social-links--hero" />
         </div>
         <div className="hero-side">
-          <div className="hero-portrait" aria-label="Portrait placeholder">
+          <div className="hero-portrait">
             <div className="hero-portrait-outline" aria-hidden="true" />
-            <div className="hero-portrait-primary" role="img" aria-label="Max Lee portrait placeholder" />
+            <img className="hero-portrait-primary" src="/max-lee-portrait.jpg" alt="Max Lee" />
           </div>
         </div>
       </section>

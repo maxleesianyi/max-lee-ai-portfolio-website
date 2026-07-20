@@ -40,6 +40,7 @@ test("server-renders the portfolio from the no-code content file", async () => {
   assert.match(html, new RegExp(siteContent.site.socialLinks[0].href));
   assert.match(html, new RegExp(siteContent.site.socialLinks[1].href));
   assert.ok((html.match(/\/max-lee-mark\.png/g) ?? []).length >= 2);
+  assert.match(html, /<img class="hero-portrait-primary" src="\/max-lee-portrait\.jpg" alt="Max Lee"\/>/);
   assert.doesNotMatch(html, /promoted in 5 years at Docusign/);
   for (const part of siteContent.pages.about.hero.headlineParts) {
     assert.match(html, new RegExp(part.text));
