@@ -24,6 +24,7 @@ export default function Home() {
           <div className="hero-portrait">
             <div className="hero-portrait-outline" aria-hidden="true" />
             <img className="hero-portrait-primary" src="/max-lee-portrait.jpg" alt="Max Lee" />
+            <span className="hero-portrait-name" aria-hidden="true">Max Lee</span>
           </div>
         </div>
       </section>
