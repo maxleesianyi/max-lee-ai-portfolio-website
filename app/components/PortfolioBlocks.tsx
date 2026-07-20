@@ -15,23 +15,23 @@ function BrandMark() {
   if (dotIndex === -1) {
     return (
       <>
-        <span className="brand-wordmark">{site.brandName}</span>
         <span className="brand-icon-crop" aria-hidden="true">
           <img src="/max-lee-mark.png" alt="" />
         </span>
+        <span className="brand-wordmark">{site.brandName}</span>
       </>
     );
   }
 
   return (
     <>
+      <span className="brand-icon-crop" aria-hidden="true">
+        <img src="/max-lee-mark.png" alt="" />
+      </span>
       <span className="brand-wordmark">
         {site.brandName.slice(0, dotIndex)}
         <span>.</span>
         {site.brandName.slice(dotIndex + 1)}
-      </span>
-      <span className="brand-icon-crop" aria-hidden="true">
-        <img src="/max-lee-mark.png" alt="" />
       </span>
     </>
   );
