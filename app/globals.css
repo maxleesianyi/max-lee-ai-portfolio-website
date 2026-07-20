@@ -793,6 +793,34 @@ h3 {
   font-size: 0.85rem !important;
 }
 
+.project-build-week-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.42rem;
+  width: fit-content;
+  margin-top: 14px;
+  color: var(--sky);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  text-decoration: none;
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.project-build-week-link strong {
+  color: var(--bone);
+  font-weight: 720;
+}
+
+.project-build-week-link:hover {
+  color: #bde8ff;
+  transform: translateX(2px);
+}
+
+.project-build-week-link:hover strong {
+  color: var(--sky);
+}
+
 .meta-line,
 .case-meta {
   display: flex;

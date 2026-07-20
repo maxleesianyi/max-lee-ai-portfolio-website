@@ -104,6 +104,16 @@ test("server-renders the Do Already? case study without the legacy side panel", 
   assert.doesNotMatch(html, /<span class="eyebrow">Highlights<\/span>/);
 });
 
+test("features the linked OpenAI Build Week credential for Do Already?", async () => {
+  const response = await render("/projects");
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Built for/);
+  assert.match(html, /OpenAI Build Week/);
+  assert.match(html, /https:\/\/devpost\.com\/software\/placeholder-for-now-th2j86/);
+});
+
 test("server-renders the Daily AI Newsletter case study without the legacy side panel", async () => {
   const project = siteContent.projects.find((item) => item.slug === "daily-ai-newsletter");
   const response = await render(`/projects/${project.slug}`);

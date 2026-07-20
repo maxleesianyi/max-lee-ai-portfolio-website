@@ -221,7 +221,21 @@ export function ProjectFeature({ project, index }: { project: Project; index: nu
         <Link href={`/projects/${project.slug}`}>
           <h2>{project.title}</h2>
         </Link>
-        {project.kicker ? <p className="mono-note">{project.kicker}</p> : null}
+        {project.kicker ? (
+          project.kickerUrl ? (
+            <a
+              className="project-build-week-link"
+              href={project.kickerUrl}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>{project.kicker}</span>
+              {project.kickerEmphasis ? <strong>{project.kickerEmphasis}</strong> : null}
+            </a>
+          ) : (
+            <p className="mono-note">{project.kicker}</p>
+          )
+        ) : null}
         <p>{project.summary}</p>
         <ul className="tag-list">
           {project.tags.map((tag) => (
