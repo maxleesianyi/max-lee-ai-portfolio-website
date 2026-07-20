@@ -89,6 +89,21 @@ test("server-renders the Bus 15 case study without the legacy side panel", async
   assert.doesNotMatch(html, /<span class="eyebrow">Highlights<\/span>/);
 });
 
+test("server-renders the Do Already? case study without the legacy side panel", async () => {
+  const project = siteContent.projects.find((item) => item.slug === "do-already");
+  const response = await render(`/projects/${project.slug}`);
+  assert.equal(response.status, 200);
+
+  const html = await response.text();
+  assert.match(html, /Do Already\?/);
+  assert.match(html, /Overview/);
+  assert.match(html, /Why I Built It/);
+  assert.match(html, /Outcomes and Learnings/);
+  assert.match(html, /How This Project Changed Me/);
+  assert.match(html, /GPT-5\.6 Luna/);
+  assert.doesNotMatch(html, /<span class="eyebrow">Highlights<\/span>/);
+});
+
 test("server-renders the Daily AI Newsletter case study without the legacy side panel", async () => {
   const project = siteContent.projects.find((item) => item.slug === "daily-ai-newsletter");
   const response = await render(`/projects/${project.slug}`);
@@ -128,6 +143,11 @@ test("keeps no-code content structurally complete", async () => {
   assert.ok(siteContent.site.socialLinks.every((item) => item.label && item.href && item.icon));
   assert.ok(siteContent.projects.every((project) => project.title && project.summary));
   assert.ok(siteContent.projects.every((project) => project.description.length >= 1));
+  assert.deepEqual(
+    siteContent.projects.slice(0, 3).map((project) => project.slug),
+    ["openai-bdr-interviewer-buddy", "do-already", "max-lee-ai-portfolio"],
+  );
+  assert.ok(!siteContent.projects.some((project) => project.slug === "crib-stock-taker"));
 });
 
 test("keeps the four AI-at-work categories available", () => {

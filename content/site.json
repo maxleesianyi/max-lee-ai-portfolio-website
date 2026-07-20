@@ -226,7 +226,7 @@
     "Max was the first AE in Docusign Asia to sell two newly launched AI product lines within the first month, before established playbooks existed.",
     "Max closed one of the first major Docusign Intelligent Agreement Management platform deals at US$120k ARR.",
     "Max built a private OpenAI BDR Interviewer Buddy that records spoken answers, transcribes with OpenAI speech-to-text, scores answers with structured AI feedback, and stores progress in Supabase without retaining raw audio.",
-    "Max built Crib Stock Taker, a household stock taking app with Supabase Auth, roles, low-stock tracking, perishables, private photo storage, and Vercel hosting."
+    "Max built Do Already?, a playful accountability assistant that turns consented Telegram commitments into editable tasks with confidence-based AI routing and a visible reward meter."
   ],
   "projects": [
     {
@@ -276,7 +276,7 @@
         "Designed for Singapore and APAC commercial fluency, not generic AI trivia."
       ],
       "role": "Product owner, designer, and builder.",
-      "next": "max-lee-ai-portfolio",
+      "next": "do-already",
       "accent": "gold",
       "caseStudySections": [
         {
@@ -327,6 +327,89 @@
       "githubUrl": "https://github.com/maxleesianyi/max-lee-OpenAI-BDR-Interviewer-Buddy"
     },
     {
+      "slug": "do-already",
+      "title": "Do Already?",
+      "year": "2026",
+      "kicker": "Playful promise keeper for shared household commitments",
+      "status": "Live demo",
+      "summary": "A mobile-first accountability assistant that turns consented Telegram commitments into editable promises, then makes progress and the agreed reward visible.",
+      "galleryDescription": "A playful mobile-first dashboard for keeping promises made at home.",
+      "description": [
+        "Do Already? turns a consented Telegram instruction from a partner into an editable household promise.",
+        "GPT-5.6 Luna extracts structured task details, routes clear tasks automatically, and asks for approval on medium-confidence messages. Low-confidence chat is ignored.",
+        "A mobile-first dashboard tracks tasks, completion or misses, and a partner-chosen reward without retaining original messages."
+      ],
+      "tags": [
+        "Codex",
+        "GPT-5.6 Luna",
+        "OpenAI Responses API",
+        "Telegram Bot API",
+        "Cloudflare D1",
+        "Next.js",
+        "TypeScript"
+      ],
+      "metrics": [
+        {
+          "value": "3",
+          "label": "confidence routes"
+        },
+        {
+          "value": "$100",
+          "label": "per missed task"
+        },
+        {
+          "value": "0",
+          "label": "original messages retained"
+        }
+      ],
+      "highlights": [
+        "Clear requests can be added to the active task list automatically, while medium-confidence requests stay private until approved.",
+        "Each missed promise adds $100 toward a partner-chosen, editable reward without automating a payment or consequence.",
+        "Only structured task data is stored; original Telegram message text is not retained.",
+        "The optional Telegram flow is limited to a consented private group and allowlisted people."
+      ],
+      "role": "Product owner, designer, and builder for a focused Build Week experiment.",
+      "next": "max-lee-ai-portfolio",
+      "accent": "violet",
+      "caseStudySections": [
+        {
+          "title": "Overview",
+          "paragraphs": [
+            "Do Already? is a playful, mobile-first accountability assistant for everyday household commitments.",
+            "It turns a consented Telegram instruction from a partner into an editable promise, then makes it easy to record whether it was done or missed. The dashboard keeps the agreed reward visible so the experience remains light-hearted, clear, and motivating.",
+            "For the live demo, users can also explore a realistic starter dashboard without signing in."
+          ]
+        },
+        {
+          "title": "Why I Built It",
+          "paragraphs": [
+            "Everyday commitments are often hidden in casual conversation: pick up groceries, book dinner, or remember something needed tomorrow. A conventional task list misses the moment where a promise is made.",
+            "I wanted to test whether AI could turn a clearly consented instruction into an editable task without making the product feel intrusive, punitive, or overly automated.",
+            "The result is deliberately narrow: it helps one person keep promises made at home, while keeping the final judgement and every outcome in human hands."
+          ]
+        },
+        {
+          "title": "Outcomes and Learnings",
+          "paragraphs": [
+            "The project became a working mobile-first loop: a Telegram message can become a structured promise, clear requests are saved automatically, uncertain ones receive private approval, and ordinary chat is ignored.",
+            "I learned that reliable AI automation depends as much on boundaries as on extraction quality. Confidence routing, explicit consent, compact context for task updates, and a clear fallback path made the flow more trustworthy.",
+            "Privacy shaped the product too. Only structured task data is stored; original Telegram message text is not retained, and the optional integration is limited to a consented private group and allowlisted people."
+          ]
+        },
+        {
+          "title": "How This Project Changed Me",
+          "paragraphs": [
+            "Do Already? pushed me to think beyond a model call and toward the experience around it: user consent, edge cases, recovery paths, and the tone a product creates.",
+            "Codex helped turn the idea into a focused Build Week project, from narrowing the MVP to implementing confidence routing, D1 persistence, and a mobile-first dashboard.",
+            "It reinforced that a good AI product does not have to start as a large platform. A small, recurring frustration can be enough when the workflow is clear and the human stays in control."
+          ]
+        }
+      ],
+      "externalLabel": "Try it out",
+      "externalUrl": "https://promise-keeper-demo.leesianyi.chatgpt.site",
+      "githubUrl": "https://github.com/maxleesianyi/do-already"
+    },
+    {
       "slug": "max-lee-ai-portfolio",
       "title": "AI Portfolio Website",
       "year": "2026",
@@ -365,54 +448,9 @@
         "Iterated directly from recruiter-focused feedback."
       ],
       "role": "Product owner, designer, and builder.",
-      "next": "crib-stock-taker",
+      "next": "bus-15-telegram-alert",
       "accent": "violet",
       "githubUrl": "https://github.com/maxleesianyi/max-lee-ai-portfolio-website"
-    },
-    {
-      "slug": "crib-stock-taker",
-      "title": "Crib Stock Taker",
-      "year": "2026",
-      "kicker": "Mobile household stock and perishables tracker",
-      "status": "Live app",
-      "summary": "A mobile-friendly household stock taking app for tracking daily necessities and food that should be consumed soon.",
-      "galleryDescription": "A mobile household stock and perishables tracker.",
-      "description": [
-        "Crib Stock Taker was built for a small household team with two admins and one helper. The helper-facing workflow uses large controls, clear item names, optional photos, and minimal settings so daily updates stay simple.",
-        "The app tracks stock items like toilet paper, detergent, rice, sauces, and cleaning supplies, plus one-off perishables like vegetables, fruit, bread, cake, and takeaway food. Attention counts show low-stock items and perishables that have reached their alert day.",
-        "Supabase powers authentication, roles, database tables, and private photo storage. The frontend is a static HTML, CSS, and JavaScript app hosted on Vercel."
-      ],
-      "tags": [
-        "JavaScript",
-        "Supabase",
-        "Supabase Auth",
-        "Supabase Storage",
-        "Vercel"
-      ],
-      "metrics": [
-        {
-          "value": "2",
-          "label": "user roles"
-        },
-        {
-          "value": "5",
-          "label": "live tables"
-        },
-        {
-          "value": "1",
-          "label": "private photo bucket"
-        }
-      ],
-      "highlights": [
-        "Admin and helper roles with different levels of control.",
-        "Batch stock updates with pending edits, save, discard, and leave-page warnings.",
-        "Perishable alerts default to two days and support optional photos and notes.",
-        "Supabase Auth profiles connect app-specific roles to real users."
-      ],
-      "role": "Solo builder for a real household workflow.",
-      "next": "bus-15-telegram-alert",
-      "accent": "teal",
-      "githubUrl": "https://github.com/maxleesianyi/crib-stock-taker"
     },
     {
       "slug": "bus-15-telegram-alert",

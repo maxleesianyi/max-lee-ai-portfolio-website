@@ -22,7 +22,7 @@ This repository currently contains the Sites-generated source for the portfolio.
 ### Projects
 
 - OpenAI BDR Interviewer Buddy
-- Crib Stock Taker
+- Do Already?
 
 ## Editing Content
 
