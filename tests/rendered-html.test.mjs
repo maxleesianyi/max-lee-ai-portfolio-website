@@ -93,6 +93,7 @@ test("server-renders the Bus 15 case study without the legacy side panel", async
   assert.match(html, /How This Project Changed Me/);
   assert.match(html, /Codex/);
   assert.match(html, /GPT-5\.5/);
+  assert.match(html, /\/projects\/bus-15-telegram-alert\.png/);
   assert.doesNotMatch(html, /<span class="eyebrow">Highlights<\/span>/);
 });
 

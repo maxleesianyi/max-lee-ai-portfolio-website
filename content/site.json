@@ -463,6 +463,7 @@
       "status": "Live automation",
       "summary": "A weekday automation that checks real-time Bus 15 arrivals and sends Max a Telegram alert with the next catchable bus and when to leave home.",
       "galleryDescription": "Real-time Bus 15 alerts with practical leave-time guidance.",
+      "imageUrl": "/projects/bus-15-telegram-alert.png",
       "description": [
         "This automation was built around a practical morning decision: which Bus 15 can Max actually catch after a 10-minute walk and a two-minute buffer?",
         "A Supabase Edge Function checks the official LTA DataMall Bus Arrival endpoint on weekday mornings, then sends the next and subsequent arrival times through Telegram with a clear leave-time recommendation.",
