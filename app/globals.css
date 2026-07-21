@@ -934,6 +934,15 @@ h3 {
   object-fit: cover;
 }
 
+.project-image-frame--daily-ai-newsletter {
+  aspect-ratio: 745 / 308;
+  border-radius: 18px;
+}
+
+.project-image-frame--daily-ai-newsletter img {
+  object-fit: cover;
+}
+
 a:hover .project-image-frame,
 a:focus-visible .project-image-frame {
   transform: translateY(-4px);

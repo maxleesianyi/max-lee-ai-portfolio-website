@@ -546,6 +546,7 @@
       "status": "Scheduled task",
       "summary": "A scheduled ChatGPT task that researches key AI developments and emails Max a concise daily briefing.",
       "galleryDescription": "A daily, source-linked AI briefing delivered by email.",
+      "imageUrl": "/projects/daily-ai-newsletter.png",
       "description": [
         "This personal automation reviews important AI developments from roughly the last 24 hours, prioritising OpenAI, Anthropic, Google and DeepMind, and material policy, market, safety, infrastructure, and talent moves.",
         "Each email starts with a short executive summary, then covers the major labs, other important AI moves, and why the developments matter for OpenAI.",

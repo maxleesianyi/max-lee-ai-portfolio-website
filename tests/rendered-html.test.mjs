@@ -140,6 +140,7 @@ test("server-renders the Daily AI Newsletter case study without the legacy side 
   assert.match(html, /Outcomes and Learnings/);
   assert.match(html, /How This Project Changed Me/);
   assert.match(html, /ChatGPT Tasks/);
+  assert.match(html, /\/projects\/daily-ai-newsletter\.png/);
   assert.doesNotMatch(html, /<span class="eyebrow">Highlights<\/span>/);
   assert.doesNotMatch(html, /<li>OpenAI<\/li>/);
 });

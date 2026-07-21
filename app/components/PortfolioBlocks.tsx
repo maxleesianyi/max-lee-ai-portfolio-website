@@ -147,7 +147,7 @@ export function BrowserFrame({
 export function ProjectVisual({ project }: { project: Project }) {
   if (project.imageUrl) {
     return (
-      <div className={`project-image-frame ${project.slug === "do-already" ? "project-image-frame--do-already" : ""}`}>
+      <div className={`project-image-frame project-image-frame--${project.slug}`}>
         <img src={project.imageUrl} alt={`${project.title} app interface`} />
       </div>
     );
