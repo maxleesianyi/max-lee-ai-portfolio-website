@@ -48,6 +48,7 @@ export type Project = {
   externalUrl?: string;
   githubLabel?: string;
   githubUrl?: string;
+  showCaseStudyCtas?: boolean;
   caseStudySections?: CaseStudySection[];
 };
 

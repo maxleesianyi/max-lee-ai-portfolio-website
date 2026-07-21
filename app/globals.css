@@ -1511,12 +1511,37 @@ a:hover .browser-frame {
   margin-top: 34px;
 }
 
-.case-build-stack {
+.case-build-row {
   margin-top: 34px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.case-build-stack {
+  min-width: 0;
 }
 
 .case-tech-cards {
   margin-top: 14px;
+}
+
+.case-build-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+  flex: 0 0 auto;
+}
+
+.case-build-actions .text-link {
+  margin-top: 0;
+  box-shadow: 0 8px 22px rgba(91, 189, 255, 0.08);
+}
+
+.case-build-actions .text-link:hover {
+  box-shadow: 0 14px 30px rgba(91, 189, 255, 0.24);
 }
 
 .case-visual {
@@ -1731,6 +1756,15 @@ a:hover .browser-frame {
 }
 
 @media (max-width: 860px) {
+  .case-build-row {
+    align-items: start;
+    flex-direction: column;
+  }
+
+  .case-build-actions {
+    justify-content: flex-start;
+  }
+
   .subpage-hero-footer {
     flex-direction: column;
     gap: 18px;

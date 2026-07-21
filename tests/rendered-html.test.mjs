@@ -68,6 +68,10 @@ test("server-renders project detail pages from editable project content", async 
   assert.match(html, /Outcomes and Learnings/);
   assert.match(html, /How This Project Changed Me/);
   assert.match(html, /Built with/);
+  assert.match(html, /Try it out/);
+  assert.match(html, /GitHub/);
+  assert.match(html, /https:\/\/ai-gtm-learning-lab\.vercel\.app\//);
+  assert.match(html, /https:\/\/github\.com\/maxleesianyi\/max-lee-OpenAI-BDR-Interviewer-Buddy/);
   for (const tag of project.tags) {
     assert.match(html, new RegExp(tag));
   }

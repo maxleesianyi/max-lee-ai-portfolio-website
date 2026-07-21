@@ -324,6 +324,7 @@
       ],
       "externalLabel": "Try it out",
       "externalUrl": "https://ai-gtm-learning-lab.vercel.app/",
+      "showCaseStudyCtas": true,
       "githubUrl": "https://github.com/maxleesianyi/max-lee-OpenAI-BDR-Interviewer-Buddy"
     },
     {

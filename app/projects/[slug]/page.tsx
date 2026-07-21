@@ -50,13 +50,29 @@ export default async function ProjectDetailPage({ params }: Props) {
             : project.title}
         </h1>
         <p className="case-lede">{project.summary}</p>
-        <div className="case-build-stack">
-          <span className="eyebrow">Built with</span>
-          <ul className="tag-list case-tech-cards">
-            {project.tags.map((tag) => (
-              <li key={tag}>{tag}</li>
-            ))}
-          </ul>
+        <div className="case-build-row">
+          <div className="case-build-stack">
+            <span className="eyebrow">Built with</span>
+            <ul className="tag-list case-tech-cards">
+              {project.tags.map((tag) => (
+                <li key={tag}>{tag}</li>
+              ))}
+            </ul>
+          </div>
+          {project.showCaseStudyCtas ? (
+            <div className="case-build-actions">
+              {project.externalUrl && project.externalLabel ? (
+                <a className="text-link" href={project.externalUrl} target="_blank" rel="noreferrer">
+                  {project.externalLabel}
+                </a>
+              ) : null}
+              {project.githubUrl ? (
+                <a className="text-link" href={project.githubUrl} target="_blank" rel="noreferrer">
+                  {project.githubLabel ?? "GitHub"}
+                </a>
+              ) : null}
+            </div>
+          ) : null}
         </div>
         <div className="case-visual">
           <ProjectVisual project={project} />
