@@ -119,7 +119,7 @@ test("features the linked OpenAI Build Week credential for Do Already?", async (
   assert.match(html, /project-image-frame project-image-frame--do-already/);
   assert.match(
     html,
-    /An accountability assistant that turns The Wife&#x27;s instructions on Telegram into actionable tasks, while keeping playful with a reward system\./,
+    /An accountability assistant that turns The Wife&#x27;s instructions on Telegram into actionable tasks, while keeping it playful with a reward system\./,
   );
   assert.match(html, /https:\/\/devpost\.com\/software\/placeholder-for-now-th2j86/);
 });

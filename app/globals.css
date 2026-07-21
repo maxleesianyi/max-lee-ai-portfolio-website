@@ -926,6 +926,7 @@ h3 {
 }
 
 .project-image-frame--do-already {
+  aspect-ratio: 960 / 656;
   border-radius: 18px;
 }
 
