@@ -64,7 +64,6 @@ function PipelineGenerationWorkflow({ tools }: { tools: ToolTag[] }) {
       <section className="pipeline-phase pipeline-phase--before">
         <div className="pipeline-phase-heading">
           <span>Before AI</span>
-          <p>A manual, fragmented preparation process.</p>
         </div>
         <div className="pipeline-before-flow">
           <article className="pipeline-before-card">
@@ -85,7 +84,6 @@ function PipelineGenerationWorkflow({ tools }: { tools: ToolTag[] }) {
       <section className="pipeline-phase pipeline-phase--after">
         <div className="pipeline-phase-heading">
           <span>After AI</span>
-          <p>Focused inputs that lead to more relevant outreach.</p>
         </div>
         <div className="pipeline-after-flow">
           <div className="pipeline-tool-stack">
