@@ -631,7 +631,7 @@
       "title": "Opportunity Management",
       "eyebrow": "Docusign",
       "year": "2025",
-      "summary": "First AE in Docusign Asia to sell two newly launched AI product lines within the first month, before established playbooks existed.",
+      "summary": "",
       "galleryDescription": "Turning customer conversations into clear actions and stronger deal discipline.",
       "details": [
         "The resume positions this as an execution story: Max sold newly launched AI product lines early, operating without mature playbooks, while applying structured discovery and deal execution.",
@@ -658,16 +658,16 @@
       ],
       "metrics": [
         {
-          "value": "2",
-          "label": "AI products sold early"
+          "value": "2.5 hrs",
+          "label": "admin time saved per week"
         },
         {
-          "value": "$120k",
-          "label": "major IAM ARR deal"
+          "value": "10 min",
+          "label": "follow-up turnaround time"
         },
         {
-          "value": "1st",
-          "label": "Asia AE milestone"
+          "value": "100%",
+          "label": "opportunities updated before forecast"
         }
       ],
       "highlights": [
@@ -682,7 +682,7 @@
       "title": "Leadership Alignment",
       "eyebrow": "Docusign",
       "year": "2025",
-      "summary": "Used structured discovery, multi-threading, and executive sponsorship to align stakeholders around new AI and IAM opportunities.",
+      "summary": "",
       "galleryDescription": "Transform complex deal context into concise, decision-ready briefings.",
       "details": [
         "The resume describes one of the first major Docusign Intelligent Agreement Management platform deals at US$120k ARR, supported by MEDDPICC execution, multi-threading, and executive sponsorship.",
@@ -705,16 +705,16 @@
       ],
       "metrics": [
         {
-          "value": "$120k",
-          "label": "major IAM ARR deal"
+          "value": "20 min",
+          "label": "saved per manager 1:1 preparation"
         },
         {
-          "value": "2",
-          "label": "AI products sold early"
+          "value": "50 min",
+          "label": "saved per executive briefing preparation"
         },
         {
-          "value": "1",
-          "label": "Asia AE milestone"
+          "value": "30 min",
+          "label": "saved per deal review preparation"
         }
       ],
       "highlights": [
@@ -729,7 +729,7 @@
       "title": "Operational Readiness",
       "eyebrow": "Docusign",
       "year": "2024-2026",
-      "summary": "Developed AI workflows within Docusign's approved tools, access controls, and data-governance policies.",
+      "summary": "",
       "galleryDescription": "Convert constant internal updates into relevant seller actions.",
       "details": [
         "The examples on this page were developed within Docusign's approved tools, access controls, and data-governance policies.",
@@ -747,16 +747,8 @@
       ],
       "metrics": [
         {
-          "value": "Approved",
-          "label": "tools"
-        },
-        {
-          "value": "Scoped",
-          "label": "access"
-        },
-        {
-          "value": "Governed",
-          "label": "data"
+          "value": "90%",
+          "label": "reduced time for information retrieval"
         }
       ],
       "highlights": [
