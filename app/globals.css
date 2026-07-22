@@ -1329,7 +1329,7 @@ a:hover .browser-frame {
 
 .ai-workflow-explorer--expanded {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.34fr);
+  grid-template-columns: minmax(0, 1fr) 260px;
   gap: 18px;
   align-items: start;
   animation: explorer-reveal 280ms cubic-bezier(0.2, 0, 0, 1);
@@ -1347,7 +1347,7 @@ a:hover .browser-frame {
 .ai-workflow-detail-topline {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   gap: 20px;
 }
 
@@ -1507,6 +1507,189 @@ a:hover .browser-frame {
   color: var(--dim);
   font-size: 0.81rem;
   line-height: 1.5;
+}
+
+.pipeline-workflow {
+  margin-top: 52px;
+  overflow: hidden;
+  border: 1px solid rgba(244, 239, 231, 0.12);
+  border-radius: 12px;
+  background: rgba(7, 10, 13, 0.34);
+}
+
+.pipeline-phase {
+  padding: clamp(22px, 3vw, 34px);
+}
+
+.pipeline-phase + .pipeline-phase {
+  border-top: 1px solid rgba(244, 239, 231, 0.12);
+}
+
+.pipeline-phase-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 24px;
+}
+
+.pipeline-phase-heading span {
+  color: var(--gold);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.78rem;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.pipeline-phase-heading p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.84rem;
+  line-height: 1.45;
+  text-align: right;
+}
+
+.pipeline-before-flow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.pipeline-before-card,
+.pipeline-tool-card,
+.pipeline-after-output {
+  min-width: 0;
+  border: 1px solid rgba(244, 239, 231, 0.14);
+  border-radius: 10px;
+  background: rgba(244, 239, 231, 0.035);
+}
+
+.pipeline-before-card {
+  position: relative;
+  padding: 18px;
+}
+
+.pipeline-before-card:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -23px;
+  z-index: 1;
+  color: var(--muted);
+  content: "\\2192";
+  font-size: 1.2rem;
+  transform: translateY(-50%);
+}
+
+.pipeline-before-card h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 620;
+}
+
+.pipeline-before-card p,
+.pipeline-tool-card p,
+.pipeline-after-output p {
+  margin: 10px 0 0;
+  color: var(--dim);
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
+.pipeline-after-flow {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 0.72fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.pipeline-after-flow::after {
+  position: absolute;
+  top: 50%;
+  left: calc(50% + 4px);
+  color: var(--gold);
+  content: "\\2192";
+  font-size: 1.4rem;
+  transform: translate(-50%, -50%);
+}
+
+.pipeline-tool-stack {
+  display: grid;
+  gap: 10px;
+}
+
+.pipeline-tool-card {
+  display: grid;
+  grid-template-columns: 112px minmax(0, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 14px 16px;
+}
+
+.pipeline-tool-card > div,
+.pipeline-after-output > div {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.pipeline-tool-card img,
+.pipeline-after-output img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.pipeline-tool-card strong,
+.pipeline-after-output strong {
+  font-size: 0.88rem;
+  font-weight: 620;
+}
+
+.pipeline-tool-card p {
+  margin: 0;
+}
+
+.pipeline-after-output {
+  padding: 24px;
+  border-color: rgba(91, 189, 255, 0.5);
+  background: rgba(91, 189, 255, 0.08);
+}
+
+@media (min-width: 1400px) {
+  .ai-workflow-explorer--expanded {
+    --workflow-rail-width: clamp(152px, calc((100vw - var(--max)) / 2 - 8px), 280px);
+    width: calc(100% + var(--workflow-rail-width));
+    grid-template-columns: minmax(0, 1fr) var(--workflow-rail-width);
+  }
+}
+
+@media (min-width: 861px) and (max-width: 1399px) {
+  .ai-workflow-explorer--expanded {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-workflow-rail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-workflow-rail-card {
+    min-height: 0;
+  }
+
+  .pipeline-before-flow,
+  .pipeline-after-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .pipeline-before-card:not(:last-child)::after,
+  .pipeline-after-flow::after {
+    display: none;
+  }
+
+  .pipeline-after-flow {
+    gap: 18px;
+  }
 }
 
 .experience-explorer {
