@@ -276,18 +276,17 @@ export function ProjectFeature({ project, index }: { project: Project; index: nu
 
 export function WorkFeature({ story, index }: { story: WorkStory; index: number }) {
   return (
-    <article className={`feature-row ${index % 2 ? "feature-row--reverse" : ""}`}>
-      <WorkVisual story={story} />
-      <div className="feature-copy">
-        <h2>{story.title}</h2>
-        <p>{story.summary}</p>
-        <ToolTagList tags={story.tags} />
-        <div className="feature-actions">
-          <Link className="text-link" href={`/ai-at-work/${story.slug}`}>
-            Case Study
-          </Link>
+    <article className="ai-workflow-card">
+      <Link href={`/ai-at-work/${story.slug}`} aria-label={`${story.title} case study`}>
+        <div className="ai-workflow-card-topline">
+          <span className="ai-workflow-card-icon" aria-hidden="true">AI</span>
+          <span className="ai-workflow-card-number">{String(index + 1).padStart(2, "0")}</span>
         </div>
-      </div>
+        <h2>{story.title}</h2>
+        <p>{story.galleryDescription}</p>
+        <ToolTagList tags={story.tags} />
+        <span className="ai-workflow-card-label">Case Study</span>
+      </Link>
     </article>
   );
 }

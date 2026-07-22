@@ -1217,6 +1217,7 @@ a:hover .browser-frame {
   color: var(--dim);
   font-size: 0.92rem;
   line-height: 1.6;
+  white-space: pre-line;
   opacity: 0;
   transition: max-height 240ms ease, margin-top 240ms ease, opacity 180ms ease;
 }
@@ -1232,13 +1233,131 @@ a:hover .browser-frame {
 
 .ai-use-disclaimer:hover p,
 .ai-use-disclaimer:focus-visible p {
-  max-height: 170px;
+  max-height: 250px;
   margin-top: 11px;
   opacity: 1;
 }
 
 .subpage-stack {
   padding-top: 60px;
+}
+
+.ai-workflow-section {
+  padding-top: 50px;
+}
+
+.ai-workflow-heading {
+  max-width: 700px;
+  margin-bottom: 34px;
+}
+
+.ai-workflow-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-weight: 620;
+  line-height: 1.05;
+}
+
+.ai-workflow-heading p {
+  margin: 12px 0 0;
+  color: var(--dim);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.ai-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.ai-workflow-card {
+  min-width: 0;
+}
+
+.ai-workflow-card > a {
+  display: flex;
+  min-height: 270px;
+  flex-direction: column;
+  border: 1px solid rgba(244, 239, 231, 0.13);
+  border-radius: 14px;
+  background: rgba(21, 26, 32, 0.68);
+  padding: 24px;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+}
+
+.ai-workflow-card > a:hover,
+.ai-workflow-card > a:focus-visible {
+  border-color: rgba(91, 189, 255, 0.82);
+  background: rgba(30, 41, 52, 0.92);
+  box-shadow: 0 18px 42px rgba(5, 18, 32, 0.35), inset 0 0 0 1px rgba(91, 189, 255, 0.06);
+  outline: none;
+  transform: translateY(-4px);
+}
+
+.ai-workflow-card-topline {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.ai-workflow-card-icon {
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 10px;
+  background: rgba(91, 189, 255, 0.1);
+  color: var(--gold);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.ai-workflow-card-number,
+.ai-workflow-card-label {
+  color: var(--gold);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.74rem;
+  line-height: 1.2;
+}
+
+.ai-workflow-card h2 {
+  margin: 28px 0 0;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 620;
+  line-height: 1.12;
+}
+
+.ai-workflow-card p {
+  margin: 12px 0 0;
+  color: var(--dim);
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+
+.ai-workflow-card .tag-list {
+  margin-top: 20px;
+}
+
+.ai-workflow-card .tag-list li {
+  padding: 6px 9px;
+  color: var(--bone);
+}
+
+.ai-workflow-card-label {
+  margin-top: auto;
+  padding-top: 22px;
+  opacity: 0;
+  transform: translateY(3px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.ai-workflow-card > a:hover .ai-workflow-card-label,
+.ai-workflow-card > a:focus-visible .ai-workflow-card-label {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .experience-explorer {
@@ -1791,6 +1910,19 @@ a:hover .browser-frame {
   .ai-use-disclaimer:hover,
   .ai-use-disclaimer:focus-visible {
     width: 100%;
+  }
+
+  .ai-workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ai-workflow-card > a {
+    min-height: 0;
+  }
+
+  .ai-workflow-card-label {
+    opacity: 1;
+    transform: none;
   }
 
   .nav-shell {
