@@ -109,6 +109,7 @@ test("server-renders the Do Already? case study without the legacy side panel", 
   assert.match(html, /Outcomes and Learnings/);
   assert.match(html, /How This Project Changed Me/);
   assert.match(html, /GPT-5\.6 Luna/);
+  assert.match(html, /Happy Wife, Happy Life/);
   assert.doesNotMatch(html, /<span class="eyebrow">Highlights<\/span>/);
 });
 

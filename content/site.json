@@ -378,17 +378,18 @@
         {
           "title": "Overview",
           "paragraphs": [
-            "Do Already? is a playful, mobile-first accountability assistant for everyday household commitments.",
-            "It turns a consented Telegram instruction from a partner into an editable promise, then makes it easy to record whether it was done or missed. The dashboard keeps the agreed reward visible so the experience remains light-hearted, clear, and motivating.",
-            "For the live demo, users can also explore a realistic starter dashboard without signing in."
+            "Do Already? is a playful, accountability assistant for everyday household commitments.",
+            "When a Telegram message is received, the server calls the OpenAI Responses API with GPT-5.6 Luna to determine if it is an instruction, which will then be converted into a task. The dashboard then makes it easy to record whether it was done or missed, keeps the agreed reward visible so the experience remains light-hearted, clear, and motivating."
           ]
         },
         {
           "title": "Why I Built It",
           "paragraphs": [
-            "Everyday commitments are often hidden in casual conversation: pick up groceries, book dinner, or remember something needed tomorrow. A conventional task list misses the moment where a promise is made.",
-            "I wanted to test whether AI could turn a clearly consented instruction into an editable task without making the product feel intrusive, punitive, or overly automated.",
-            "The result is deliberately narrow: it helps one person keep promises made at home, while keeping the final judgement and every outcome in human hands."
+            "For OpenAI Build Week, I chose the \"Apps for your life\" category.",
+            "Looking at how much I use AI at work and personal projects, I thought it would be fun to build something that involves my wife. As the saying goes, \"Happy Wife, Happy Life\".",
+            "As an aspiring AI GTM seller, I reflected deeply and identified a small, well-contained problem with a huge negative impact: I always forget to do the tasks my wife asks me to.",
+            "Till now, we had to rely on my empty promises to remember my tasks better. I wanted to test whether AI could turn our daily conversations into tasks.",
+            "The result is deliberately narrow: it helps me keep promises made at home, while keeping the process and outcome in my hands."
           ]
         },
         {
