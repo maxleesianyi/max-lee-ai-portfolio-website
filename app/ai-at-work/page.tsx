@@ -32,14 +32,10 @@ export default function AiAtWorkPage() {
         </div>
       </section>
       <section className="section-pad subpage-stack ai-workflow-section">
-        <div className="ai-workflow-heading">
-          <h2>How I apply AI across the sales motion</h2>
-          <p>Select a workflow to preview the detailed case study.</p>
-        </div>
         <div className="ai-workflow-grid">
-        {workStories.map((story, index) => (
-          <WorkFeature key={story.slug} story={story} index={index} />
-        ))}
+          {workStories.map((story) => (
+            <WorkFeature key={story.slug} story={story} />
+          ))}
         </div>
       </section>
     </PageShell>

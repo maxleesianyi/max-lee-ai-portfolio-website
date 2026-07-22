@@ -274,14 +274,10 @@ export function ProjectFeature({ project, index }: { project: Project; index: nu
   );
 }
 
-export function WorkFeature({ story, index }: { story: WorkStory; index: number }) {
+export function WorkFeature({ story }: { story: WorkStory }) {
   return (
     <article className="ai-workflow-card">
       <Link href={`/ai-at-work/${story.slug}`} aria-label={`${story.title} case study`}>
-        <div className="ai-workflow-card-topline">
-          <span className="ai-workflow-card-icon" aria-hidden="true">AI</span>
-          <span className="ai-workflow-card-number">{String(index + 1).padStart(2, "0")}</span>
-        </div>
         <h2>{story.title}</h2>
         <p>{story.galleryDescription}</p>
         <ToolTagList tags={story.tags} />

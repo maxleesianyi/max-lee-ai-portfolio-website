@@ -1246,25 +1246,6 @@ a:hover .browser-frame {
   padding-top: 50px;
 }
 
-.ai-workflow-heading {
-  max-width: 700px;
-  margin-bottom: 34px;
-}
-
-.ai-workflow-heading h2 {
-  margin: 0;
-  font-size: clamp(2rem, 3.2vw, 3rem);
-  font-weight: 620;
-  line-height: 1.05;
-}
-
-.ai-workflow-heading p {
-  margin: 12px 0 0;
-  color: var(--dim);
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
 .ai-workflow-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1295,27 +1276,6 @@ a:hover .browser-frame {
   transform: translateY(-4px);
 }
 
-.ai-workflow-card-topline {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
-}
-
-.ai-workflow-card-icon {
-  display: grid;
-  width: 38px;
-  height: 38px;
-  place-items: center;
-  border-radius: 10px;
-  background: rgba(91, 189, 255, 0.1);
-  color: var(--gold);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.72rem;
-  font-weight: 700;
-}
-
-.ai-workflow-card-number,
 .ai-workflow-card-label {
   color: var(--gold);
   font-family: var(--font-geist-mono), monospace;
@@ -1324,7 +1284,7 @@ a:hover .browser-frame {
 }
 
 .ai-workflow-card h2 {
-  margin: 28px 0 0;
+  margin: 0;
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   font-weight: 620;
   line-height: 1.12;
