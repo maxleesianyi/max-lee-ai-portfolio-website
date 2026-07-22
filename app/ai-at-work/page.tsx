@@ -35,6 +35,27 @@ export default function AiAtWorkPage() {
       <section className="section-pad subpage-stack ai-workflow-section">
         <AiWorkExplorer stories={workStories} />
       </section>
+      <section className="section-pad human-judgement">
+        <h2>Where human judgement remains</h2>
+        <p>
+          AI helps gather, structure, and draft information. I remain responsible for verifying account context,
+          deciding the commercial strategy, and approving anything used with a customer.
+        </p>
+        <div className="human-judgement-list">
+          <article>
+            <h3>Approved tools only</h3>
+            <p>Workflows stay within permitted enterprise systems and access controls.</p>
+          </article>
+          <article>
+            <h3>Human review before action</h3>
+            <p>AI output is treated as a draft or recommendation, not an autonomous decision.</p>
+          </article>
+          <article>
+            <h3>Anonymised portfolio examples</h3>
+            <p>Public demonstrations use fictional or reconstructed data.</p>
+          </article>
+        </div>
+      </section>
     </PageShell>
   );
 }

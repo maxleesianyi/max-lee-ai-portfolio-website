@@ -29,16 +29,11 @@ function WorkflowCard({ story, onSelect }: { story: WorkStory; onSelect: () => v
           {story.title}
         </span>
         <span className="ai-workflow-card-description">{story.galleryDescription}</span>
-        <span className="ai-workflow-card-metrics">
-          {story.metrics.map((metric) => (
-            <span key={metric.label}>
-              <strong>{metric.value}</strong>
-              <small>{metric.label}</small>
-            </span>
-          ))}
-        </span>
         <ToolTags tags={story.tags} />
-        <span className="ai-workflow-card-label">Case Study</span>
+        <span className="ai-workflow-card-label">
+          <span className="ai-workflow-card-label-default">Case Study</span>
+          <span className="ai-workflow-card-label-hover">Learn more</span>
+        </span>
       </button>
     </article>
   );

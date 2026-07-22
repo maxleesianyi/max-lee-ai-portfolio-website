@@ -1259,7 +1259,7 @@ a:hover .browser-frame {
 .ai-workflow-card > button {
   display: flex;
   width: 100%;
-  min-height: 330px;
+  min-height: 270px;
   flex-direction: column;
   border: 1px solid rgba(244, 239, 231, 0.13);
   border-radius: 14px;
@@ -1304,38 +1304,6 @@ a:hover .browser-frame {
   line-height: 1.6;
 }
 
-.ai-workflow-card-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-  margin-top: 18px;
-}
-
-.ai-workflow-card-metrics > span {
-  display: block;
-  min-width: 0;
-  border-top: 1px solid rgba(244, 239, 231, 0.14);
-  padding-top: 9px;
-}
-
-.ai-workflow-card-metrics strong,
-.ai-workflow-card-metrics small {
-  display: block;
-}
-
-.ai-workflow-card-metrics strong {
-  color: var(--bone);
-  font-size: 1rem;
-  font-weight: 620;
-}
-
-.ai-workflow-card-metrics small {
-  margin-top: 4px;
-  color: var(--muted);
-  font-size: 0.72rem;
-  line-height: 1.35;
-}
-
 .ai-workflow-card .tag-list {
   margin-top: 20px;
 }
@@ -1346,15 +1314,29 @@ a:hover .browser-frame {
 }
 
 .ai-workflow-card-label {
+  position: relative;
   margin-top: auto;
   padding-top: 22px;
+  color: var(--gold);
+  transition: color 180ms ease;
+}
+
+.ai-workflow-card-label-hover {
+  position: absolute;
+  top: 22px;
+  left: 0;
   opacity: 0;
   transform: translateY(3px);
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
-.ai-workflow-card > button:hover .ai-workflow-card-label,
-.ai-workflow-card > button:focus-visible .ai-workflow-card-label {
+.ai-workflow-card > button:hover .ai-workflow-card-label-default,
+.ai-workflow-card > button:focus-visible .ai-workflow-card-label-default {
+  opacity: 0;
+}
+
+.ai-workflow-card > button:hover .ai-workflow-card-label-hover,
+.ai-workflow-card > button:focus-visible .ai-workflow-card-label-hover {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1662,6 +1644,11 @@ a:hover .browser-frame {
   transform: rotate(50deg);
 }
 
+.pipeline-tool-card:nth-child(2)::after {
+  right: -72px;
+  width: 72px;
+}
+
 .pipeline-tool-card:nth-child(3)::after {
   transform: rotate(-50deg);
 }
@@ -1695,6 +1682,72 @@ a:hover .browser-frame {
 
 .pipeline-after-output p {
   margin: 0;
+}
+
+.human-judgement {
+  padding-top: 36px;
+}
+
+.human-judgement h2 {
+  max-width: 760px;
+  margin: 0;
+  font-size: clamp(2rem, 3.7vw, 3.2rem);
+  font-weight: 620;
+  line-height: 1.05;
+}
+
+.human-judgement > p {
+  max-width: 860px;
+  margin: 20px 0 0;
+  color: var(--dim);
+  font-size: 1.04rem;
+  line-height: 1.7;
+}
+
+.human-judgement-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.human-judgement-list article {
+  position: relative;
+  border: 1px solid rgba(244, 239, 231, 0.14);
+  border-radius: 10px;
+  background: rgba(244, 239, 231, 0.025);
+  padding: 18px 22px 18px 62px;
+}
+
+.human-judgement-list article::before {
+  position: absolute;
+  top: 21px;
+  left: 22px;
+  display: grid;
+  width: 22px;
+  height: 22px;
+  place-items: center;
+  border-radius: 999px;
+  background: rgba(91, 189, 255, 0.1);
+  color: var(--gold);
+  content: "\2713";
+  font-size: 0.75rem;
+}
+
+.human-judgement-list h3,
+.human-judgement-list p {
+  margin: 0;
+}
+
+.human-judgement-list h3 {
+  font-size: 0.96rem;
+  font-weight: 620;
+}
+
+.human-judgement-list p {
+  margin-top: 6px;
+  color: var(--dim);
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 @media (min-width: 1400px) {
