@@ -30,10 +30,7 @@ function WorkflowCard({ story, onSelect }: { story: WorkStory; onSelect: () => v
         </span>
         <span className="ai-workflow-card-description">{story.galleryDescription}</span>
         <ToolTags tags={story.tags} />
-        <span className="ai-workflow-card-label">
-          <span className="ai-workflow-card-label-default">Case Study</span>
-          <span className="ai-workflow-card-label-hover">Learn more</span>
-        </span>
+        <span className="ai-workflow-card-label">Learn more</span>
       </button>
     </article>
   );

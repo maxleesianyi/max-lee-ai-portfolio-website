@@ -186,7 +186,7 @@ test("keeps the four AI-at-work categories available", () => {
       "Pipeline Generation",
       "Opportunity Management",
       "Leadership Alignment",
-      "Internal Intelligence & Compliance",
+      "Operational Readiness",
     ],
   );
   assert.ok(
@@ -203,7 +203,7 @@ test("renders the in-place case study explorer and placeholder pages for every A
 
   const indexHtml = await indexResponse.text();
   for (const story of siteContent.workStories) {
-    assert.match(indexHtml, new RegExp(`Case Study`));
+    assert.match(indexHtml, new RegExp(`Learn more`));
     assert.match(indexHtml, new RegExp(`Open ${story.title.replace("&", "&amp;")} case study`));
 
     const caseStudyResponse = await render(`/ai-at-work/${story.slug}`);

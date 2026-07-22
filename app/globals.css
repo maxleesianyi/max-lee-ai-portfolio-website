@@ -1318,25 +1318,13 @@ a:hover .browser-frame {
   margin-top: auto;
   padding-top: 22px;
   color: var(--gold);
-  transition: color 180ms ease;
-}
-
-.ai-workflow-card-label-hover {
-  position: absolute;
-  top: 22px;
-  left: 0;
   opacity: 0;
   transform: translateY(3px);
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
-.ai-workflow-card > button:hover .ai-workflow-card-label-default,
-.ai-workflow-card > button:focus-visible .ai-workflow-card-label-default {
-  opacity: 0;
-}
-
-.ai-workflow-card > button:hover .ai-workflow-card-label-hover,
-.ai-workflow-card > button:focus-visible .ai-workflow-card-label-hover {
+.ai-workflow-card > button:hover .ai-workflow-card-label,
+.ai-workflow-card > button:focus-visible .ai-workflow-card-label {
   opacity: 1;
   transform: translateY(0);
 }
@@ -1689,11 +1677,11 @@ a:hover .browser-frame {
 }
 
 .human-judgement h2 {
-  max-width: 760px;
   margin: 0;
-  font-size: clamp(2rem, 3.7vw, 3.2rem);
+  font-size: clamp(2rem, 3.1vw, 2.55rem);
   font-weight: 620;
   line-height: 1.05;
+  white-space: nowrap;
 }
 
 .human-judgement > p {
@@ -2351,11 +2339,6 @@ a:hover .browser-frame {
     min-height: 0;
   }
 
-  .ai-workflow-card-label {
-    opacity: 1;
-    transform: none;
-  }
-
   .ai-workflow-detail {
     min-height: 0;
   }
@@ -2522,6 +2505,10 @@ a:hover .browser-frame {
 }
 
 @media (max-width: 560px) {
+  .human-judgement h2 {
+    font-size: 1.2rem;
+  }
+
   .ai-workflow-rail {
     grid-template-columns: 1fr;
   }
