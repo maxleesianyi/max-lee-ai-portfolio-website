@@ -47,10 +47,9 @@ function WorkflowRailCard({ story, onSelect }: { story: WorkStory; onSelect: () 
 
 function PipelineToolCard({ tag, children }: { tag?: ToolTag; children: string }) {
   return (
-    <article className="pipeline-tool-card">
+    <article className="pipeline-tool-card" aria-label={tag?.name}>
       <div>
         {tag ? <img src={tag.logo} alt="" aria-hidden="true" style={tag.scale ? { transform: `scale(${tag.scale})` } : undefined} /> : null}
-        <strong>{tag?.name}</strong>
       </div>
       <p>{children}</p>
     </article>
@@ -90,16 +89,15 @@ function PipelineGenerationWorkflow({ tools }: { tools: ToolTag[] }) {
         </div>
         <div className="pipeline-after-flow">
           <div className="pipeline-tool-stack">
-            <PipelineToolCard tag={tool("Slackbot")}>Analyses the book of business to surface where attention is needed.</PipelineToolCard>
-            <PipelineToolCard tag={tool("Glean")}>Surfaces relevant industry use cases and customer success stories.</PipelineToolCard>
-            <PipelineToolCard tag={tool("Gemini")}>Researches company news and strategic goals.</PipelineToolCard>
+            <PipelineToolCard tag={tool("Slackbot")}>Analyses the book of business to understand purchased SKUs, product usage, growth opportunities, existing footprint, and whitespace.</PipelineToolCard>
+            <PipelineToolCard tag={tool("Glean")}>Surfaces relevant industry use cases, customer success stories, and ICPs.</PipelineToolCard>
+            <PipelineToolCard tag={tool("Gemini")}>Signal detection for organizational changes, financial events, performance indicators, and stakeholder identification.</PipelineToolCard>
           </div>
-          <article className="pipeline-after-output">
+          <article className="pipeline-after-output" aria-label="Gemini">
             <div>
               {tool("Gemini") ? <img src={tool("Gemini")?.logo} alt="" aria-hidden="true" /> : null}
-              <strong>Gemini</strong>
             </div>
-            <p>Identifies key stakeholders and creates persona-tailored outreach sequences.</p>
+            <p>Creates persona-tailored outreach sequences across email, LinkedIn, and cold calling.</p>
           </article>
         </div>
       </section>

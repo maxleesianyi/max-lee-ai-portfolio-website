@@ -1572,12 +1572,11 @@ a:hover .browser-frame {
 .pipeline-before-card:not(:last-child)::after {
   position: absolute;
   top: 50%;
-  right: -23px;
+  right: -29px;
   z-index: 1;
-  color: var(--muted);
-  content: "\\2192";
-  font-size: 1.2rem;
-  transform: translateY(-50%);
+  width: 28px;
+  border-top: 1px solid rgba(91, 189, 255, 0.55);
+  content: "";
 }
 
 .pipeline-before-card h3 {
@@ -1603,16 +1602,6 @@ a:hover .browser-frame {
   align-items: center;
 }
 
-.pipeline-after-flow::after {
-  position: absolute;
-  top: 50%;
-  left: calc(50% + 4px);
-  color: var(--gold);
-  content: "\\2192";
-  font-size: 1.4rem;
-  transform: translate(-50%, -50%);
-}
-
 .pipeline-tool-stack {
   display: grid;
   gap: 10px;
@@ -1620,7 +1609,7 @@ a:hover .browser-frame {
 
 .pipeline-tool-card {
   display: grid;
-  grid-template-columns: 112px minmax(0, 1fr);
+  grid-template-columns: 24px minmax(0, 1fr);
   gap: 16px;
   align-items: center;
   padding: 14px 16px;
@@ -1638,12 +1627,6 @@ a:hover .browser-frame {
   width: 20px;
   height: 20px;
   object-fit: contain;
-}
-
-.pipeline-tool-card strong,
-.pipeline-after-output strong {
-  font-size: 0.88rem;
-  font-weight: 620;
 }
 
 .pipeline-tool-card p {
@@ -1682,8 +1665,7 @@ a:hover .browser-frame {
     grid-template-columns: 1fr;
   }
 
-  .pipeline-before-card:not(:last-child)::after,
-  .pipeline-after-flow::after {
+  .pipeline-before-card:not(:last-child)::after {
     display: none;
   }
 
