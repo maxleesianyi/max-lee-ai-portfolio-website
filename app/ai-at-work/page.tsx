@@ -1,4 +1,5 @@
-import { PageShell, WorkFeature } from "../components/PortfolioBlocks";
+import { AiWorkExplorer } from "../components/AiWorkExplorer";
+import { PageShell } from "../components/PortfolioBlocks";
 import { pages, workStories } from "../data";
 
 export const metadata = {
@@ -32,11 +33,7 @@ export default function AiAtWorkPage() {
         </div>
       </section>
       <section className="section-pad subpage-stack ai-workflow-section">
-        <div className="ai-workflow-grid">
-          {workStories.map((story) => (
-            <WorkFeature key={story.slug} story={story} />
-          ))}
-        </div>
+        <AiWorkExplorer stories={workStories} />
       </section>
     </PageShell>
   );

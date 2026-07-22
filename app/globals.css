@@ -1256,8 +1256,9 @@ a:hover .browser-frame {
   min-width: 0;
 }
 
-.ai-workflow-card > a {
+.ai-workflow-card > button {
   display: flex;
+  width: 100%;
   min-height: 270px;
   flex-direction: column;
   border: 1px solid rgba(244, 239, 231, 0.13);
@@ -1265,10 +1266,14 @@ a:hover .browser-frame {
   background: rgba(21, 26, 32, 0.68);
   padding: 24px;
   transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
-.ai-workflow-card > a:hover,
-.ai-workflow-card > a:focus-visible {
+.ai-workflow-card > button:hover,
+.ai-workflow-card > button:focus-visible {
   border-color: rgba(91, 189, 255, 0.82);
   background: rgba(30, 41, 52, 0.92);
   box-shadow: 0 18px 42px rgba(5, 18, 32, 0.35), inset 0 0 0 1px rgba(91, 189, 255, 0.06);
@@ -1283,14 +1288,16 @@ a:hover .browser-frame {
   line-height: 1.2;
 }
 
-.ai-workflow-card h2 {
+.ai-workflow-card-title {
+  display: block;
   margin: 0;
   font-size: clamp(1.4rem, 2vw, 1.8rem);
   font-weight: 620;
   line-height: 1.12;
 }
 
-.ai-workflow-card p {
+.ai-workflow-card-description {
+  display: block;
   margin: 12px 0 0;
   color: var(--dim);
   font-size: 0.97rem;
@@ -1314,10 +1321,192 @@ a:hover .browser-frame {
   transition: opacity 180ms ease, transform 180ms ease;
 }
 
-.ai-workflow-card > a:hover .ai-workflow-card-label,
-.ai-workflow-card > a:focus-visible .ai-workflow-card-label {
+.ai-workflow-card > button:hover .ai-workflow-card-label,
+.ai-workflow-card > button:focus-visible .ai-workflow-card-label {
   opacity: 1;
   transform: translateY(0);
+}
+
+.ai-workflow-explorer--expanded {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.34fr);
+  gap: 18px;
+  align-items: start;
+  animation: explorer-reveal 280ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.ai-workflow-detail {
+  min-height: 620px;
+  border: 1px solid rgba(91, 189, 255, 0.55);
+  border-radius: 14px;
+  background: rgba(21, 29, 37, 0.88);
+  padding: clamp(28px, 4vw, 48px);
+  box-shadow: 0 26px 70px rgba(4, 17, 31, 0.35), inset 0 0 0 1px rgba(91, 189, 255, 0.04);
+}
+
+.ai-workflow-detail-topline {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.ai-workflow-close {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(244, 239, 231, 0.16);
+  border-radius: 999px;
+  background: rgba(244, 239, 231, 0.04);
+  color: var(--bone);
+  font-size: 1.45rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.ai-workflow-close:hover,
+.ai-workflow-close:focus-visible {
+  border-color: var(--gold);
+  background: rgba(91, 189, 255, 0.12);
+  color: var(--gold);
+  outline: none;
+}
+
+.ai-workflow-detail h2 {
+  max-width: 900px;
+  margin: 26px 0 0;
+  font-size: clamp(2.5rem, 5.1vw, 5.6rem);
+  font-weight: 620;
+  line-height: 0.98;
+}
+
+.ai-workflow-detail-lede {
+  max-width: 760px;
+  margin: 22px 0 0;
+  color: var(--dim);
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.ai-workflow-detail .tag-list {
+  margin-top: 25px;
+}
+
+.ai-workflow-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 42px;
+}
+
+.ai-workflow-metrics div {
+  min-width: 0;
+  border-top: 1px solid rgba(244, 239, 231, 0.15);
+  padding-top: 14px;
+}
+
+.ai-workflow-metrics strong,
+.ai-workflow-metrics span {
+  display: block;
+}
+
+.ai-workflow-metrics strong {
+  color: var(--bone);
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  font-weight: 620;
+}
+
+.ai-workflow-metrics span {
+  margin-top: 5px;
+  color: var(--muted);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.7rem;
+  line-height: 1.35;
+}
+
+.ai-workflow-detail-copy {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
+  gap: clamp(30px, 5vw, 62px);
+  margin-top: 52px;
+  border-top: 1px solid rgba(244, 239, 231, 0.12);
+  padding-top: 34px;
+}
+
+.ai-workflow-detail-copy h3 {
+  margin: 0 0 16px;
+  color: var(--muted);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.ai-workflow-detail-copy p,
+.ai-workflow-detail-copy li {
+  color: var(--dim);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.ai-workflow-detail-copy p + p {
+  margin-top: 18px;
+}
+
+.ai-workflow-detail-copy ul {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.ai-workflow-rail {
+  display: grid;
+  gap: 12px;
+}
+
+.ai-workflow-rail-card {
+  display: block;
+  width: 100%;
+  min-height: 142px;
+  border: 1px solid rgba(244, 239, 231, 0.13);
+  border-radius: 12px;
+  background: rgba(21, 26, 32, 0.68);
+  padding: 20px;
+  color: var(--bone);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.ai-workflow-rail-card:hover,
+.ai-workflow-rail-card:focus-visible {
+  border-color: rgba(91, 189, 255, 0.7);
+  background: rgba(30, 41, 52, 0.9);
+  outline: none;
+  transform: translateX(-3px);
+}
+
+.ai-workflow-rail-card span,
+.ai-workflow-rail-card small {
+  display: block;
+}
+
+.ai-workflow-rail-card span {
+  font-size: 1.06rem;
+  font-weight: 620;
+  line-height: 1.2;
+}
+
+.ai-workflow-rail-card small {
+  margin-top: 10px;
+  color: var(--dim);
+  font-size: 0.81rem;
+  line-height: 1.5;
 }
 
 .experience-explorer {
@@ -1872,17 +2061,31 @@ a:hover .browser-frame {
     width: 100%;
   }
 
-  .ai-workflow-grid {
+  .ai-workflow-grid,
+  .ai-workflow-explorer--expanded,
+  .ai-workflow-detail-copy {
     grid-template-columns: 1fr;
   }
 
-  .ai-workflow-card > a {
+  .ai-workflow-card > button {
     min-height: 0;
   }
 
   .ai-workflow-card-label {
     opacity: 1;
     transform: none;
+  }
+
+  .ai-workflow-detail {
+    min-height: 0;
+  }
+
+  .ai-workflow-rail {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .ai-workflow-rail-card {
+    min-height: 0;
   }
 
   .nav-shell {
@@ -2039,6 +2242,10 @@ a:hover .browser-frame {
 }
 
 @media (max-width: 560px) {
+  .ai-workflow-rail {
+    grid-template-columns: 1fr;
+  }
+
   .section-pad {
     padding: 70px 18px;
   }
