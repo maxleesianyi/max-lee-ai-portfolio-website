@@ -372,7 +372,7 @@
         "The optional Telegram flow is limited to a consented private group and allowlisted people."
       ],
       "role": "Product owner, designer, and builder for a focused Build Week experiment.",
-      "next": "max-lee-ai-portfolio",
+      "next": "bus-15-telegram-alert",
       "accent": "violet",
       "caseStudySections": [
         {
@@ -414,53 +414,10 @@
       "githubUrl": "https://github.com/maxleesianyi/do-already"
     },
     {
-      "slug": "max-lee-ai-portfolio",
-      "title": "AI Portfolio Website",
-      "year": "2026",
-      "kicker": "",
-      "status": "Live site",
-      "summary": "A portfolio that brings together Max's sales experience, AI at Work stories, and Personal Projects in one interactive site.",
-      "galleryDescription": "An interactive site for Max's sales, AI at Work stories, and Personal Projects.",
-      "description": [
-        "This portfolio was designed to make Max's work easy to explore: practical AI workflows, personal builds, and commercial experience live in one place.",
-        "Codex supported the implementation loop from layout and content modeling to visual refinements, responsive interactions, and deployment."
-      ],
-      "tags": [
-        "React",
-        "Next.js",
-        "Tailwind CSS",
-        "OpenAI Sites",
-        "Codex"
-      ],
-      "metrics": [
-        {
-          "value": "3",
-          "label": "portfolio sections"
-        },
-        {
-          "value": "4",
-          "label": "interactive views"
-        },
-        {
-          "value": "1",
-          "label": "live portfolio"
-        }
-      ],
-      "highlights": [
-        "Built around editable content so copy and projects can change without code.",
-        "Uses an interactive homepage explorer and responsive route-level case studies.",
-        "Iterated directly from recruiter-focused feedback."
-      ],
-      "role": "Product owner, designer, and builder.",
-      "next": "bus-15-telegram-alert",
-      "accent": "violet",
-      "githubUrl": "https://github.com/maxleesianyi/max-lee-ai-portfolio-website"
-    },
-    {
       "slug": "bus-15-telegram-alert",
       "title": "Bus 15 Telegram Alert",
       "year": "2026",
-      "kicker": "Weekday bus arrival and leave-time automation",
+      "kicker": "",
       "status": "Live automation",
       "summary": "A weekday automation that checks real-time Bus 15 arrivals and sends Max a Telegram alert with the next catchable bus and when to leave home.",
       "galleryDescription": "Real-time Bus 15 alerts with practical leave-time guidance.",
@@ -543,7 +500,7 @@
       "slug": "daily-ai-newsletter",
       "title": "Daily AI Newsletter",
       "year": "2026",
-      "kicker": "A scheduled personal AI intelligence briefing",
+      "kicker": "",
       "status": "Scheduled task",
       "summary": "A scheduled ChatGPT task that researches key AI developments and emails Max a concise daily briefing.",
       "galleryDescription": "A daily, source-linked AI briefing delivered by email.",

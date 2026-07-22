@@ -172,9 +172,11 @@ test("keeps no-code content structurally complete", async () => {
   assert.ok(siteContent.projects.every((project) => project.description.length >= 1));
   assert.deepEqual(
     siteContent.projects.slice(0, 3).map((project) => project.slug),
-    ["openai-bdr-interviewer-buddy", "do-already", "max-lee-ai-portfolio"],
+    ["openai-bdr-interviewer-buddy", "do-already", "bus-15-telegram-alert"],
   );
+  assert.equal(siteContent.projects.length, 4);
   assert.ok(!siteContent.projects.some((project) => project.slug === "crib-stock-taker"));
+  assert.ok(!siteContent.projects.some((project) => project.slug === "max-lee-ai-portfolio"));
 });
 
 test("keeps the four AI-at-work categories available", () => {
