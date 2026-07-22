@@ -1339,6 +1339,7 @@ a:hover .browser-frame {
 
 .ai-workflow-detail {
   min-height: 620px;
+  container-type: inline-size;
   border: 1px solid rgba(91, 189, 255, 0.55);
   border-radius: 14px;
   background: rgba(21, 29, 37, 0.88);
@@ -1379,9 +1380,10 @@ a:hover .browser-frame {
 .ai-workflow-detail h2 {
   max-width: 900px;
   margin: 26px 0 0;
-  font-size: clamp(2.5rem, 5.1vw, 5.6rem);
+  font-size: clamp(1rem, 7cqi, 4.6rem);
   font-weight: 620;
   line-height: 0.98;
+  white-space: nowrap;
 }
 
 .ai-workflow-detail-lede {
