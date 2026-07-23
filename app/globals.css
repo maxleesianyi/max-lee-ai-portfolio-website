@@ -1710,8 +1710,8 @@ a:hover .browser-frame {
 .pipeline-stage-tools {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin: 12px 0 0;
+  gap: 10px;
+  margin: 14px 0 0;
   padding: 0;
   list-style: none;
 }
@@ -1719,30 +1719,18 @@ a:hover .browser-frame {
 .pipeline-stage-tools li {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  min-height: 24px;
-  padding: 4px 7px;
-  border: 1px solid rgba(244, 239, 231, 0.12);
-  border-radius: 999px;
-  background: rgba(7, 10, 13, 0.35);
-  color: var(--text);
-  font-size: 0.72rem;
-  line-height: 1;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
 }
 
 .pipeline-stage-tools img {
-  width: 14px;
-  height: 14px;
+  width: 20px;
+  height: 20px;
   object-fit: contain;
 }
 
-.leadership-after-flow--branch .pipeline-stage-tools li {
-  width: 28px;
-  justify-content: center;
-  padding-inline: 4px;
-}
-
-.leadership-after-flow--branch .pipeline-stage-tools span {
+.pipeline-stage-tools span {
   display: none;
 }
 
@@ -1750,16 +1738,6 @@ a:hover .browser-frame {
   border-color: rgba(91, 189, 255, 0.35);
   background: rgba(91, 189, 255, 0.07);
   box-shadow: 0 0 22px rgba(91, 189, 255, 0.08);
-}
-
-.pipeline-workflow--opportunity-management .pipeline-stage-tools li {
-  width: 28px;
-  justify-content: center;
-  padding-inline: 4px;
-}
-
-.pipeline-workflow--opportunity-management .pipeline-stage-tools span {
-  display: none;
 }
 
 .pipeline-after-flow {
