@@ -2093,6 +2093,11 @@ a:hover .browser-frame {
   object-position: center;
 }
 
+.life-experience-tile .life-experience-photo--image img {
+  filter: grayscale(1);
+  transition: filter 260ms ease;
+}
+
 .life-experience-photo::before {
   top: 25%;
   width: 28%;
@@ -2121,6 +2126,11 @@ a:hover .browser-frame {
 .life-experience-tile:focus-visible .life-experience-photo {
   border-color: rgba(91, 189, 255, 0.46);
   transform: translateY(-4px);
+}
+
+.life-experience-tile:hover .life-experience-photo--image img,
+.life-experience-tile:focus-visible .life-experience-photo--image img {
+  filter: grayscale(0);
 }
 
 .life-experience-tile:focus-visible {

@@ -1,6 +1,6 @@
 "use client";
 
-import { KeyboardEvent, useState } from "react";
+import { KeyboardEvent, useEffect, useState } from "react";
 
 type ExperienceKey = "life" | "professional";
 
@@ -70,6 +70,17 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
   const [activeLifeTitle, setActiveLifeTitle] = useState<string | null>(null);
   const activeLifeItem = content.life.items.find((item) => item.title === activeLifeTitle);
 
+  useEffect(() => {
+    if (!activeLifeTitle) return;
+
+    function resetLifeExperience() {
+      setActiveLifeTitle(null);
+    }
+
+    document.addEventListener("click", resetLifeExperience);
+    return () => document.removeEventListener("click", resetLifeExperience);
+  }, [activeLifeTitle]);
+
   function handleTabKeyDown(event: KeyboardEvent<HTMLButtonElement>, tab: ExperienceKey) {
     const currentIndex = tabs.indexOf(tab);
     let nextIndex = currentIndex;
@@ -122,13 +133,15 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
         {active === "life" ? (
           <div className="life-experience">
             <div className="life-experience-list">
-              {content.life.items.map((item) => (
+              {content.life.items.filter((item) => item.title !== activeLifeTitle).map((item) => (
                 <button
                   key={item.title}
                   type="button"
                   className="life-experience-tile"
-                  aria-expanded={activeLifeTitle === item.title}
-                  onClick={() => setActiveLifeTitle(item.title)}
+                  onClick={(event) => {
+                    event.stopPropagation();
+                    setActiveLifeTitle(item.title);
+                  }}
                 >
                   <div
                     className={`life-experience-photo${item.imageUrl ? " life-experience-photo--image" : ""}`}
