@@ -82,19 +82,38 @@
         "label": "Life Experience",
         "items": [
           {
-            "title": "The Monk"
+            "title": "The Monk",
+            "details": [
+              "More to come."
+            ]
           },
           {
             "title": "The Commando",
-            "imageUrl": "/life-commando.jpg"
+            "imageUrl": "/life-commando.jpg",
+            "details": [
+              "Age 18",
+              "1st Commando Battalion 2013 - 2014",
+              "10th Commando Battalion 2016 - 2022",
+              "5x NS Excellence Award (NSEA), 2016, 2018, 2019, 2020 & 2021, 10th Commando Battalion. NSEA recognises outstanding Operationally Ready National Servicemen for their performance."
+            ]
           },
           {
             "title": "The Coach",
-            "imageUrl": "/life-coach.jpg"
+            "imageUrl": "/life-coach.jpg",
+            "details": [
+              "Age 22",
+              "6x National Canoeing Champion",
+              "Coached Damai Secondary School canoeing team, leading B and C Division Girls to 2nd and 3rd place finishes at the 2017 National Canoeing Championships.",
+              "Coached Saint Andrew's Junior College canoeing team, leading A Division Girls to 4th place finishes at the 2017 National Canoeing Championships."
+            ]
           },
           {
             "title": "The Graduate",
-            "imageUrl": "/life-graduate.jpg"
+            "imageUrl": "/life-graduate.jpg",
+            "details": [
+              "Age 25",
+              "BSc of Science, Statistics, National University of Singapore"
+            ]
           }
         ]
       },

@@ -10,6 +10,7 @@ export type ExperienceExplorerContent = {
     items: Array<{
       title: string;
       imageUrl?: string;
+      details: string[];
     }>;
   };
   professional: {
@@ -66,6 +67,8 @@ function CompanyTimeline({
 
 export function ExperienceExplorer({ content, nested = false }: Props) {
   const [active, setActive] = useState<ExperienceKey>("professional");
+  const [activeLifeTitle, setActiveLifeTitle] = useState<string | null>(null);
+  const activeLifeItem = content.life.items.find((item) => item.title === activeLifeTitle);
 
   function handleTabKeyDown(event: KeyboardEvent<HTMLButtonElement>, tab: ExperienceKey) {
     const currentIndex = tabs.indexOf(tab);
@@ -120,18 +123,36 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
           <div className="life-experience">
             <div className="life-experience-list">
               {content.life.items.map((item) => (
-                <article key={item.title}>
+                <button
+                  key={item.title}
+                  type="button"
+                  className="life-experience-tile"
+                  aria-expanded={activeLifeTitle === item.title}
+                  onClick={() => setActiveLifeTitle(item.title)}
+                >
                   <div
                     className={`life-experience-photo${item.imageUrl ? " life-experience-photo--image" : ""}`}
-                    role="img"
-                    aria-label={`${item.title} photo${item.imageUrl ? "" : " placeholder"}`}
+                    aria-hidden="true"
                   >
                     {item.imageUrl ? <img src={item.imageUrl} alt="" /> : null}
                   </div>
                   <h3>{item.title}</h3>
-                </article>
+                </button>
               ))}
             </div>
+            {activeLifeItem ? (
+              <article className="life-experience-detail">
+                <div className={`life-experience-photo life-experience-detail-photo${activeLifeItem.imageUrl ? " life-experience-photo--image" : ""}`}>
+                  {activeLifeItem.imageUrl ? <img src={activeLifeItem.imageUrl} alt={`${activeLifeItem.title} photo`} /> : null}
+                </div>
+                <div>
+                  <h3>{activeLifeItem.title}</h3>
+                  <ul>
+                    {activeLifeItem.details.map((detail) => <li key={detail}>{detail}</li>)}
+                  </ul>
+                </div>
+              </article>
+            ) : null}
           </div>
         ) : (
           <div className="professional-timeline" aria-label="Professional timeline">
