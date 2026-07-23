@@ -82,12 +82,6 @@
         "label": "Life Experience",
         "items": [
           {
-            "title": "The Monk",
-            "details": [
-              "More to come."
-            ]
-          },
-          {
             "title": "The Commando",
             "imageUrl": "/life-commando.jpg",
             "details": [
@@ -195,14 +189,14 @@
       },
       "hero": {
         "eyebrow": "About Me",
-        "headline": "A monk, a commando, and a coach walked into a bar. They're all Max.",
+        "headline": "A commando, a coach, and a graduate walked into a bar. They're all Max.",
         "headlineParts": [
           { "text": "A " },
-          { "text": "monk", "color": "#5BBDFF" },
-          { "text": ", a " },
           { "text": "commando", "color": "#5B6BFF" },
-          { "text": ", and a " },
+          { "text": ", a " },
           { "text": "coach", "color": "#5BFFEF" },
+          { "text": ", and a " },
+          { "text": "graduate", "color": "#5BBDFF" },
           { "text": " walked into a bar. They're all Max." }
         ],
         "body": "I am an Account Executive in Singapore who spends the day selling complex software and the night turning AI ideas into working tools. This portfolio is where those two sides meet: commercial discipline, practical curiosity, and a bias toward shipping."
