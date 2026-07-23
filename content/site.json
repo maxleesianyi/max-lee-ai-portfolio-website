@@ -747,8 +747,16 @@
       ],
       "metrics": [
         {
-          "value": "90%",
-          "label": "reduced time for information retrieval"
+          "value": "30 mins",
+          "label": "faster quoting"
+        },
+        {
+          "value": "0",
+          "label": "errors in proposals"
+        },
+        {
+          "value": "100%",
+          "label": "automated product and pricing updates"
         }
       ],
       "highlights": [

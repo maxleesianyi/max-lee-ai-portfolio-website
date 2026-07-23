@@ -1564,6 +1564,10 @@ a:hover .browser-frame {
   gap: 28px;
 }
 
+.pipeline-stage-flow--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .pipeline-before-card,
 .pipeline-tool-card,
 .pipeline-after-output {
@@ -1600,7 +1604,8 @@ a:hover .browser-frame {
 .leadership-before-flow {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.9fr) minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: 28px;
+  column-gap: 98px;
+  row-gap: 28px;
   align-items: center;
 }
 
@@ -1619,9 +1624,9 @@ a:hover .browser-frame {
 .leadership-before-card--context::after {
   position: absolute;
   top: 50%;
-  right: -29px;
+  right: -98px;
   z-index: 1;
-  width: 28px;
+  width: 98px;
   border-top: 1px solid rgba(91, 189, 255, 0.55);
   content: "";
 }
@@ -1630,20 +1635,20 @@ a:hover .browser-frame {
 .leadership-before-card--briefing::after {
   position: absolute;
   top: 50%;
-  right: -31px;
+  right: -117px;
   z-index: 1;
-  width: 30px;
+  width: 117px;
   border-top: 1px solid rgba(91, 189, 255, 0.55);
   content: "";
   transform-origin: left center;
 }
 
 .leadership-before-card--briefing::before {
-  transform: rotate(-24deg);
+  transform: rotate(-33deg);
 }
 
 .leadership-before-card--briefing::after {
-  transform: rotate(24deg);
+  transform: rotate(33deg);
 }
 
 .leadership-before-branch {
@@ -1652,23 +1657,27 @@ a:hover .browser-frame {
   gap: 12px;
 }
 
+.leadership-branch-card {
+  min-height: 112px;
+}
+
 .leadership-branch-card::after {
   position: absolute;
   top: 50%;
-  right: -31px;
+  right: -117px;
   z-index: 1;
-  width: 30px;
+  width: 117px;
   border-top: 1px solid rgba(91, 189, 255, 0.55);
   content: "";
   transform-origin: left center;
 }
 
 .leadership-branch-card--internal::after {
-  transform: rotate(24deg);
+  transform: rotate(33deg);
 }
 
 .leadership-branch-card--external::after {
-  transform: rotate(-24deg);
+  transform: rotate(-33deg);
 }
 
 .pipeline-after-stage:not(:last-child)::after {

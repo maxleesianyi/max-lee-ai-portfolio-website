@@ -125,9 +125,14 @@ const transformations: Record<string, Transformation> = {
   },
   "internal-intelligence-compliance": {
     before: [
-      { title: "Policy lookup", copy: "Search across approved sources to understand the right guidance and boundaries for each workflow." },
-      { title: "Context gathering", copy: "Manually bring together current documentation, internal expertise, and account context." },
-      { title: "Compliance checks", copy: "Review access boundaries and data-governance requirements before sharing an output." },
+      { title: "Policy Look Up", copy: "Search across scattered policy documents and internal guidance to confirm what is allowed." },
+      { title: "Indicative Proposal", copy: "Build a first-pass proposal from product, pricing, and customer requirements." },
+      { title: "Quote Approval", copy: "Collect the latest commercial details and route approvals through the right people." },
+      { title: "Quote Revisions", copy: "Manually reconcile changing scope, pricing, and product information across each revision." },
+    ],
+    afterStages: [
+      { title: "Product & Pricing Updates", tools: ["Glean"], copy: "A Glean agent runs weekly to surface product and pricing changes." },
+      { title: "Faster Quoting", tools: ["Gemini"], copy: "Speeds up the quoting process with current deal inputs and a clear first draft." },
     ],
     inputs: [
       { tool: "Glean", copy: "Retrieves approved internal knowledge, policies, and relevant documentation." },
@@ -258,7 +263,7 @@ function WorkflowTransformation({ story }: { story: WorkStory }) {
         {transformation.afterLeadership ? (
           <LeadershipAfterFlow items={transformation.before} automation={transformation.afterLeadership} findTool={tool} />
         ) : transformation.afterStages ? (
-          <div className="pipeline-stage-flow">
+          <div className={`pipeline-stage-flow${transformation.afterStages.length === 2 ? " pipeline-stage-flow--two" : ""}`}>
             {transformation.afterStages.map((stage) => (
               <article className="pipeline-after-stage" key={stage.title}>
                 <h3>{stage.title}</h3>
