@@ -585,7 +585,7 @@
       "title": "Pipeline Generation",
       "eyebrow": "Docusign",
       "year": "2024-2026",
-      "summary": "",
+      "summary": "Research faster, surface buying signals, and sharpen outreach.",
       "galleryDescription": "Research faster, surface buying signals, and sharpen outreach.",
       "details": [
         "Max used AI to make pre-call and prospecting research faster and more precise. The workflow supported account planning, persona research, value-based positioning, and buying-signal discovery.",
@@ -613,10 +613,6 @@
         {
           "value": "25%",
           "label": "pipeline increase"
-        },
-        {
-          "value": "4%",
-          "label": "reply-rate increase"
         }
       ],
       "highlights": [
@@ -631,7 +627,7 @@
       "title": "Opportunity Management",
       "eyebrow": "Docusign",
       "year": "2025",
-      "summary": "",
+      "summary": "Turn customer conversations into clear actions and stronger deal discipline.",
       "galleryDescription": "Turning customer conversations into clear actions and stronger deal discipline.",
       "details": [
         "The resume positions this as an execution story: Max sold newly launched AI product lines early, operating without mature playbooks, while applying structured discovery and deal execution.",
@@ -662,12 +658,8 @@
           "label": "admin time saved per week"
         },
         {
-          "value": "30 mins",
+          "value": "60 -> 15 mins",
           "label": "follow-up turnaround time"
-        },
-        {
-          "value": "100%",
-          "label": "opportunities updated before forecast"
         }
       ],
       "highlights": [
@@ -682,7 +674,7 @@
       "title": "Leadership Alignment",
       "eyebrow": "Docusign",
       "year": "2025",
-      "summary": "",
+      "summary": "Transform complex deal context into concise, decision-ready briefings.",
       "galleryDescription": "Transform complex deal context into concise, decision-ready briefings.",
       "details": [
         "The resume describes one of the first major Docusign Intelligent Agreement Management platform deals at US$120k ARR, supported by MEDDPICC execution, multi-threading, and executive sponsorship.",
@@ -729,7 +721,7 @@
       "title": "Operational Readiness",
       "eyebrow": "Docusign",
       "year": "2024-2026",
-      "summary": "",
+      "summary": "Convert constant internal updates into relevant seller actions.",
       "galleryDescription": "Convert constant internal updates into relevant seller actions.",
       "details": [
         "The examples on this page were developed within Docusign's approved tools, access controls, and data-governance policies.",
@@ -753,10 +745,6 @@
         {
           "value": "0",
           "label": "errors in proposals"
-        },
-        {
-          "value": "100%",
-          "label": "automated product and pricing updates"
         }
       ],
       "highlights": [
