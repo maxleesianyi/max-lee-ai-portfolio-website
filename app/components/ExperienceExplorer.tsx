@@ -93,7 +93,11 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
   useEffect(() => {
     if (!activeLifeTitle) return;
 
-    function resetLifeExperience() {
+    function resetLifeExperience(event: MouseEvent) {
+      if (event.target instanceof Element && event.target.closest(".life-experience-tile")) {
+        return;
+      }
+
       updateLifeSelection(null);
     }
 
