@@ -1,6 +1,7 @@
 "use client";
 
-import { KeyboardEvent, useEffect, useState } from "react";
+import { CSSProperties, KeyboardEvent, useEffect, useState } from "react";
+import { flushSync } from "react-dom";
 
 type ExperienceKey = "life" | "professional";
 
@@ -32,6 +33,10 @@ type TimelineEntry = {
 };
 
 const tabs: ExperienceKey[] = ["life", "professional"];
+
+function lifeTransitionName(title: string) {
+  return `life-${title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`;
+}
 
 function CompanyTimeline({
   company,
@@ -70,11 +75,26 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
   const [activeLifeTitle, setActiveLifeTitle] = useState<string | null>(null);
   const activeLifeItem = content.life.items.find((item) => item.title === activeLifeTitle);
 
+  function updateLifeSelection(title: string | null) {
+    const viewTransitionDocument = document as Document & {
+      startViewTransition?: (callback: () => void) => void;
+    };
+
+    if (viewTransitionDocument.startViewTransition) {
+      viewTransitionDocument.startViewTransition(() => {
+        flushSync(() => setActiveLifeTitle(title));
+      });
+      return;
+    }
+
+    setActiveLifeTitle(title);
+  }
+
   useEffect(() => {
     if (!activeLifeTitle) return;
 
     function resetLifeExperience() {
-      setActiveLifeTitle(null);
+      updateLifeSelection(null);
     }
 
     document.addEventListener("click", resetLifeExperience);
@@ -132,7 +152,7 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
       >
         {active === "life" ? (
           <div className="life-experience">
-            <div className="life-experience-list">
+            <div className={`life-experience-list${activeLifeItem ? " life-experience-list--condensed" : ""}`}>
               {content.life.items.filter((item) => item.title !== activeLifeTitle).map((item) => (
                 <button
                   key={item.title}
@@ -140,12 +160,13 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
                   className="life-experience-tile"
                   onClick={(event) => {
                     event.stopPropagation();
-                    setActiveLifeTitle(item.title);
+                    updateLifeSelection(item.title);
                   }}
                 >
                   <div
                     className={`life-experience-photo${item.imageUrl ? " life-experience-photo--image" : ""}`}
                     aria-hidden="true"
+                    style={{ "--life-transition-name": lifeTransitionName(item.title) } as CSSProperties}
                   >
                     {item.imageUrl ? <img src={item.imageUrl} alt="" /> : null}
                   </div>
@@ -155,7 +176,10 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
             </div>
             {activeLifeItem ? (
               <article className="life-experience-detail">
-                <div className={`life-experience-photo life-experience-detail-photo${activeLifeItem.imageUrl ? " life-experience-photo--image" : ""}`}>
+                <div
+                  className={`life-experience-photo life-experience-detail-photo${activeLifeItem.imageUrl ? " life-experience-photo--image" : ""}`}
+                  style={{ "--life-transition-name": lifeTransitionName(activeLifeItem.title) } as CSSProperties}
+                >
                   {activeLifeItem.imageUrl ? <img src={activeLifeItem.imageUrl} alt={`${activeLifeItem.title} photo`} /> : null}
                 </div>
                 <div>
