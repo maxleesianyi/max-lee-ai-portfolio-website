@@ -132,7 +132,9 @@ function WorkflowTransformation({ story }: { story: WorkStory }) {
   const tool = (name: string) => tools.find((item) => item.name === name);
 
   return (
-    <div className={`pipeline-workflow${story.slug === "ai-research-at-docusign" ? " pipeline-workflow--pipeline-generation" : ""}`}>
+    <div
+      className={`pipeline-workflow${story.slug === "ai-research-at-docusign" ? " pipeline-workflow--pipeline-generation" : ""}${story.slug === "ai-product-launch-selling" ? " pipeline-workflow--opportunity-management" : ""}`}
+    >
       <section className="pipeline-phase pipeline-phase--before">
         <div className="pipeline-phase-heading">
           <span>Before AI</span>

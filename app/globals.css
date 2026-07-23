@@ -1658,6 +1658,16 @@ a:hover .browser-frame {
   object-fit: contain;
 }
 
+.pipeline-workflow--opportunity-management .pipeline-stage-tools li {
+  width: 28px;
+  justify-content: center;
+  padding-inline: 4px;
+}
+
+.pipeline-workflow--opportunity-management .pipeline-stage-tools span {
+  display: none;
+}
+
 .pipeline-after-flow {
   position: relative;
   display: grid;
