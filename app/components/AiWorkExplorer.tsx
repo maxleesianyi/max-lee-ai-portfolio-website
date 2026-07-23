@@ -78,7 +78,7 @@ const transformations: Record<string, Transformation> = {
   },
   "ai-product-launch-selling": {
     before: [
-      { title: "Meeting Prep", copy: "" },
+      { title: "Meeting Prep", copy: "Pull together discovery notes, customer conversations, product context, and account history before planning the next move." },
       { title: "Customer Meeting", copy: "Manually take down meeting notes and outstanding questions." },
       { title: "Meeting Followup", copy: "Tidy up meeting notes and format next steps." },
       { title: "Updating CRM", copy: "Copy and paste meeting notes, then update MEDDPICC." },
