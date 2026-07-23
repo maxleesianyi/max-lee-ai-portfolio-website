@@ -85,10 +85,16 @@
             "title": "The Monk"
           },
           {
-            "title": "The Commando"
+            "title": "The Commando",
+            "imageUrl": "/life-commando.jpg"
           },
           {
-            "title": "The Coach"
+            "title": "The Coach",
+            "imageUrl": "/life-coach.jpg"
+          },
+          {
+            "title": "The Graduate",
+            "imageUrl": "/life-graduate.jpg"
           }
         ]
       },
@@ -169,14 +175,14 @@
       },
       "hero": {
         "eyebrow": "About Me",
-        "headline": "A monk, a commando, and a chef walked into a bar. They're all Max.",
+        "headline": "A monk, a commando, and a coach walked into a bar. They're all Max.",
         "headlineParts": [
           { "text": "A " },
           { "text": "monk", "color": "#5BBDFF" },
           { "text": ", a " },
           { "text": "commando", "color": "#5B6BFF" },
           { "text": ", and a " },
-          { "text": "chef", "color": "#5BFFEF" },
+          { "text": "coach", "color": "#5BFFEF" },
           { "text": " walked into a bar. They're all Max." }
         ],
         "body": "I am an Account Executive in Singapore who spends the day selling complex software and the night turning AI ideas into working tools. This portfolio is where those two sides meet: commercial discipline, practical curiosity, and a bias toward shipping."

@@ -9,6 +9,7 @@ export type ExperienceExplorerContent = {
     label: string;
     items: Array<{
       title: string;
+      imageUrl?: string;
     }>;
   };
   professional: {
@@ -120,7 +121,13 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
             <div className="life-experience-list">
               {content.life.items.map((item) => (
                 <article key={item.title}>
-                  <div className="life-experience-photo" role="img" aria-label={`${item.title} photo placeholder`} />
+                  <div
+                    className={`life-experience-photo${item.imageUrl ? " life-experience-photo--image" : ""}`}
+                    role="img"
+                    aria-label={`${item.title} photo${item.imageUrl ? "" : " placeholder"}`}
+                  >
+                    {item.imageUrl ? <img src={item.imageUrl} alt="" /> : null}
+                  </div>
                   <h3>{item.title}</h3>
                 </article>
               ))}
