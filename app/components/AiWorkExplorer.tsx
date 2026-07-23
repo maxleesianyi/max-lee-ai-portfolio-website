@@ -78,9 +78,10 @@ const transformations: Record<string, Transformation> = {
   },
   "ai-product-launch-selling": {
     before: [
-      { title: "Deal context", copy: "Pull together discovery notes, customer conversations, product context, and account history before planning the next move." },
-      { title: "Value positioning", copy: "Translate newly launched AI capabilities into relevant customer outcomes without a mature playbook." },
-      { title: "Execution", copy: "Track stakeholders, commitments, and follow-up actions manually across the deal team." },
+      { title: "Meeting Prep", copy: "" },
+      { title: "Customer Meeting", copy: "Manually take down meeting notes and outstanding questions." },
+      { title: "Meeting Followup", copy: "Tidy up meeting notes and format next steps." },
+      { title: "Updating CRM", copy: "Copy and paste meeting notes, then update MEDDPICC." },
     ],
     inputs: [
       { tool: "Gong", copy: "Summarises customer conversations, decision criteria, commitments, and deal risks." },
@@ -132,7 +133,7 @@ function WorkflowTransformation({ story }: { story: WorkStory }) {
           {transformation.before.map((item) => (
             <article className="pipeline-before-card" key={item.title}>
               <h3>{item.title}</h3>
-              <p>{item.copy}</p>
+              {item.copy ? <p>{item.copy}</p> : null}
             </article>
           ))}
         </div>
