@@ -2145,8 +2145,15 @@ a:hover .browser-frame {
 }
 
 .timeline-company--nodeflair .timeline-company-logo img {
-  width: min(100%, 220px);
-  height: 72px;
+  width: 185px;
+  height: auto;
+  max-width: none;
+}
+
+.timeline-company--nodeflair .timeline-company-logo {
+  overflow: hidden;
+  border-radius: 6px;
+  background: #20c66a;
 }
 
 .timeline-company--docusign .timeline-company-logo img {
