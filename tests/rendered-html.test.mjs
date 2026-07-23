@@ -151,10 +151,10 @@ test("server-renders the about page from editable content", async () => {
   assert.equal(response.status, 200);
 
   const html = await response.text();
-  for (const part of siteContent.pages.about.hero.headlineParts) {
-    assert.match(html, new RegExp(part.text));
-  }
-  assert.match(html, new RegExp(siteContent.pages.about.facts[0].value));
+  assert.match(html, /max-lee-portrait\.jpg/);
+  assert.match(html, /<button class="about-resume-button" type="button">Resume<\/button>/);
+  assert.doesNotMatch(html, /<h1>/);
+  assert.doesNotMatch(html, /Based in/);
   assert.match(html, /Tools I reach for/);
 });
 

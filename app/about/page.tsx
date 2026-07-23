@@ -13,33 +13,14 @@ export default function AboutPage() {
     <PageShell>
       <section className="about-section about-page section-pad">
         <div className="about-visual">
-          <div className="about-photo-placeholder" aria-label="About portrait placeholder">
-            <div>
-              <span>Portrait</span>
-              <strong>Replace with your photo</strong>
-            </div>
+          <div className="hero-portrait about-portrait">
+            <div className="hero-portrait-outline" aria-hidden="true" />
+            <img className="hero-portrait-primary" src="/max-lee-portrait.jpg" alt="Max Lee" />
+            <span className="hero-portrait-name" aria-hidden="true">Max Lee</span>
           </div>
-          <dl className="about-facts">
-            {about.facts.map((fact) => (
-              <div key={fact.label}>
-                <dt>{fact.label}</dt>
-                <dd>{fact.value}</dd>
-              </div>
-            ))}
-          </dl>
+          <button className="about-resume-button" type="button">Resume</button>
         </div>
         <div className="about-copy">
-          <h1>
-            {about.hero.headlineParts?.map((part, index) =>
-              part.color ? (
-                <span key={`${part.text}-${index}`} style={{ color: part.color }}>
-                  {part.text}
-                </span>
-              ) : (
-                part.text
-              ),
-            ) ?? about.hero.headline}
-          </h1>
           <p className="about-intro">{about.hero.body}</p>
           <div className="about-narrative">
             {about.paragraphs.map((paragraph) => (

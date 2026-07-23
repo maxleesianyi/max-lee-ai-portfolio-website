@@ -720,6 +720,33 @@ h3 {
   gap: 20px;
 }
 
+.about-portrait {
+  min-height: 380px;
+}
+
+.about-resume-button {
+  justify-self: start;
+  border: 1px solid rgba(91, 189, 255, 0.7);
+  border-radius: 8px;
+  padding: 12px 18px;
+  background: rgba(91, 189, 255, 0.12);
+  box-shadow: 0 0 24px rgba(91, 189, 255, 0.2), inset 0 0 14px rgba(91, 189, 255, 0.08);
+  color: var(--bone);
+  cursor: pointer;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 0.82rem;
+  transition: background 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.about-resume-button:hover,
+.about-resume-button:focus-visible {
+  border-color: var(--sky);
+  background: rgba(91, 189, 255, 0.22);
+  box-shadow: 0 0 30px rgba(91, 189, 255, 0.46), inset 0 0 18px rgba(91, 189, 255, 0.12);
+  outline: none;
+  transform: translateY(-2px);
+}
+
 .about-photo-placeholder {
   aspect-ratio: 1 / 1.18;
   min-height: 380px;
