@@ -1558,6 +1558,12 @@ a:hover .browser-frame {
   gap: 28px;
 }
 
+.pipeline-stage-flow {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 28px;
+}
+
 .pipeline-before-card,
 .pipeline-tool-card,
 .pipeline-after-output {
@@ -1572,7 +1578,26 @@ a:hover .browser-frame {
   padding: 18px;
 }
 
+.pipeline-after-stage {
+  position: relative;
+  min-width: 0;
+  border: 1px solid rgba(91, 189, 255, 0.3);
+  border-radius: 10px;
+  background: rgba(91, 189, 255, 0.055);
+  padding: 18px;
+}
+
 .pipeline-before-card:not(:last-child)::after {
+  position: absolute;
+  top: 50%;
+  right: -29px;
+  z-index: 1;
+  width: 28px;
+  border-top: 1px solid rgba(91, 189, 255, 0.55);
+  content: "";
+}
+
+.pipeline-after-stage:not(:last-child)::after {
   position: absolute;
   top: 50%;
   right: -29px;
@@ -1588,13 +1613,49 @@ a:hover .browser-frame {
   font-weight: 620;
 }
 
+.pipeline-after-stage h3 {
+  margin: 0;
+  font-size: 1.02rem;
+  font-weight: 620;
+}
+
 .pipeline-before-card p,
 .pipeline-tool-card p,
-.pipeline-after-output p {
+.pipeline-after-output p,
+.pipeline-after-stage p {
   margin: 10px 0 0;
   color: var(--dim);
   font-size: 0.88rem;
   line-height: 1.55;
+}
+
+.pipeline-stage-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 12px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pipeline-stage-tools li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 24px;
+  padding: 4px 7px;
+  border: 1px solid rgba(244, 239, 231, 0.12);
+  border-radius: 999px;
+  background: rgba(7, 10, 13, 0.35);
+  color: var(--text);
+  font-size: 0.72rem;
+  line-height: 1;
+}
+
+.pipeline-stage-tools img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
 }
 
 .pipeline-after-flow {
@@ -1762,11 +1823,13 @@ a:hover .browser-frame {
   }
 
   .pipeline-before-flow,
-  .pipeline-after-flow {
+  .pipeline-after-flow,
+  .pipeline-stage-flow {
     grid-template-columns: 1fr;
   }
 
-  .pipeline-before-card:not(:last-child)::after {
+  .pipeline-before-card:not(:last-child)::after,
+  .pipeline-after-stage:not(:last-child)::after {
     display: none;
   }
 
@@ -2303,6 +2366,16 @@ a:hover .browser-frame {
 }
 
 @media (max-width: 860px) {
+  .pipeline-before-flow,
+  .pipeline-stage-flow {
+    grid-template-columns: 1fr;
+  }
+
+  .pipeline-before-card:not(:last-child)::after,
+  .pipeline-after-stage:not(:last-child)::after {
+    display: none;
+  }
+
   .case-build-row {
     align-items: start;
     flex-direction: column;

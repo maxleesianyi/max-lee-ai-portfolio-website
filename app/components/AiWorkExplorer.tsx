@@ -60,6 +60,7 @@ type Transformation = {
   before: Array<{ title: string; copy: string }>;
   inputs: Array<{ tool: string; copy: string }>;
   output: { tool: string; copy: string };
+  afterStages?: Array<{ title: string; tools: string[]; copy: string }>;
 };
 
 const transformations: Record<string, Transformation> = {
@@ -78,10 +79,16 @@ const transformations: Record<string, Transformation> = {
   },
   "ai-product-launch-selling": {
     before: [
-      { title: "Meeting Prep", copy: "Pull together discovery notes, customer conversations, product context, and account history before planning the next move." },
+      { title: "Meeting Prep", copy: "Pull together discovery notes, customer conversations, product context, and account history." },
       { title: "Customer Meeting", copy: "Manually take down meeting notes and outstanding questions." },
       { title: "Meeting Followup", copy: "Tidy up meeting notes and format next steps." },
       { title: "Updating CRM", copy: "Copy and paste meeting notes, then update MEDDPICC." },
+    ],
+    afterStages: [
+      { title: "Meeting Prep", tools: ["Gong", "Slackbot"], copy: "Surfaces the deal context and internal updates needed to prepare." },
+      { title: "Customer Meeting", tools: ["Gong"], copy: "Captures meeting notes and outstanding questions." },
+      { title: "Meeting Followup", tools: ["Gong", "Glean", "Gemini"], copy: "Drafts next steps, checks open questions, and prepares the follow-up email." },
+      { title: "Updating CRM", tools: ["Gong"], copy: "Automatically updates MEDDPICC and Deal Stage in Salesforce." },
     ],
     inputs: [
       { tool: "Gong", copy: "Summarises customer conversations, decision criteria, commitments, and deal risks." },
@@ -143,19 +150,41 @@ function WorkflowTransformation({ story }: { story: WorkStory }) {
         <div className="pipeline-phase-heading">
           <span>After AI</span>
         </div>
-        <div className="pipeline-after-flow">
-          <div className="pipeline-tool-stack">
-            {transformation.inputs.map((input, index) => (
-              <PipelineToolCard key={`${input.tool}-${index}`} tag={tool(input.tool)}>{input.copy}</PipelineToolCard>
+        {transformation.afterStages ? (
+          <div className="pipeline-stage-flow">
+            {transformation.afterStages.map((stage) => (
+              <article className="pipeline-after-stage" key={stage.title}>
+                <h3>{stage.title}</h3>
+                <ul className="pipeline-stage-tools" aria-label={`Tools used for ${stage.title}`}>
+                  {stage.tools.map((name) => {
+                    const stageTool = tool(name);
+                    return stageTool ? (
+                      <li key={name} title={stageTool.name}>
+                        <img src={stageTool.logo} alt="" aria-hidden="true" style={stageTool.scale ? { transform: `scale(${stageTool.scale})` } : undefined} />
+                        <span>{stageTool.name}</span>
+                      </li>
+                    ) : null;
+                  })}
+                </ul>
+                <p>{stage.copy}</p>
+              </article>
             ))}
           </div>
-          <article className="pipeline-after-output" aria-label={transformation.output.tool}>
-            <div>
-              {tool(transformation.output.tool) ? <img src={tool(transformation.output.tool)?.logo} alt="" aria-hidden="true" /> : null}
+        ) : (
+          <div className="pipeline-after-flow">
+            <div className="pipeline-tool-stack">
+              {transformation.inputs.map((input, index) => (
+                <PipelineToolCard key={`${input.tool}-${index}`} tag={tool(input.tool)}>{input.copy}</PipelineToolCard>
+              ))}
             </div>
-            <p>{transformation.output.copy}</p>
-          </article>
-        </div>
+            <article className="pipeline-after-output" aria-label={transformation.output.tool}>
+              <div>
+                {tool(transformation.output.tool) ? <img src={tool(transformation.output.tool)?.logo} alt="" aria-hidden="true" /> : null}
+              </div>
+              <p>{transformation.output.copy}</p>
+            </article>
+          </div>
+        )}
       </section>
     </div>
   );
