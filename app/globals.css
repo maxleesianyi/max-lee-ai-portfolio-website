@@ -1630,7 +1630,7 @@ a:hover .browser-frame {
 .leadership-before-card--briefing::after {
   position: absolute;
   top: 50%;
-  right: -30px;
+  right: -31px;
   z-index: 1;
   width: 30px;
   border-top: 1px solid rgba(91, 189, 255, 0.55);
@@ -1639,11 +1639,11 @@ a:hover .browser-frame {
 }
 
 .leadership-before-card--briefing::before {
-  transform: rotate(-32deg);
+  transform: rotate(-24deg);
 }
 
 .leadership-before-card--briefing::after {
-  transform: rotate(32deg);
+  transform: rotate(24deg);
 }
 
 .leadership-before-branch {
