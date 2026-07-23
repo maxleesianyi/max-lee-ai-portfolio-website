@@ -62,6 +62,10 @@ type Transformation = {
   output: { tool: string; copy: string };
   afterStages?: Array<{ title: string; tools: string[]; copy: string }>;
   beforeLayout?: "leadership-branch";
+  afterLeadership?: {
+    accountContext: { tools: string[]; copy: string };
+    briefingPrep: { tools: string[]; copy: string };
+  };
 };
 
 const transformations: Record<string, Transformation> = {
@@ -103,11 +107,15 @@ const transformations: Record<string, Transformation> = {
     before: [
       { title: "Account Context", copy: "Collect updates from CRM and cross functional teammates." },
       { title: "Briefing Prep", copy: "Turn fragmented account updates into a concise point of view for senior leaders." },
-      { title: "Internal alignment", copy: "Coordinate action owners and important updates across a distributed deal team." },
-      { title: "External Alignment", copy: "Align the customer-facing narrative, priorities, and next steps before senior conversations." },
+      { title: "Internal Alignment", copy: "Coordinate action owners and brief leadership team." },
+      { title: "External Alignment", copy: "Align customer Champion on narrative, priorities and next steps." },
       { title: "Executive Meeting", copy: "Bring the aligned context into a clear executive conversation." },
     ],
     beforeLayout: "leadership-branch",
+    afterLeadership: {
+      accountContext: { tools: ["Gong", "Slackbot"], copy: "Automatically retrieves account information from CRM and cross-functional team meetings." },
+      briefingPrep: { tools: ["Gemini"], copy: "Instantly structures account information into a standardised template for executive leadership." },
+    },
     inputs: [
       { tool: "Gong", copy: "Surfaces customer language, decision criteria, objections, and moments that matter." },
       { tool: "Gemini", copy: "Synthesises deal context into a clear, executive-level business narrative." },
@@ -161,6 +169,61 @@ function LeadershipBeforeFlow({ items }: { items: Transformation["before"] }) {
   );
 }
 
+function LeadershipAfterFlow({
+  items,
+  automation,
+  findTool,
+}: {
+  items: Transformation["before"];
+  automation: NonNullable<Transformation["afterLeadership"]>;
+  findTool: (name: string) => ToolTag | undefined;
+}) {
+  const [accountContext, briefingPrep, internalAlignment, externalAlignment, executiveMeeting] = items;
+
+  const icons = (names: string[]) => (
+    <ul className="pipeline-stage-tools" aria-label="AI tools used">
+      {names.map((name) => {
+        const item = findTool(name);
+        return item ? (
+          <li key={name} title={item.name}>
+            <img src={item.logo} alt="" aria-hidden="true" style={item.scale ? { transform: `scale(${item.scale})` } : undefined} />
+            <span>{item.name}</span>
+          </li>
+        ) : null;
+      })}
+    </ul>
+  );
+
+  return (
+    <div className="leadership-before-flow leadership-after-flow--branch">
+      <article className="pipeline-before-card pipeline-after-stage leadership-before-card leadership-before-card--context leadership-after-card leadership-after-card--automated">
+        <h3>{accountContext.title}</h3>
+        {icons(automation.accountContext.tools)}
+        <p>{automation.accountContext.copy}</p>
+      </article>
+      <article className="pipeline-before-card pipeline-after-stage leadership-before-card leadership-before-card--briefing leadership-after-card leadership-after-card--automated">
+        <h3>{briefingPrep.title}</h3>
+        {icons(automation.briefingPrep.tools)}
+        <p>{automation.briefingPrep.copy}</p>
+      </article>
+      <div className="leadership-before-branch" aria-label="Parallel internal and external alignment">
+        <article className="pipeline-before-card leadership-before-card leadership-branch-card leadership-branch-card--internal leadership-after-card">
+          <h3>{internalAlignment.title}</h3>
+          <p>{internalAlignment.copy}</p>
+        </article>
+        <article className="pipeline-before-card leadership-before-card leadership-branch-card leadership-branch-card--external leadership-after-card">
+          <h3>{externalAlignment.title}</h3>
+          <p>{externalAlignment.copy}</p>
+        </article>
+      </div>
+      <article className="pipeline-before-card leadership-before-card leadership-before-card--meeting leadership-after-card">
+        <h3>{executiveMeeting.title}</h3>
+        <p>{executiveMeeting.copy}</p>
+      </article>
+    </div>
+  );
+}
+
 function WorkflowTransformation({ story }: { story: WorkStory }) {
   const transformation = transformations[story.slug];
   const tools = story.tags;
@@ -192,7 +255,9 @@ function WorkflowTransformation({ story }: { story: WorkStory }) {
         <div className="pipeline-phase-heading">
           <span>After AI</span>
         </div>
-        {transformation.afterStages ? (
+        {transformation.afterLeadership ? (
+          <LeadershipAfterFlow items={transformation.before} automation={transformation.afterLeadership} findTool={tool} />
+        ) : transformation.afterStages ? (
           <div className="pipeline-stage-flow">
             {transformation.afterStages.map((stage) => (
               <article className="pipeline-after-stage" key={stage.title}>

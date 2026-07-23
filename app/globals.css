@@ -1601,7 +1601,7 @@ a:hover .browser-frame {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.9fr) minmax(0, 1.1fr) minmax(0, 0.9fr);
   gap: 28px;
-  align-items: stretch;
+  align-items: center;
 }
 
 .leadership-before-card {
@@ -1611,13 +1611,11 @@ a:hover .browser-frame {
 }
 
 .leadership-before-card--context,
-.leadership-before-card--briefing,
 .leadership-branch-card {
   position: relative;
 }
 
-.leadership-before-card--context::after,
-.leadership-before-card--briefing::after {
+.leadership-before-card--context::after {
   position: absolute;
   top: 50%;
   right: -29px;
@@ -1628,9 +1626,40 @@ a:hover .browser-frame {
 }
 
 .leadership-before-branch {
+  position: relative;
   display: grid;
   grid-template-rows: repeat(2, minmax(0, 1fr));
   gap: 12px;
+}
+
+.leadership-before-branch::before {
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  left: -29px;
+  z-index: 1;
+  border-left: 1px solid rgba(91, 189, 255, 0.55);
+  content: "";
+}
+
+.leadership-before-branch::after {
+  position: absolute;
+  top: 50%;
+  left: -29px;
+  z-index: 1;
+  width: 29px;
+  border-top: 1px solid rgba(91, 189, 255, 0.55);
+  content: "";
+}
+
+.leadership-branch-card::before {
+  position: absolute;
+  top: 50%;
+  left: -29px;
+  z-index: 1;
+  width: 29px;
+  border-top: 1px solid rgba(91, 189, 255, 0.55);
+  content: "";
 }
 
 .leadership-branch-card::after {
@@ -1711,6 +1740,22 @@ a:hover .browser-frame {
   width: 14px;
   height: 14px;
   object-fit: contain;
+}
+
+.leadership-after-flow--branch .pipeline-stage-tools li {
+  width: 28px;
+  justify-content: center;
+  padding-inline: 4px;
+}
+
+.leadership-after-flow--branch .pipeline-stage-tools span {
+  display: none;
+}
+
+.leadership-after-card--automated {
+  border-color: rgba(91, 189, 255, 0.35);
+  background: rgba(91, 189, 255, 0.07);
+  box-shadow: 0 0 22px rgba(91, 189, 255, 0.08);
 }
 
 .pipeline-workflow--opportunity-management .pipeline-stage-tools li {
@@ -1916,6 +1961,9 @@ a:hover .browser-frame {
 
   .leadership-before-card--context::after,
   .leadership-before-card--briefing::after,
+  .leadership-before-branch::before,
+  .leadership-before-branch::after,
+  .leadership-branch-card::before,
   .leadership-branch-card::after {
     display: none;
   }
@@ -2474,6 +2522,9 @@ a:hover .browser-frame {
 
   .leadership-before-card--context::after,
   .leadership-before-card--briefing::after,
+  .leadership-before-branch::before,
+  .leadership-before-branch::after,
+  .leadership-branch-card::before,
   .leadership-branch-card::after {
     display: none;
   }
