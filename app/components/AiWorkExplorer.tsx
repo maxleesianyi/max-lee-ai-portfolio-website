@@ -61,6 +61,7 @@ type Transformation = {
   inputs: Array<{ tool: string; copy: string }>;
   output: { tool: string; copy: string };
   afterStages?: Array<{ title: string; tools: string[]; copy: string }>;
+  beforeLayout?: "leadership-branch";
 };
 
 const transformations: Record<string, Transformation> = {
@@ -100,10 +101,13 @@ const transformations: Record<string, Transformation> = {
   },
   "leadership-alignment": {
     before: [
-      { title: "Stakeholder context", copy: "Collect different perspectives, priorities, and objections across a complex account by hand." },
-      { title: "Executive narrative", copy: "Turn fragmented account updates into a concise point of view for senior leaders." },
+      { title: "Account Context", copy: "Collect updates from CRM and cross functional teammates." },
+      { title: "Briefing Prep", copy: "Turn fragmented account updates into a concise point of view for senior leaders." },
       { title: "Internal alignment", copy: "Coordinate action owners and important updates across a distributed deal team." },
+      { title: "External Alignment", copy: "Align the customer-facing narrative, priorities, and next steps before senior conversations." },
+      { title: "Executive Meeting", copy: "Bring the aligned context into a clear executive conversation." },
     ],
+    beforeLayout: "leadership-branch",
     inputs: [
       { tool: "Gong", copy: "Surfaces customer language, decision criteria, objections, and moments that matter." },
       { tool: "Gemini", copy: "Synthesises deal context into a clear, executive-level business narrative." },
@@ -126,6 +130,37 @@ const transformations: Record<string, Transformation> = {
   },
 };
 
+function LeadershipBeforeFlow({ items }: { items: Transformation["before"] }) {
+  const [accountContext, briefingPrep, internalAlignment, externalAlignment, executiveMeeting] = items;
+
+  return (
+    <div className="leadership-before-flow">
+      <article className="pipeline-before-card leadership-before-card leadership-before-card--context">
+        <h3>{accountContext.title}</h3>
+        <p>{accountContext.copy}</p>
+      </article>
+      <article className="pipeline-before-card leadership-before-card leadership-before-card--briefing">
+        <h3>{briefingPrep.title}</h3>
+        <p>{briefingPrep.copy}</p>
+      </article>
+      <div className="leadership-before-branch" aria-label="Parallel internal and external alignment">
+        <article className="pipeline-before-card leadership-before-card leadership-branch-card leadership-branch-card--internal">
+          <h3>{internalAlignment.title}</h3>
+          <p>{internalAlignment.copy}</p>
+        </article>
+        <article className="pipeline-before-card leadership-before-card leadership-branch-card leadership-branch-card--external">
+          <h3>{externalAlignment.title}</h3>
+          <p>{externalAlignment.copy}</p>
+        </article>
+      </div>
+      <article className="pipeline-before-card leadership-before-card leadership-before-card--meeting">
+        <h3>{executiveMeeting.title}</h3>
+        <p>{executiveMeeting.copy}</p>
+      </article>
+    </div>
+  );
+}
+
 function WorkflowTransformation({ story }: { story: WorkStory }) {
   const transformation = transformations[story.slug];
   const tools = story.tags;
@@ -139,14 +174,18 @@ function WorkflowTransformation({ story }: { story: WorkStory }) {
         <div className="pipeline-phase-heading">
           <span>Before AI</span>
         </div>
-        <div className="pipeline-before-flow">
-          {transformation.before.map((item) => (
-            <article className="pipeline-before-card" key={item.title}>
-              <h3>{item.title}</h3>
-              {item.copy ? <p>{item.copy}</p> : null}
-            </article>
-          ))}
-        </div>
+        {transformation.beforeLayout === "leadership-branch" ? (
+          <LeadershipBeforeFlow items={transformation.before} />
+        ) : (
+          <div className="pipeline-before-flow">
+            {transformation.before.map((item) => (
+              <article className="pipeline-before-card" key={item.title}>
+                <h3>{item.title}</h3>
+                {item.copy ? <p>{item.copy}</p> : null}
+              </article>
+            ))}
+          </div>
+        )}
       </section>
 
       <section className="pipeline-phase pipeline-phase--after">
