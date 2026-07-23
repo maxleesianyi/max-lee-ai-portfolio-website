@@ -36,23 +36,41 @@ export default function AiAtWorkPage() {
         <AiWorkExplorer stories={workStories} />
       </section>
       <section className="section-pad human-judgement">
-        <h2>Where human judgement remains</h2>
+        <h2>Where Human Judgement Remains Essential</h2>
         <p>
-          AI helps gather, structure, and draft information. I remain responsible for verifying account context,
-          deciding the commercial strategy, and approving anything used with a customer.
+          AI helps me research, organise information, and develop a stronger first draft. It does not replace the
+          judgement, context, or accountability required in enterprise sales.
         </p>
         <div className="human-judgement-list">
           <article>
-            <h3>Approved tools only</h3>
-            <p>Workflows stay within permitted enterprise systems and access controls.</p>
+            <h3>I verify the evidence</h3>
+            <p>
+              For factual or time-sensitive outputs, I ask AI to provide sources and review the underlying material
+              myself. I do not treat a confident answer as an accurate one without checking the evidence.
+            </p>
           </article>
           <article>
-            <h3>Human review before action</h3>
-            <p>AI output is treated as a draft or recommendation, not an autonomous decision.</p>
+            <h3>I test the strategy with people</h3>
+            <p>
+              AI can help me identify risks, questions, and possible approaches, but it does not have the full
+              customer or organisational context. I validate important assumptions and strategies with my manager,
+              solution consultants, and relevant cross-functional partners before acting.
+            </p>
           </article>
           <article>
-            <h3>Anonymised portfolio examples</h3>
-            <p>Public demonstrations use fictional or reconstructed data.</p>
+            <h3>I personalise every customer interaction</h3>
+            <p>
+              AI may help create an initial email or message, but I review and rewrite it using my own understanding
+              of the customer, relationship, and situation. I do not send AI-generated communication without applying
+              personal judgement and making it sound like me.
+            </p>
+          </article>
+          <article>
+            <h3>I remain accountable for the outcome</h3>
+            <p>
+              AI supports the process, but the final decision remains mine. I am responsible for what I recommend,
+              what I communicate, and what action I take.
+            </p>
           </article>
         </div>
       </section>
