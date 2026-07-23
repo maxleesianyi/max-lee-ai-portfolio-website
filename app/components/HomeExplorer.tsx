@@ -4,7 +4,7 @@ import Link from "next/link";
 import { KeyboardEvent, useState } from "react";
 import type { Project, WorkStory } from "../data";
 import { ExperienceExplorer, type ExperienceExplorerContent } from "./ExperienceExplorer";
-import { ProjectVisual, WorkVisual } from "./PortfolioBlocks";
+import { ProjectVisual, ToolTagList } from "./PortfolioBlocks";
 
 type ExplorerKey = "about" | "aiAtWork" | "projects";
 
@@ -75,6 +75,15 @@ function ExplorerHeading({
   }
 
   return <h2>{fallback}</h2>;
+}
+
+function HomeWorkflowPreview({ story }: { story: WorkStory }) {
+  return (
+    <article className="explorer-workflow-card">
+      <h3>{story.title}</h3>
+      <ToolTagList tags={story.tags} />
+    </article>
+  );
 }
 
 export function HomeExplorer({
@@ -152,12 +161,9 @@ export function HomeExplorer({
         {active === "aiAtWork" ? (
           <div className="explorer-copy">
             <ExplorerHeading fallback={aiAtWork.hero.headline} parts={aiAtWork.hero.headlineParts} />
-            <div className="explorer-gallery" aria-label="AI at Work highlights">
-              {workStories.slice(0, 3).map((story) => (
-                <article className="explorer-gallery-item" key={story.slug}>
-                  <WorkVisual story={story} />
-                  <p>{story.galleryDescription}</p>
-                </article>
+            <div className="explorer-workflow-grid" aria-label="AI at Work highlights">
+              {workStories.map((story) => (
+                <HomeWorkflowPreview key={story.slug} story={story} />
               ))}
             </div>
             <Link className="text-link" href="/ai-at-work">
@@ -176,7 +182,7 @@ export function HomeExplorer({
               {projects.slice(0, 3).map((project) => (
                 <article className="explorer-gallery-item" key={project.slug}>
                   <ProjectVisual project={project} />
-                  <p>{project.galleryDescription}</p>
+                  <p>{project.title}</p>
                 </article>
               ))}
             </div>

@@ -658,7 +658,7 @@
           "label": "admin time saved per week"
         },
         {
-          "value": "60 -> 15 mins",
+          "value": "60 → 15 mins",
           "label": "follow-up turnaround time"
         }
       ],

@@ -566,6 +566,35 @@ h3 {
   margin-top: 30px;
 }
 
+.explorer-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.explorer-workflow-card {
+  display: flex;
+  min-width: 0;
+  min-height: 152px;
+  flex-direction: column;
+  border: 1px solid rgba(244, 239, 231, 0.13);
+  border-radius: 10px;
+  background: rgba(21, 26, 32, 0.68);
+  padding: 22px;
+}
+
+.explorer-workflow-card h3 {
+  margin: 0;
+  font-size: clamp(1.15rem, 1.6vw, 1.5rem);
+  font-weight: 620;
+  line-height: 1.15;
+}
+
+.explorer-workflow-card .tag-list {
+  margin-top: auto;
+}
+
 .explorer-gallery-item {
   min-width: 0;
 }
@@ -1340,11 +1369,11 @@ a:hover .browser-frame {
 .ai-workflow-detail {
   min-height: 620px;
   container-type: inline-size;
-  border: 1px solid rgba(91, 189, 255, 0.55);
+  border: 1px solid rgba(244, 239, 231, 0.13);
   border-radius: 14px;
   background: rgba(21, 29, 37, 0.88);
   padding: clamp(28px, 4vw, 48px);
-  box-shadow: 0 26px 70px rgba(4, 17, 31, 0.35), inset 0 0 0 1px rgba(91, 189, 255, 0.04);
+  box-shadow: 0 26px 70px rgba(4, 17, 31, 0.35);
 }
 
 .ai-workflow-detail-topline {
@@ -2684,6 +2713,19 @@ a:hover .browser-frame {
     overflow-x: auto;
     padding-bottom: 6px;
     scroll-snap-type: x proximity;
+  }
+
+  .explorer-workflow-grid {
+    grid-auto-columns: minmax(235px, 62vw);
+    grid-auto-flow: column;
+    grid-template-columns: none;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x proximity;
+  }
+
+  .explorer-workflow-card {
+    scroll-snap-align: start;
   }
 
   .explorer-gallery-item {
