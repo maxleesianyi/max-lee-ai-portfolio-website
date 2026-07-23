@@ -21,31 +21,87 @@ export default function AboutPage() {
           <button className="about-resume-button" type="button">Resume</button>
         </div>
         <div className="about-copy">
-          <p className="about-intro">{about.hero.body}</p>
-          <div className="about-narrative">
-            {about.paragraphs.map((paragraph) => (
+          <div className="about-page-intro">
+            {about.story.intro.map((paragraph, index) => (
+              <p className={index === 0 ? "about-page-lead" : undefined} key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+          <dl className="about-metrics">
+            {about.story.metrics.map((metric) => (
+              <div key={metric.label}>
+                <dt>{metric.value}</dt>
+                <dd>{metric.label}</dd>
+              </div>
+            ))}
+          </dl>
+          <blockquote className="about-thread">
+            <p>{about.story.thread.quote}</p>
+            <cite>{about.story.thread.title}</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <section className="about-story section-pad">
+        <header className="about-story-heading">
+          <p>{about.story.journey.label}</p>
+          <h2>{about.story.journey.title}</h2>
+          <span>{about.story.journey.body}</span>
+        </header>
+        <ol className="about-timeline">
+          {about.story.journey.chapters.map((chapter) => (
+            <li key={chapter.number}>
+              <span className="about-timeline-number">{chapter.number}</span>
+              <div>
+                <p>{chapter.label}</p>
+                <h3>{chapter.title}</h3>
+                <span>{chapter.body}</span>
+              </div>
+            </li>
+          ))}
+        </ol>
+
+        <section className="about-content-section">
+          <header className="about-story-heading">
+            <p>{about.story.strengths.label}</p>
+            <h2>{about.story.strengths.title}</h2>
+          </header>
+          <div className="about-strengths">
+            {about.story.strengths.items.map((item) => (
+              <article key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="about-content-section about-reading-section">
+          <header className="about-story-heading">
+            <p>{about.story.whyAi.label}</p>
+            <h2>{about.story.whyAi.title}</h2>
+          </header>
+          <div className="about-reading-copy">
+            {about.story.whyAi.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <div className="about-lists">
-            <div>
-              <h3>Now</h3>
-              <ul>
-                {about.now.map((item) => (
-                  <li key={item}>{item}</li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3>Tools I reach for</h3>
-              <ul className="tag-list tag-list--solid">
-                {about.tools.map((tool) => (
-                  <li key={tool}>{tool}</li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
+        </section>
+
+        <section className="about-content-section about-outside-work">
+          <header className="about-story-heading">
+            <p>{about.story.outsideWork.label}</p>
+            <h2>{about.story.outsideWork.title}</h2>
+          </header>
+          <p>{about.story.outsideWork.body}</p>
+          <ul className="about-outside-tags">
+            {about.story.outsideWork.tags.map((tag) => <li key={tag}>{tag}</li>)}
+          </ul>
+        </section>
+
+        <footer className="about-closing">
+          <p>{about.story.closing.label}</p>
+          <span>{about.story.closing.body}</span>
+        </footer>
       </section>
     </PageShell>
   );

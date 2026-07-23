@@ -154,8 +154,10 @@ test("server-renders the about page from editable content", async () => {
   assert.match(html, /max-lee-portrait\.jpg/);
   assert.match(html, /<button class="about-resume-button" type="button">Resume<\/button>/);
   assert.doesNotMatch(html, /<h1>/);
-  assert.doesNotMatch(html, /Based in/);
-  assert.match(html, /Tools I reach for/);
+  assert.match(html, /Built through different environments/);
+  assert.match(html, /Learning through building, not just reading/);
+  assert.match(html, /The everyday problems behind the projects/);
+  assert.doesNotMatch(html, /Replace with your photo/);
 });
 
 test("keeps no-code content structurally complete", async () => {
