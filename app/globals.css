@@ -1604,8 +1604,7 @@ a:hover .browser-frame {
 .leadership-before-flow {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 0.9fr) minmax(0, 1.1fr) minmax(0, 0.9fr);
-  column-gap: 98px;
-  row-gap: 28px;
+  gap: 28px;
   align-items: center;
 }
 
@@ -1624,9 +1623,9 @@ a:hover .browser-frame {
 .leadership-before-card--context::after {
   position: absolute;
   top: 50%;
-  right: -98px;
+  right: -29px;
   z-index: 1;
-  width: 98px;
+  width: 28px;
   border-top: 1px solid rgba(91, 189, 255, 0.55);
   content: "";
 }
@@ -1635,20 +1634,20 @@ a:hover .browser-frame {
 .leadership-before-card--briefing::after {
   position: absolute;
   top: 50%;
-  right: -117px;
+  right: -31px;
   z-index: 1;
-  width: 117px;
+  width: 30px;
   border-top: 1px solid rgba(91, 189, 255, 0.55);
   content: "";
   transform-origin: left center;
 }
 
 .leadership-before-card--briefing::before {
-  transform: rotate(-33deg);
+  transform: rotate(-24deg);
 }
 
 .leadership-before-card--briefing::after {
-  transform: rotate(33deg);
+  transform: rotate(24deg);
 }
 
 .leadership-before-branch {
@@ -1657,27 +1656,23 @@ a:hover .browser-frame {
   gap: 12px;
 }
 
-.leadership-branch-card {
-  min-height: 112px;
-}
-
 .leadership-branch-card::after {
   position: absolute;
   top: 50%;
-  right: -117px;
+  right: -31px;
   z-index: 1;
-  width: 117px;
+  width: 30px;
   border-top: 1px solid rgba(91, 189, 255, 0.55);
   content: "";
   transform-origin: left center;
 }
 
 .leadership-branch-card--internal::after {
-  transform: rotate(33deg);
+  transform: rotate(24deg);
 }
 
 .leadership-branch-card--external::after {
-  transform: rotate(-33deg);
+  transform: rotate(-24deg);
 }
 
 .pipeline-after-stage:not(:last-child)::after {
