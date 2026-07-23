@@ -1681,6 +1681,13 @@ a:hover .browser-frame {
   padding: 14px 16px;
 }
 
+.pipeline-workflow--pipeline-generation .pipeline-tool-card,
+.pipeline-workflow--pipeline-generation .pipeline-after-output {
+  border-color: rgba(91, 189, 255, 0.3);
+  background: rgba(91, 189, 255, 0.055);
+  box-shadow: 0 0 22px rgba(91, 189, 255, 0.06);
+}
+
 .pipeline-tool-card::after {
   position: absolute;
   top: 50%;

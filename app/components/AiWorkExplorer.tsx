@@ -66,9 +66,10 @@ type Transformation = {
 const transformations: Record<string, Transformation> = {
   "ai-research-at-docusign": {
     before: [
-      { title: "Account tiering", copy: "Piece together CRM data, product usage, LinkedIn research, company news, and customer stories to decide where to focus." },
+      { title: "Account tiering", copy: "Piece together CRM data, product usage, and internal customer stories to decide where to focus." },
+      { title: "Account research", copy: "Go through company news, reports and LinkedIn research." },
       { title: "Stakeholder mapping", copy: "Search LinkedIn and ZoomInfo manually to identify the right people across each account." },
-      { title: "Outreach planning", copy: "Write every outreach sequence from scratch, with limited time left to tailor the message." },
+      { title: "Outreach planning", copy: "Write every outreach sequence from scratch, manually personalise it based on prospect profile." },
     ],
     inputs: [
       { tool: "Slackbot", copy: "Analyses the book of business to understand purchased SKUs, product usage, growth opportunities, existing footprint, and whitespace." },
@@ -131,7 +132,7 @@ function WorkflowTransformation({ story }: { story: WorkStory }) {
   const tool = (name: string) => tools.find((item) => item.name === name);
 
   return (
-    <div className="pipeline-workflow">
+    <div className={`pipeline-workflow${story.slug === "ai-research-at-docusign" ? " pipeline-workflow--pipeline-generation" : ""}`}>
       <section className="pipeline-phase pipeline-phase--before">
         <div className="pipeline-phase-heading">
           <span>Before AI</span>
