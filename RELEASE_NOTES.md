@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.1.2 - Deep-Space Background
+
+- Reworked the site background into a sparse, brighter star field with restrained blue atmospheric depth.
+
 ## v1.1.1 - Resume Download
 
 - Added the supplied Max Lee Sian Yi resume PDF to the public site.
