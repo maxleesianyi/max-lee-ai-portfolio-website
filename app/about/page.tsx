@@ -1,6 +1,16 @@
 import { PageShell } from "../components/PortfolioBlocks";
 import { pages } from "../data";
 
+type IntroParagraph = {
+  text?: string;
+  prefix?: string;
+  suffix?: string;
+  link?: {
+    label: string;
+    href: string;
+  };
+};
+
 export const metadata = {
   title: pages.about.metadata.title,
   description: pages.about.metadata.description,
@@ -8,6 +18,7 @@ export const metadata = {
 
 export default function AboutPage() {
   const about = pages.about;
+  const intro = about.story.intro as IntroParagraph[];
 
   return (
     <PageShell>
@@ -23,8 +34,18 @@ export default function AboutPage() {
         </div>
         <div className="about-copy">
           <div className="about-page-intro">
-            {about.story.intro.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
+            {intro.map((paragraph) => (
+              <p key={paragraph.text ?? paragraph.link?.href}>
+                {paragraph.text ?? (
+                  <>
+                    {paragraph.prefix}
+                    <a href={paragraph.link?.href} target="_blank" rel="noreferrer">
+                      {paragraph.link?.label}
+                    </a>
+                    {paragraph.suffix}
+                  </>
+                )}
+              </p>
             ))}
           </div>
         </div>

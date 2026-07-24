@@ -155,7 +155,8 @@ test("server-renders the about page from editable content", async () => {
   assert.match(html, /<button class="about-resume-button" type="button">Resume<\/button>/);
   assert.doesNotMatch(html, /<h1>/);
   assert.match(html, /Majors Account Executive, Docusign/);
-  assert.match(html, /OpenAI Five defeated my favourite world champion team twice/);
+  assert.match(html, /href="https:\/\/openai\.com\/index\/openai-five-defeats-dota-2-world-champions\/"/);
+  assert.match(html, /OpenAI Five<\/a> defeated my favourite world champion team twice/);
   assert.doesNotMatch(html, /Replace with your photo/);
   assert.doesNotMatch(html, /<h[1-6][^>]*>/);
 });

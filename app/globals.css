@@ -776,6 +776,18 @@ h3 {
   line-height: 1.78;
 }
 
+.about-page-intro a {
+  color: var(--sky);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--sky) 65%, transparent);
+  transition: border-color 160ms ease, color 160ms ease;
+}
+
+.about-page-intro a:hover {
+  color: #c7edff;
+  border-color: currentColor;
+}
+
 .about-story {
   margin-top: 48px;
   border-top: 1px solid rgba(244, 239, 231, 0.1);

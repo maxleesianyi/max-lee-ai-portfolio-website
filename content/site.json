@@ -83,8 +83,11 @@
         "items": [
           {
             "title": "The Monk",
+            "imageUrl": "/life-monk.jpg",
             "details": [
-              "More to come."
+              "Age 10",
+              "7-day Thai Buddhist monk experience at Ulu Tiram, Malaysia",
+              "Potentially achieved nirvana"
             ]
           },
           {
@@ -242,9 +245,20 @@
       ],
       "story": {
         "intro": [
-          "I am a husband, a father to 2 beautiful children, and a long-time Dota player. In fact, my first brush with AI was through Dota, when OpenAI Five defeated my favourite world champion team twice.",
-          "My career has not followed a conventional path. Each chapter taught me something I still rely on today: discipline, composure under pressure, clear communication and responsibility for the people around me.",
-          "I eventually found my way into enterprise technology sales, progressing from SDR to Majors Account Executive at Docusign. Today, I am applying the same learning velocity to AI, building products, automating workflows and sharpening my technical fluency through practice."
+          {
+            "prefix": "I am a husband, a father to 2 beautiful children, and a long-time Dota player. In fact, my first brush with AI was through Dota, when ",
+            "link": {
+              "label": "OpenAI Five",
+              "href": "https://openai.com/index/openai-five-defeats-dota-2-world-champions/"
+            },
+            "suffix": " defeated my favourite world champion team twice."
+          },
+          {
+            "text": "My career has not followed a conventional path. Each chapter taught me something I still rely on today: discipline, composure under pressure, clear communication and responsibility for the people around me."
+          },
+          {
+            "text": "I eventually found my way into enterprise technology sales, progressing from SDR to Majors Account Executive at Docusign. Today, I am applying the same learning velocity to AI, building products, automating workflows and sharpening my technical fluency through practice."
+          }
         ]
       }
     }
