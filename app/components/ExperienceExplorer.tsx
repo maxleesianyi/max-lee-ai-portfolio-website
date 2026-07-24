@@ -162,6 +162,7 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
                   key={item.title}
                   type="button"
                   className="life-experience-tile"
+                  aria-label={`Expand ${item.title}`}
                   onClick={(event) => {
                     event.stopPropagation();
                     updateLifeSelection(item.title);
@@ -173,6 +174,7 @@ export function ExperienceExplorer({ content, nested = false }: Props) {
                     style={{ "--life-transition-name": lifeTransitionName(item.title) } as CSSProperties}
                   >
                     {item.imageUrl ? <img src={item.imageUrl} alt="" /> : null}
+                    <span className="life-experience-tile-affordance" aria-hidden="true">+</span>
                   </div>
                   <h3>{item.title}</h3>
                 </button>

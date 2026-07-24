@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PrimaryNavigation } from "./PrimaryNavigation";
 import {
   navigation,
   site,
@@ -72,22 +73,7 @@ export function SocialLinks({ className = "" }: { className?: string }) {
 }
 
 export function Header() {
-  return (
-    <header className="site-header">
-      <nav className="nav-shell" aria-label="Primary navigation">
-        <Link className="brand" href="/">
-          <BrandMark />
-        </Link>
-        <div className="nav-tabs">
-          {navigation.map((item) => (
-            <Link key={item.href} href={item.href}>
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      </nav>
-    </header>
-  );
+  return <PrimaryNavigation />;
 }
 
 export function Footer() {
