@@ -1,5 +1,10 @@
 # Release Notes
 
+## v1.1.1 - Resume Download
+
+- Added the supplied Max Lee Sian Yi resume PDF to the public site.
+- Connected the About Me Resume CTA to open the resume in a new tab.
+
 ## v1.1.0 - Public Portfolio Refresh
 
 - Updated the Interviewer Buddy display name across the portfolio.

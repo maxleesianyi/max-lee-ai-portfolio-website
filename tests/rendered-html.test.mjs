@@ -156,7 +156,8 @@ test("server-renders the about page from editable content", async () => {
 
   const html = await response.text();
   assert.match(html, /max-lee-portrait\.jpg/);
-  assert.match(html, /<button class="about-resume-button" type="button">Resume<\/button>/);
+  assert.match(html, /href="\/resume\/max-lee-sian-yi-resume\.pdf"/);
+  assert.match(html, /class="about-resume-button"/);
   assert.doesNotMatch(html, /<h1>/);
   assert.match(html, /Majors Account Executive, Docusign/);
   assert.match(html, /href="https:\/\/openai\.com\/index\/openai-five-defeats-dota-2-world-champions\/"/);

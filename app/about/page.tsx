@@ -30,7 +30,14 @@ export default function AboutPage() {
             <span className="hero-portrait-name" aria-hidden="true">Max Lee</span>
           </div>
           <p className="about-role">Majors Account Executive, Docusign</p>
-          <button className="about-resume-button" type="button">Resume</button>
+          <a
+            className="about-resume-button"
+            href="/resume/max-lee-sian-yi-resume.pdf"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Resume
+          </a>
         </div>
         <div className="about-copy">
           <div className="about-page-intro">
