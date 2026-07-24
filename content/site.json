@@ -246,16 +246,6 @@
           "My career has not followed a conventional path. Each chapter taught me something I still rely on today: discipline, composure under pressure, clear communication and responsibility for the people around me.",
           "I eventually found my way into enterprise technology sales, progressing from SDR to Majors Account Executive at DocuSign through four promotions in five years. Today, I am applying the same learning velocity to AI, building products, automating workflows and sharpening my technical fluency through practice."
         ],
-        "metrics": [
-          { "value": "Singapore", "label": "Based in" },
-          { "value": "4x", "label": "Promotions" },
-          { "value": "5 yrs", "label": "DocuSign" },
-          { "value": "3+", "label": "AI builds" }
-        ],
-        "thread": {
-          "title": "The thread connecting every chapter",
-          "quote": "I have repeatedly entered unfamiliar environments, learned quickly and earned greater responsibility. AI is the newest, and most intentional, chapter of that pattern."
-        },
         "journey": {
           "label": "My journey",
           "title": "Built through different environments",

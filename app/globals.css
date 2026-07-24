@@ -774,63 +774,10 @@ h3 {
   line-height: 1.35;
 }
 
-.about-metrics {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 18px;
-  margin: 42px 0 0;
-  border-top: 1px solid rgba(244, 239, 231, 0.12);
-  border-bottom: 1px solid rgba(244, 239, 231, 0.12);
-  padding: 20px 0;
-}
-
-.about-metrics div {
-  min-width: 0;
-}
-
-.about-metrics dt {
-  color: var(--bone);
-  font-size: clamp(1.1rem, 2.2vw, 1.55rem);
-  font-weight: 620;
-  line-height: 1.15;
-}
-
-.about-metrics dd {
-  margin: 7px 0 0;
-  color: var(--muted);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.68rem;
-  text-transform: uppercase;
-}
-
-.about-thread {
-  margin: 44px 0 0;
-  border-left: 2px solid var(--sky);
-  padding-left: 22px;
-}
-
-.about-thread p {
-  max-width: 720px;
-  margin: 0;
-  color: var(--bone);
-  font-size: clamp(1.25rem, 2.1vw, 1.68rem);
-  line-height: 1.48;
-}
-
-.about-thread cite {
-  display: block;
-  margin-top: 15px;
-  color: var(--muted);
-  font-family: var(--font-geist-mono), monospace;
-  font-size: 0.7rem;
-  font-style: normal;
-  text-transform: uppercase;
-}
-
 .about-story {
-  margin-top: 72px;
+  margin-top: 48px;
   border-top: 1px solid rgba(244, 239, 231, 0.1);
-  padding-top: 72px;
+  padding-top: 56px;
 }
 
 .about-story-heading > p,
@@ -2983,10 +2930,6 @@ a:hover .browser-frame {
 
   .about-portrait {
     width: min(100%, 300px);
-  }
-
-  .about-metrics {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .about-strengths {

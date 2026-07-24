@@ -26,18 +26,6 @@ export default function AboutPage() {
               <p className={index === 0 ? "about-page-lead" : undefined} key={paragraph}>{paragraph}</p>
             ))}
           </div>
-          <dl className="about-metrics">
-            {about.story.metrics.map((metric) => (
-              <div key={metric.label}>
-                <dt>{metric.value}</dt>
-                <dd>{metric.label}</dd>
-              </div>
-            ))}
-          </dl>
-          <blockquote className="about-thread">
-            <p>{about.story.thread.quote}</p>
-            <cite>{about.story.thread.title}</cite>
-          </blockquote>
         </div>
       </section>
 

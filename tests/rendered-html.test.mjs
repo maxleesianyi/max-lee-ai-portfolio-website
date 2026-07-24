@@ -158,6 +158,8 @@ test("server-renders the about page from editable content", async () => {
   assert.match(html, /Learning through building, not just reading/);
   assert.match(html, /The everyday problems behind the projects/);
   assert.doesNotMatch(html, /Replace with your photo/);
+  assert.doesNotMatch(html, /The thread connecting every chapter/);
+  assert.doesNotMatch(html, /AI builds/);
 });
 
 test("keeps no-code content structurally complete", async () => {
