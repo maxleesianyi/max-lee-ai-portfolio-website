@@ -110,6 +110,10 @@ test("server-renders the Do Already? case study without the legacy side panel", 
   assert.match(html, /How This Project Changed Me/);
   assert.match(html, /GPT-5\.6 Luna/);
   assert.match(html, /Happy Wife, Happy Life/);
+  assert.match(html, /Try it out/);
+  assert.match(html, /https:\/\/promise-keeper-demo\.leesianyi\.chatgpt\.site/);
+  assert.match(html, /https:\/\/github\.com\/maxleesianyi\/do-already/);
+  assert.match(html, /class="text-link project-github-link"/);
   assert.doesNotMatch(html, /<span class="eyebrow">Highlights<\/span>/);
 });
 

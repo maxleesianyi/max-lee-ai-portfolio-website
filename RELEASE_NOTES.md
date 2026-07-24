@@ -1,5 +1,12 @@
 # Release Notes
 
+## v1.1.0 - Public Portfolio Refresh
+
+- Updated the Interviewer Buddy display name across the portfolio.
+- Added consistent GitHub-icon CTAs to project case studies.
+- Added Try it out and GitHub CTAs to the Do Already? case study.
+- Published the public portfolio source snapshot and release.
+
 ## v1.0.0 - Initial AI Sales Portfolio
 
 Initial GitHub release for Max Lee's AI Sales Portfolio.
@@ -21,7 +28,7 @@ Initial GitHub release for Max Lee's AI Sales Portfolio.
 
 ### Featured Projects
 
-- OpenAI BDR Interviewer Buddy.
+- OpenAI Interviewer Buddy.
 - Crib Stock Taker.
 
 ### Notes

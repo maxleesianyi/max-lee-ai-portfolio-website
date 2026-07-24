@@ -274,15 +274,15 @@
     "Max used Gemini and Glean for account and persona research, reducing account research time by 55%, increasing pipeline by 25%, and improving reply rates by 4%.",
     "Max was the first AE in Docusign Asia to sell two newly launched AI product lines within the first month, before established playbooks existed.",
     "Max closed one of the first major Docusign Intelligent Agreement Management platform deals at US$120k ARR.",
-    "Max built a private OpenAI BDR Interviewer Buddy that records spoken answers, transcribes with OpenAI speech-to-text, scores answers with structured AI feedback, and stores progress in Supabase without retaining raw audio.",
+    "Max built a private OpenAI Interviewer Buddy that records spoken answers, transcribes with OpenAI speech-to-text, scores answers with structured AI feedback, and stores progress in Supabase without retaining raw audio.",
     "Max built Do Already?, a playful accountability assistant that turns consented Telegram commitments into editable tasks with confidence-based AI routing and a visible reward meter."
   ],
   "projects": [
     {
       "slug": "openai-bdr-interviewer-buddy",
-      "title": "OpenAI BDR Interviewer Buddy",
+      "title": "OpenAI Interviewer Buddy",
       "titleLines": [
-        "OpenAI BDR",
+        "OpenAI",
         "Interviewer Buddy"
       ],
       "year": "2026",
@@ -460,6 +460,7 @@
       ],
       "externalLabel": "Try it out",
       "externalUrl": "https://promise-keeper-demo.leesianyi.chatgpt.site",
+      "showCaseStudyCtas": true,
       "githubUrl": "https://github.com/maxleesianyi/do-already"
     },
     {

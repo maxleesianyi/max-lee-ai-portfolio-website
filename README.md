@@ -21,7 +21,7 @@ This repository currently contains the Sites-generated source for the portfolio.
 
 ### Projects
 
-- OpenAI BDR Interviewer Buddy
+- OpenAI Interviewer Buddy
 - Do Already?
 
 ## Editing Content

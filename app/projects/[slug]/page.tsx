@@ -4,6 +4,7 @@ import {
   CaseStudySections,
   PageShell,
   ProjectVisual,
+  SocialIcon,
 } from "../../components/PortfolioBlocks";
 import { projects, site } from "../../data";
 
@@ -67,7 +68,13 @@ export default async function ProjectDetailPage({ params }: Props) {
                 </a>
               ) : null}
               {project.githubUrl ? (
-                <a className="text-link" href={project.githubUrl} target="_blank" rel="noreferrer">
+                <a
+                  className="text-link project-github-link"
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <SocialIcon label="GitHub" />
                   {project.githubLabel ?? "GitHub"}
                 </a>
               ) : null}

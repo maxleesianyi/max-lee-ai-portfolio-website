@@ -38,7 +38,7 @@ function BrandMark() {
   );
 }
 
-function SocialIcon({ label }: { label: string }) {
+export function SocialIcon({ label }: { label: string }) {
   const normalized = label.toLowerCase();
 
   if (normalized === "linkedin") {
