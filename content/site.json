@@ -242,94 +242,10 @@
       ],
       "story": {
         "intro": [
-          "Before sales, there was a monk, a commando and a coach.",
+          "I am a husband, a father to 2 beautiful children, and a long-time Dota player. In fact, my first brush with AI was through Dota, when OpenAI Five defeated my favourite world champion team twice.",
           "My career has not followed a conventional path. Each chapter taught me something I still rely on today: discipline, composure under pressure, clear communication and responsibility for the people around me.",
-          "I eventually found my way into enterprise technology sales, progressing from SDR to Majors Account Executive at DocuSign through four promotions in five years. Today, I am applying the same learning velocity to AI, building products, automating workflows and sharpening my technical fluency through practice."
-        ],
-        "journey": {
-          "label": "My journey",
-          "title": "Built through different environments",
-          "body": "Rather than reproducing my resume, this timeline highlights the experiences that shaped how I work and learn.",
-          "chapters": [
-            {
-              "number": "01",
-              "label": "Foundation",
-              "title": "Monastery",
-              "body": "Developed discipline, reflection and the ability to stay present when progress is slow."
-            },
-            {
-              "number": "02",
-              "label": "Resilience",
-              "title": "Commando",
-              "body": "Learned teamwork, resilience and composure when the environment is uncertain or demanding."
-            },
-            {
-              "number": "03",
-              "label": "Communication",
-              "title": "Coach",
-              "body": "Learned to adapt communication, motivate different personalities and help people improve without doing the work for them."
-            },
-            {
-              "number": "04",
-              "label": "Commercial craft",
-              "title": "SDR to Majors Account Executive",
-              "body": "Progressed through outbound, SMB, mid-market and enterprise roles while learning to connect customer problems with practical technology outcomes."
-            },
-            {
-              "number": "05",
-              "label": "Current chapter",
-              "title": "Learning to build with AI",
-              "body": "Using Codex and AI tools to turn personal problems, professional workflows and direct feedback into working products and measurable learning loops."
-            }
-          ]
-        },
-        "strengths": {
-          "label": "What I bring",
-          "title": "A seller's experience with a builder's mindset",
-          "items": [
-            {
-              "title": "Commercial experience",
-              "body": "Experience across the full sales journey, from prospecting and discovery to complex account management and internal alignment."
-            },
-            {
-              "title": "Learning velocity",
-              "body": "A track record of moving into unfamiliar roles, learning quickly and earning increased responsibility."
-            },
-            {
-              "title": "Builder mindset",
-              "body": "A habit of turning recurring problems and skill gaps into workflows, prototypes and working products."
-            },
-            {
-              "title": "Customer perspective",
-              "body": "The ability to translate technical capabilities into practical business outcomes without pretending to be an engineer."
-            }
-          ]
-        },
-        "whyAi": {
-          "label": "Why AI",
-          "title": "Learning through building, not just reading",
-          "paragraphs": [
-            "My interest in AI began as a customer-facing seller trying to understand a rapidly changing technology. It became more serious when I recognised the difference between being familiar with AI and being genuinely fluent in it.",
-            "Since then, I have focused on learning through building, creating applications, automations and structured practice systems rather than relying only on courses or passive study.",
-            "My goal is not to present myself as a software engineer. It is to become the kind of AI GTM professional who can understand the product, ask better questions and connect technical possibilities to real customer outcomes."
-          ]
-        },
-        "outsideWork": {
-          "label": "Outside work",
-          "title": "The everyday problems behind the projects",
-          "body": "I am a husband, father, dog owner and long-time Dota player. Many of my projects begin with small problems from everyday life, from catching the morning bus with my son to keeping track of household supplies.",
-          "tags": [
-            "Husband & father",
-            "Dog owner",
-            "Dota player",
-            "Practical builder",
-            "Lifelong learner"
-          ]
-        },
-        "closing": {
-          "label": "Keep exploring",
-          "body": "The resume shows where I have been. The work shows where I am going. Explore how I apply AI at work and review the products I have built."
-        }
+          "I eventually found my way into enterprise technology sales, progressing from SDR to Majors Account Executive at Docusign. Today, I am applying the same learning velocity to AI, building products, automating workflows and sharpening my technical fluency through practice."
+        ]
       }
     }
   },
