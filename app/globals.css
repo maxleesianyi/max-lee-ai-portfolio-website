@@ -776,12 +776,6 @@ h3 {
   line-height: 1.78;
 }
 
-.about-page-intro .about-page-lead {
-  color: var(--bone);
-  font-size: clamp(1.25rem, 2vw, 1.62rem);
-  line-height: 1.35;
-}
-
 .about-story {
   margin-top: 48px;
   border-top: 1px solid rgba(244, 239, 231, 0.1);

@@ -23,8 +23,8 @@ export default function AboutPage() {
         </div>
         <div className="about-copy">
           <div className="about-page-intro">
-            {about.story.intro.map((paragraph, index) => (
-              <p className={index === 0 ? "about-page-lead" : undefined} key={paragraph}>{paragraph}</p>
+            {about.story.intro.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
         </div>

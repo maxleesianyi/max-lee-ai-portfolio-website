@@ -157,8 +157,7 @@ test("server-renders the about page from editable content", async () => {
   assert.match(html, /Majors Account Executive, Docusign/);
   assert.match(html, /OpenAI Five defeated my favourite world champion team twice/);
   assert.doesNotMatch(html, /Replace with your photo/);
-  assert.doesNotMatch(html, /My journey/);
-  assert.doesNotMatch(html, /Built through different environments/);
+  assert.doesNotMatch(html, /<h[1-6][^>]*>/);
 });
 
 test("keeps no-code content structurally complete", async () => {
