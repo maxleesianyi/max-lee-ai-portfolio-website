@@ -1,5 +1,9 @@
 # Release Notes
 
+## v1.1.3 - Space Background Artwork
+
+- Replaced the CSS-only star effect with a sparse deep-space background image and subtle blue nebula detail.
+
 ## v1.1.2 - Deep-Space Background
 
 - Reworked the site background into a sparse, brighter star field with restrained blue atmospheric depth.
